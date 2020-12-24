@@ -38,6 +38,7 @@ module.exports = function script() {
         new DuplicatePackageCheckerPlugin()
       ]
     }))
+    .pipe(gulp.src('src/js/**/*.js'))
     .pipe(gulp.dest('docs/js'))
 }
 
