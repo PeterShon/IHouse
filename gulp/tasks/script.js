@@ -10,7 +10,7 @@ module.exports = function script() {
     .pipe(plumber())
     .pipe(eslint({
       "rules": {
-        "indent": [2, 2, {"SwitchCase": 1}]
+        "indent": [2, 2, { "SwitchCase": 1 }]
       }
     }))
     .pipe(eslint.format())
@@ -38,6 +38,6 @@ module.exports = function script() {
         new DuplicatePackageCheckerPlugin()
       ]
     }))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('docs/js'))
 }
 

@@ -13,6 +13,6 @@ module.exports = function pug2html() {
     .pipe(pug({ pretty: config.pug2html.beautifyHtml }))
     .pipe(htmlValidator())
     .pipe(bemValidator())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
 }
 

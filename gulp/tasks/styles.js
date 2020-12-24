@@ -26,7 +26,7 @@ module.exports = function styles() {
       cascade: false
     }))
     .pipe(shorthand())
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(cleanCSS({
       debug: true,
       compatibility: '*'
@@ -35,6 +35,6 @@ module.exports = function styles() {
     }))
     .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('docs/css'))
 }
 
