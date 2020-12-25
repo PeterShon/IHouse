@@ -27,14 +27,22 @@
       padding: 0 10px;
       & a {
         color: $black;
-        & img {
+        
+        transition: 0.3s;
+        & svg {
           width: 48px;
           height: 40px;
-          object-position: center;
-          object-fit: contain;
+
+          transition: 0.3s;
         }
         & span {
           display: block;
+        }
+      }
+      &:hover {
+        & svg, & span {
+          fill: $active-link;
+          color: $active-link;
         }
       }
     }

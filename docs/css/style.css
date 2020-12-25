@@ -769,19 +769,25 @@ a {
 
 .category__list li a {
   color: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.category__list li a img {
+.category__list li a svg {
   width: 48px;
   height: 40px;
-  -o-object-position: center;
-  object-position: center;
-  -o-object-fit: contain;
-  object-fit: contain;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .category__list li a span {
   display: block;
+}
+
+.category__list li:hover svg,
+.category__list li:hover span {
+  fill: #004D77;
+  color: #004D77;
 }
 
 .footer {
