@@ -18,12 +18,31 @@
   visibility: visible;
   opacity: 1;
 
-  transition: 0.3s;
+  transition: 0.5s;
   &_hide {
     visibility: hidden;
     opacity: 0;
   }
+  &:after {
+    content: 'в начало';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    text-align: center;
+    color: $active-link;
+    font-size: 12;
+    font-weight: 600;
+    opacity: 0;
+
+    transition: 0.3s;
+    transition-delay: 0.2s;
+  }
   &:hover {
     background-position: 50% 30%;
+    &:after {
+      opacity: 1;
+    }
   }
 }
