@@ -1,4 +1,91 @@
-header {
+.header {
+  &__conteiner {
+
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+  }
+  &__logo {
+    width: 189.33px;
+    height: 47px;
+  }
+  &__logo-img {
+    width: 100%;
+    height: 100%;
+  }
+  &__nav {
+
+  }
+  &__nav-list {
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    list-style: none;
+    & li {
+        margin: auto 27.5px;
+    }
+    & a {
+      color: $black;
+    }
+    & ._active {
+      color: $active-link;
+    }
+  }
+  &__translator {
+
+  }
+  &__translator-btn {
+    padding: auto 9px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    font-size: 16px;
+    &_active {
+      font-weight: 600;
+    }
+  }
+  &__find {
+    width: 14px; height: 14px;
+    padding: 13px;
+
+    background-image: url(../img/magnifier.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+  }
+  &__connection {
+    flex: 0 1 480px;
+    min-width: 0; //slider-fix
+  }
+  &__adress {
+    font-size: 12px;
+    color: $black;
+    text-align: right;
+  }
+  &__adress-first {
+    color: $black;
+  }
+  &__adress-second {
+    color: $black;
+  }
+  &__hours {
+
+  }
+  &__phone {
+    display: inline-block;
+    width: 100%;
+
+    color: $black;
+    text-align: right;
+    font-weight: 600;
+    font-size: 16px;
+  }
   @include media-tablet {
 
     }

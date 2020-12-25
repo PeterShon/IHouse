@@ -7,4 +7,13 @@ $(document).ready(() => {
   console.log(`document ready`)
 })
 
-$(`.header__adress`).slick()
+$(`.header__adress`).slick({
+  speed: 300,
+  autoplay: true,
+  autoplaySpeed: 1500,
+  fade: true,
+  cssEase: 'linear',
+  accessibility: false,
+  arrows: false,
+
+})
