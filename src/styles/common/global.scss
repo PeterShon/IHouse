@@ -10,7 +10,7 @@ html {
     min-height: 100%;
     box-sizing: border-box;
     /* custom scrollbar FF */
-    scrollbar-color: $white $button-blue;
+    scrollbar-color: $button-blue $white;
     scrollbar-width: thin;
 }
 
