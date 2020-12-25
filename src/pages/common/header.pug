@@ -15,8 +15,19 @@ header.header
             a(href="#") О компании
           li
             a(href="#") Контакты
-          li
-            a(href="#") Доставка и оплата
+          li.header__pseudo-item.pseudo-item
+            a(href="#").pseudo-item__link Доставка и оплата
+            .pseudo-item__modal
+              .pseudo-item__part.pseudo-item__part_delivery
+                .pseudo-item__text
+                  p - Осуществляем доставку по всему Казахстану (условия оговариваются индивидуально)
+                  p - Самовывоз 
+                  a(href="#") Смотреть адрес
+              .pseudo-item__part.pseudo-item__part_pay
+                .pseudo-item__text
+                  p - Наличный расчет
+                  p - Безналичный расчет
+                  p - Оплата по счету
       .header__translator
         button.header__translator-btn.header__translator-btn_active ru
         button.header__translator-btn en

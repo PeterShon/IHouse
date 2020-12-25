@@ -1,0 +1,98 @@
+.pseudo-item {
+  position: relative;
+  padding: 0 !important;
+  &:hover > *, &:focus > *{
+    background-color: $background-blue-lite;
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 35px;
+
+    font-weight: 600;
+    font-size: 12px;
+    color: $black;
+
+    transition: 0.3s;
+    &:after {
+      content: url(../img/arrow-bottom.svg);
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+    &:hover, &:focus {
+      background-color: $background-blue-lite;
+      text-decoration: underline;
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+    &:hover + *, &:focus + * {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__modal {
+    position: absolute;
+
+    z-index: 1;
+    width: 100%;
+    padding: 15px;
+
+    background-color: $background-blue-lite;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+    &:hover, &:focus {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__part {
+    display: flex;
+    &::before {
+      content: '';
+      flex: 0 0 30px;
+      height: 30px;
+    }
+    &_delivery {
+      &::before {
+        background-image: url(../img/car.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      & > div {
+        & > p:nth-child(2) {
+          margin-top: 10px;
+        }
+        & > a {
+          text-decoration: underline;
+        }
+      }
+    }
+    &_pay {
+      margin-top: 15px;
+      &::before {
+        background-image: url(../img/pay-cards.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+  }
+  &__text {
+    margin-left: 10px;
+    & p {
+      margin: 0;
+    }
+    & a {
+      
+    }
+  }
+}
