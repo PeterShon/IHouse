@@ -906,3 +906,27 @@ a {
 .pseudo-item__text p {
   margin: 0;
 }
+
+.move-up {
+  background: url(../img/logo-arrow.svg) no-repeat 50% 50%/80% transparent;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.move-up_hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.move-up:hover {
+  background-position: 50% 30%;
+}
