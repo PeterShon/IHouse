@@ -738,7 +738,7 @@ a {
   position: absolute;
   top: 112px;
   width: 100%;
-  min-height: 100%;
+  min-height: calc(100% - 112px);
 }
 
 .category__inner {
@@ -793,7 +793,299 @@ a {
 }
 
 .footer {
-  border: 1px solid red;
+  background: url(../img/footer-bg.png) repeat fixed 0 0/40px #29969D;
+  position: relative;
+  z-index: 1;
+  letter-spacing: .5px;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 118px;
+  padding-bottom: 70px;
+}
+
+.footer__logo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__logo:hover * {
+  color: #CDF7F9;
+}
+
+.footer__logo:hover img {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+.footer__logo-img {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.footer__copyright {
+  font: 400 18px/1.36 'Open Sans', sans-serif;
+  margin-top: 38px;
+}
+
+.footer__address {
+  max-width: 243px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__address:hover * {
+  color: #CDF7F9;
+}
+
+.footer__city {
+  font-weight: 700;
+}
+
+.footer__full-address {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.footer__phone {
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__phone:hover {
+  color: #CDF7F9;
+}
+
+.footer__email {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__email:hover {
+  color: #CDF7F9;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 61px;
+}
+
+.footer__social-item svg {
+  width: 31px;
+  height: 31px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__social-item svg use {
+  fill: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__social-item:hover svg {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.footer__social-item:hover svg use {
+  fill: #CDF7F9;
+}
+
+.footer__navigation-list {
+  font: 14px/1.36 'Open Sans', sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__navigation-list li:not(:first-child) {
+  margin-top: 12px;
+}
+
+.footer__navigation-list li a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__navigation-list li a:hover {
+  color: #CDF7F9;
+}
+
+.footer__add {
+  font: 400 14px/1.36 'Open Sans', sans-serif;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.footer__delivery {
+  display: block;
+  border-bottom: 1px solid #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__delivery:hover {
+  color: #CDF7F9;
+  border-bottom: 1px solid #CDF7F9;
+}
+
+.footer__privacy-policy {
+  display: block;
+  margin-top: 16px;
+  border-bottom: 1px solid #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__privacy-policy:hover {
+  color: #CDF7F9;
+  border-bottom: 1px solid #CDF7F9;
+}
+
+.footer__work-schedule {
+  display: block;
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.footer__hours {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.footer__created-by {
+  display: block;
+  margin-top: 25px;
+}
+
+.footer__created-by:hover img {
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+.footer__creared-by-img {
+  display: block;
+  margin-left: auto;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.footer * {
+  color: #ffffff;
+}
+
+.subscribe {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.subscribe__header {
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+.subscribe__description {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.subscribe__input-wrapper {
+  display: -webkit-box;
+  display: flex;
+  margin-top: 30px;
+}
+
+.subscribe__input {
+  background: transparent;
+  -webkit-box-flex: 0;
+  flex: 0 0 71.5%;
+  padding: 12px 5px 12px 19px;
+  border: 1px solid #ffffff;
+  font-style: italic;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.subscribe__input::-webkit-input-placeholder {
+  color: #ffffff;
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.subscribe__input::-moz-placeholder {
+  color: #ffffff;
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.subscribe__input:-ms-input-placeholder {
+  color: #ffffff;
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.subscribe__input::-ms-input-placeholder {
+  color: #ffffff;
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.subscribe__input::placeholder {
+  color: #ffffff;
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.subscribe__submit {
+  background: url(../img/arrow-quad.svg) no-repeat center/25%;
+  -webkit-box-flex: 0;
+  flex: 0 0 28.5%;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.subscribe__submit:hover {
+  background-size: 27%;
 }
 
 .pseudo-item {
@@ -856,7 +1148,7 @@ a {
   position: absolute;
   z-index: 1;
   width: 100%;
-  padding: 15px;
+  padding: 15px 10px 15px 15px;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: 0.3s;
@@ -912,12 +1204,14 @@ a {
 .move-up {
   background: url(../img/logo-arrow.svg) no-repeat 50% 50%/80% transparent;
   position: fixed;
+  z-index: 10;
   bottom: 40px;
   right: 40px;
   width: 60px;
   height: 60px;
   border: none;
   cursor: pointer;
+  outline: none;
   visibility: visible;
   opacity: 1;
   -webkit-transition: 0.5s;
@@ -947,7 +1241,7 @@ a {
 }
 
 .move-up:hover {
-  background-position: 50% 30%;
+  background-position: 50% 20%;
 }
 
 .move-up:hover:after {

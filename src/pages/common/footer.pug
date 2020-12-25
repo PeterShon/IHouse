@@ -1,2 +1,50 @@
-footer
-    p Footer
+footer.footer
+  .footer__conteiner.conteiner
+    .footer__inner
+      a.footer__logo(href="#")
+        .footer__logo-wrapper
+          img.footer__logo-img(src="./img/logo-white.svg", alt="logo")
+        span.footer__copyright © 2015-2020 TOO I‘HOUSE
+      a.footer__address(href="#")
+        span.footer__city ​г. Алматы
+        span.footer__full-address пр-т Жибек Жолы, 135​, ТЦ Жибек Жолы​, 3 этаж; бутик C25/26 
+      .footer__connection
+        a.footer__phone(href="tel:+77272247050") +7 727 224 7050
+        a.footer__email(href="tomail:info@ihouse.com.kz") info@ihouse.com.kz
+        .footer__social
+          a.footer__social-item(href="#")
+            svg
+              use(xlink:href="./img/sprite.svg#insta")
+          a.footer__social-item(href="#")
+            svg
+              use(xlink:href="./img/sprite.svg#facebook")
+          a.footer__social-item(href="#")
+            svg
+              use(xlink:href="./img/sprite.svg#youtube")
+      nav.footer__navigation
+        ul.footer__navigation-list
+          li
+            a(href="#") Каталог
+          li
+            a(href="#") Коллекции
+          li
+            a(href="#") Товары со скидкой
+          li
+            a(href="#") О компании
+          li
+            a(href="#") Контакты
+      .footer__add
+        a.footer__delivery(href="#") Доставка и оплата
+        a.footer__privacy-policy(href="#") Политика конфиденциальности
+        span.footer__work-schedule.
+          ПН — ВС  
+          #[span.footer__hours &nbsp; 10:00 — 20:00]
+      .footer__provider
+        form.footer__subscribe.subscribe(action="#")
+          span.subscribe__header Подпишитесь 
+          span.subscribe__description Чтобы быть в курсе всех акций и новинок
+          .subscribe__input-wrapper
+            input.subscribe__input(type="email" placeholder="Введите e-mail*")
+            button.subscribe__submit(type="submit")
+        a.footer__created-by(href="#")
+          img.footer__creared-by-img(src="./img/logo-grad.svg", alt="grad media group logo")
