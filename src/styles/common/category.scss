@@ -1,22 +1,24 @@
 .category {
   position: absolute;
-  top: 112px;
+  top: $category-high;
   width: 100%;
   min-height: calc(100% - 112px);
   &__inner {
     position: sticky;
+    z-index: 2;
     top: 0;
     display: flex;
     align-items: center;
     
     width: 100%;
-    height: 112px;
+    height: $category-high;
     background-color: $background-grey;
   }
   &__list {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
   
     padding: 0;
 

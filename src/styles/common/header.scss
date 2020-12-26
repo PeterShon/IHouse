@@ -9,7 +9,7 @@
     width: 100%;
 
     padding-top: 30px;
-    padding-bottom: calc(40px);
+    padding-bottom: $header-padding + $category-high;
   }
   &__logo {
     width: 189.33px;
