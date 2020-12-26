@@ -1,7 +1,9 @@
 import { moveUp } from '../js/move-up.js'
+import { popups } from '../js/popups.js'
 
 $(document).ready(() => {
   moveUp()
+  popups()
   // eslint-disable-next-line no-console
 })
 

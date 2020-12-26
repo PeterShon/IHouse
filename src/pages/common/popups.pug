@@ -1,6 +1,117 @@
-//- #popup-category.popup
-//-   .popup__body
-//-     .popup__content
-//-       a.popup__close(href="#") +
-//-       .popup__title Это модальное окно #popup-name
-//-       .popup__text здесь размещается какой-то контент
+//popup-category
+#popup-category.popup
+  .popup__body
+    .popup__content
+      a.popup__close(href="#")
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Мягкая мебель
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='2') Диваны
+          li
+            a(href="#", data-count='10') Угловые диваны
+          li
+            a(href="#", data-count='4') Диваны-кровати
+          li
+            a(href="#", data-count='2') Кресла
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Стулья
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='18') Барные стулья
+          li
+            a(href="#", data-count='18') Стулья для гостиной
+          li
+            a(href="#", data-count='') Кухонные стулья
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Спальня
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='18') Кровати
+          li
+            a(href="#", data-count='') Шкафы
+          li
+            a(href="#", data-count='18') Матрасы
+          li
+            a(href="#", data-count='') Комоды
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Столы
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='18') Обеденные
+      //-card
+      .popup__category-card.popup__category-card_phantom
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Хранение
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='') Шкафы
+          li
+            a(href="#", data-count='') Комоды
+          li
+            a(href="#", data-count='') Полки
+          li
+            a(href="#", data-count='') Стеллажи
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Детская
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='') Шкафы
+          li
+            a(href="#", data-count='') Комоды
+          li
+            a(href="#", data-count='') Полки
+          li
+            a(href="#", data-count='') Стеллажи
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Офис
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='') Шкафы
+          li
+            a(href="#", data-count='') Комоды
+          li
+            a(href="#", data-count='') Полки
+          li
+            a(href="#", data-count='') Стеллажи
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Текстиль
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='') Шкафы
+          li
+            a(href="#", data-count='') Комоды
+          li
+            a(href="#", data-count='') Полки
+          li
+            a(href="#", data-count='') Стеллажи
+      //-card
+      .popup__category-card
+        a.popup__category-title(href="#", data-count='18') Ковры
+        ul.popup__category-stuck
+          li
+            a(href="#", data-count='') Шкафы
+          li
+            a(href="#", data-count='') Комоды
+          li
+            a(href="#", data-count='') Полки
+          li
+            a(href="#", data-count='') Стеллажи
+
+//popup-finder
+#popup-finder.popup
+  .popup__body
+    .popup__content.popup__content_small.popup__content_blue
+      a.popup__close.popup__close_near(href="#")
+      form(action="#")
+        .popup__finder-input-wrapper
+          input#fff.popup__finder-input.js_focus(placeholder='Введите свой запрос')
+          img.popup__finder-input-icon(src="./img/magnifier.svg", alt="поиск")

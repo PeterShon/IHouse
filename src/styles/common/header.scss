@@ -36,6 +36,9 @@
     }
     & a {
       color: $black;
+      &:hover {
+        color: $active-link;
+      }
     }
     & ._active {
       color: $active-link;
@@ -59,6 +62,9 @@
     &_active {
       font-weight: 600;
     }
+    &:hover {
+      color: $active-link;
+    }
   }
   &__find {
     width: 14px; height: 14px;
@@ -68,6 +74,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 45%;
+    
+    transition: 0.3s;
+    &:hover {
+      background-size: 65%;
+    }
   }
   &__connection {
     flex: 0 1 480px;
@@ -96,6 +107,11 @@
     text-align: right;
     font-weight: 600;
     font-size: 16px;
+
+    transition: 0.3s;
+    &:hover {
+      color: $active-link;
+    }
   }
   @include media-tablet {
 
