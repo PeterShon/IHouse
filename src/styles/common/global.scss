@@ -45,3 +45,8 @@ a {
 ::-webkit-scrollbar-thumb {
   background-color: $active-link;
 }
+
+::selection {
+  background: $active-link;
+  color: $white;
+}

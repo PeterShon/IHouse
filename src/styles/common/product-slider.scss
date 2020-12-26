@@ -1,0 +1,60 @@
+.product-slider {
+  &__conteriner {}
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 85px 0 45px 0;
+  }
+  &__title {
+    margin-bottom: 88px;
+  }
+  &__card-box {
+    width: 100%;
+    min-width: 0;
+  }
+  &__card-box-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-width: 0;
+    & .slick-arrow {
+      position: absolute;
+      z-index: 1;
+
+      width: 60px;
+      height: 30px;
+
+      background-image: url(../img/arrow-slider.svg);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      border: none;
+      cursor: pointer;
+      outline: none;
+
+      font-size: 0;
+
+      transition: 0.3s;
+    }
+    & .slick-prev {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    & .slick-next {
+      right: 0;
+      transform: rotate(180deg);
+      &:hover {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+  }
+  &__card {
+
+  }
+}

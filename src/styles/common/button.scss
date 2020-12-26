@@ -1,0 +1,12 @@
+.button {
+  padding: 11px 33px;
+  background-color: $background-button;
+
+  color: $white;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.47;
+  &:hover {
+    background-color: $active-link;
+  } 
+}

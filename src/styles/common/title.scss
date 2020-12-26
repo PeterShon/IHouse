@@ -1,0 +1,12 @@
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 400;
+  color: $black;
+
+  transition: 0.3s;
+  &:hover {
+    color: $active-link;
+  }
+}
