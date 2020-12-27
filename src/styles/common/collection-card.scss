@@ -1,0 +1,51 @@
+.collection-card {
+  display: flex;
+  &__cover-side {
+    position: relative;
+    flex: 1 0 69%;
+  }
+    &__image-wrapper {
+      width: 100%; height: 100%;
+      overflow: hidden;
+    }
+    &__image {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &__brand {
+      position: absolute;
+      top: 0; left: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      max-width: 485px;
+      padding: 30px 100px 50px 50px;
+
+      background-color: $background-blue;
+    }
+    &__brand-img {
+      max-width: 133px;
+      max-height: 75px;
+      margin-bottom: 22px;
+
+      object-fit: contain;
+      object-position: center;
+    }
+    &__about-collection {
+      margin-bottom: 22px;
+
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 23px;
+    }
+    &__link {}
+
+  &__info-side {
+    flex: 1 0 31%;
+  }
+    &__wrapper {}
+}

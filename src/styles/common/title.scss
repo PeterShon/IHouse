@@ -4,9 +4,13 @@
   font-style: italic;
   font-weight: 400;
   color: $black;
+  text-align: center;
 
   transition: 0.3s;
   &:hover {
     color: $active-link;
+  }
+  & h2 {
+    margin: 0
   }
 }

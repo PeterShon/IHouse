@@ -1,0 +1,40 @@
+.collections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 108px 0 64px;
+
+  background-color: $background-grey-dark;
+  &__container {}
+  &__inner {}
+  &__title {}
+  &__panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 109px;
+  }
+  &__button {
+    width: 284px;
+    height: 43px;
+
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: 0.3s;
+    &:hover {
+      border: 1px solid $black-opacity-50;
+    }
+    &_active {
+      border: 1px solid $black;
+    }
+  }
+  &__cards {
+    margin-top: 85px;
+  }
+  &__cards-slider {}
+  &__collection-card-wrapper {}
+}
