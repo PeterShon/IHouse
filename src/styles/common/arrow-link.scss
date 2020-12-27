@@ -1,0 +1,19 @@
+.arrow-link {
+  position: relative;
+
+  color: $black;
+  line-height: 1.38;
+  &:after {
+    content: url(../img/arrow-long.svg);
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+
+    transition: 0.3s;
+  }
+  &:hover {
+    &:after {
+      transform: translateX(5px);
+    }
+  }
+}

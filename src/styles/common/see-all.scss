@@ -1,0 +1,12 @@
+.see-all {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 136px;
+  background-color: $background-grey;
+  &__link {
+    margin-top: 25px;
+  }
+}
