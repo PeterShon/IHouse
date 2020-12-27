@@ -1,6 +1,10 @@
 .button {
+  width: 219px;
   padding: 11px 33px;
+
   background-color: $background-button;
+  border: none;
+  cursor: pointer;
 
   color: $white;
   font-size: 17px;

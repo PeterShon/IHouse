@@ -5,6 +5,7 @@ export function intro() {
     let posX = -(-clientWidth / 2 + e.clientX)
     let posY = -(-clientHeight / 2 + e.clientY)
     let might = 100
+    let might_0 = might * 0.15
     let might_1 = might * 0.3
     let might_2 = might * 1
     let might_3 = might * 1.5
@@ -18,6 +19,10 @@ export function intro() {
       url(img/intro-el3.png) calc(66.5% + ${posX / might_2}px) calc(29% + ${posY / might_1}px)/18% no-repeat,
       url(img/intro-bg.jpg) center/cover no-repeat
       `
+    }
+    if (document.querySelector('.subscribe-section__bg')) {
+      let bg_softness = document.querySelector('.subscribe-section__bg')
+      bg_softness.style.background = `linear-gradient(rgba(205, 247, 249, 0.2), rgba(205, 247, 249, 0.2)), url(img/softness.jpg) 50% calc(50% + ${posX / might_0}px)/cover no-repeat`
     }
   }
   setTimeout(() => {

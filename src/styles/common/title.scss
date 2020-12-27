@@ -1,17 +1,26 @@
 .title {
   font-family: 'Playfair Display', serif;
-  font-size: 36px;
   font-style: italic;
   font-weight: 400;
   color: $black;
   text-align: center;
 
   transition: 0.3s;
+  &_big {
+    & h2 {
+      font-size: 56px;
+    }
+  }
   &:hover {
     color: $active-link;
   }
   & h2 {
     margin: 0;
     font-weight: 400;
+    font-size: 36px;
   }
+}
+
+div.title:hover {
+  color: black;
 }

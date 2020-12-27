@@ -34,11 +34,12 @@ $(`.product-slider__card-box-inner`).slick({
 $(`.collections__cards-slider`).slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  speed: 2000,
+  speed: 1000,
   autoplay: true,
   autoplaySpeed: 10000,
   cssEase: `linear`,
   arrows: false,
+  fade: true,
   asNavFor: `.collections__pagination-slider`
 })
 
@@ -47,7 +48,7 @@ $(`.collections__pagination-slider`).slick({
   centerPadding: `5px`,
   slidesToShow: 3,
   slidesToScroll: 1,
-  speed: 300,
+  speed: 1000,
   autoplay: true,
   autoplaySpeed: 10000,
   cssEase: `linear`,
