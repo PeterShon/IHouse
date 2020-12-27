@@ -30,3 +30,27 @@ $(`.product-slider__card-box-inner`).slick({
   autoplaySpeed: 5000,
   cssEase: `linear`,
 })
+
+$(`.collections__cards-slider`).slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 1000,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  cssEase: `linear`,
+  arrows: false,
+  asNavFor: `.collections__pagination-slider`
+})
+
+$(`.collections__pagination-slider`).slick({
+  centerMode: true,
+  centerPadding: `5px`,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  speed: 1000,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  cssEase: `linear`,
+  asNavFor: `.collections__cards-slider`,
+  focusOnSelect: true
+})

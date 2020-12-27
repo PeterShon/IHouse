@@ -19,6 +19,7 @@
   &__button {
     width: 284px;
     height: 43px;
+    margin: 0 1px;
 
     border: 1px solid transparent;
     background-color: transparent;
@@ -33,8 +34,102 @@
     }
   }
   &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     margin-top: 85px;
   }
-  &__cards-slider {}
-  &__collection-card-wrapper {}
+  &__cards-slider {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 0;
+    // & .slick-dots {
+    //   position: absolute;
+    //   bottom: 0;
+    //   display: flex;
+    //   align-items: flex-end;
+    //   list-style: none;
+    //   cursor: pointer;
+    //   & li {
+    //     margin: 0 5px;
+    //     & button {
+    //       background-color: transparent;
+    //       border: none;
+    //       color: $white;
+    //       font-size: 18px;
+    //       font-family: 'Montserrat', sans-serif;
+    //     }
+    //     &.slick-active {
+    //       & button {
+    //         font-size: 36px;
+    //         font-family: 'Montserrat', sans-serif;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+  &__collection-card-wrapper {
+    width: 100%; height: 738px;
+  }
+  &__pagination-slider {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 104px;
+    width: 247px;
+    & .slick-arrow {
+      flex: 0 0 60px;
+      bottom: 0;
+      z-index: 1;
+
+      height: 30px;
+
+      background-image: url(../img/arrow-slider_white.svg);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      border: none;
+      cursor: pointer;
+      outline: none;
+
+      font-size: 0;
+
+      transition: 0.3s;
+    }
+    & .slick-prev {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    & .slick-next {
+      right: 0;
+      transform: rotate(180deg);
+      &:hover {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+    & .slick-track {
+      display: flex;
+      align-items: flex-end;
+      height: 50px;
+    }
+  }
+  &__pagination-item {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-end;
+
+    margin: 0 5px;
+    color: $white;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+    &.slick-current {
+      font-size: 36px;
+    }
+  }
 }

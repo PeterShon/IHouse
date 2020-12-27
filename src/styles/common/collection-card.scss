@@ -1,5 +1,6 @@
 .collection-card {
   display: flex;
+  height: 738px;
   &__cover-side {
     position: relative;
     flex: 1 0 69%;
@@ -46,6 +47,11 @@
 
   &__info-side {
     flex: 1 0 31%;
+    height: 100%;
+    background-color: $white;
   }
-    &__wrapper {}
+    &__wrapper {
+      height: 100%;
+      padding: 10px 17px 43px 14px;
+    }
 }
