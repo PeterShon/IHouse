@@ -2,7 +2,7 @@
   position: relative;
   padding: 0 !important;
   &:hover > *, &:focus > *{
-    background-color: $background-blue-lite;
+    background-color: $background-blue-lite-opacity-90;
     &:after {
       transform: rotate(180deg);
     }
@@ -24,7 +24,7 @@
       transition: 0.3s;
     }
     &:hover, &:focus {
-      background-color: $background-blue-lite;
+      background-color: $background-blue-lite-opacity-90;
       text-decoration: underline;
       &:after {
         transform: rotate(180deg);
@@ -42,7 +42,7 @@
     width: 100%;
     padding: 15px 10px 15px 15px;
 
-    background-color: $background-blue-lite;
+    background-color: $background-blue-lite-opacity-90;
 
     visibility: hidden;
     opacity: 0;

@@ -970,6 +970,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 33px 21px 118px;
+  outline: none;
   color: #000000;
 }
 
@@ -1699,7 +1700,7 @@ a {
 
 .pseudo-item:hover > *,
 .pseudo-item:focus > * {
-  background: #CDF7F9;
+  background: rgba(205, 247, 249, 0.9);
 }
 
 .pseudo-item:hover > *:after,
@@ -1726,7 +1727,7 @@ a {
 
 .pseudo-item__link:hover,
 .pseudo-item__link:focus {
-  background: #CDF7F9;
+  background: rgba(205, 247, 249, 0.9);
   text-decoration: underline;
 }
 
@@ -1742,7 +1743,7 @@ a {
 }
 
 .pseudo-item__modal {
-  background: #CDF7F9;
+  background: rgba(205, 247, 249, 0.9);
   position: absolute;
   z-index: 3;
   width: 100%;

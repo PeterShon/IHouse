@@ -55,6 +55,9 @@
     align-items: center;
     justify-content: center;
     padding: 33px 21px 118px;
+    
+    outline: none;
+
     color: $black;
     .card-product_collection & {
       width: 100%;
