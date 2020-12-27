@@ -1,0 +1,78 @@
+.about-us {
+  display: flex;
+  &__info-side {
+    flex: 0 0 50%;
+  }
+    &__header {
+      padding: 87px 350px 58px 145px;
+
+      background-color: $active-link;
+    }
+    &__logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+    &__info {
+      padding: 75px 71px 94px 45px;
+      background-color: $background-grey;
+    }
+    &__title {
+      margin: 0 0 70px 0;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 56px;
+    }
+    &__thesis {
+      &:not(:last-child) {
+        margin-bottom: 34px;
+      }
+    }
+    &__thesis-title {
+      margin: 0 0 18px 0;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    &__thesis-description {
+      margin: 0;
+    }
+
+  &__cover-side {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex: 0 0 50%;
+    padding: 67px 110px;
+  }
+    &__bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url(../img/about-us-bg.jpg) top center/cover no-repeat;
+    }
+    &__invitation {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 490px;
+      height: 380px;
+      position: relative;
+      z-index: 1;
+    }
+    &__invation-title {
+      margin: 0 0 45px;
+      font-weight: 600;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+    &__invation-text {
+      flex: 1 0 auto;
+    }
+    &__buttons {
+    }
+    &__button {
+      margin-right: 58px;
+    }
+    &__link {}
+}
