@@ -1361,6 +1361,87 @@ a {
   object-position: center;
 }
 
+.category-field__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 118px;
+}
+
+.category-field__title {
+  margin-bottom: 113px;
+}
+
+.category-field__box {
+  width: 100%;
+  height: 80vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+
+.category-field__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.category-field__item_cushioned-furniture {
+  grid-column: 1 / 7;
+  background: url(../img/category_cushioned-furniture.jpg) center/cover no-repeat;
+}
+
+.category-field__item_chair {
+  grid-column: 7 / 10;
+  background: url(../img/category_chair.jpg) center/cover no-repeat;
+}
+
+.category-field__item_table {
+  grid-column: 10 / 13;
+  background: url(../img/category_table.jpg) center/cover no-repeat;
+}
+
+.category-field__item_store {
+  grid-column: 1 / 5;
+  background: url(../img/category_store.jpg) center/cover no-repeat;
+}
+
+.category-field__item_child-room {
+  grid-column: 5 / 9;
+  background: url(../img/category_child-room.jpg) center/cover no-repeat;
+}
+
+.category-field__item_carpets {
+  grid-column: 9 / 13;
+  background: url(../img/category_carpets.jpg) center/cover no-repeat;
+}
+
+.category-field__item_office {
+  grid-column: 1 / 7;
+  background: url(../img/category_office.jpg) center/cover no-repeat;
+}
+
+.category-field__item_textile {
+  grid-column: 7 / 13;
+  background: url(../img/category_textile.jpg) center/cover no-repeat;
+}
+
+.category-field__item:hover {
+  filter: grayscale(0);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 36px;
+}
+
 .footer {
   background: url(../img/footer-bg.png) repeat fixed 0 0/40px #29969D;
   position: relative;
@@ -1720,7 +1801,7 @@ a {
   position: fixed;
   z-index: 10;
   bottom: 40px;
-  right: 40px;
+  right: 10px;
   width: 60px;
   height: 60px;
   border: none;
@@ -1971,6 +2052,7 @@ body.lock {
 
 .title h2 {
   margin: 0;
+  font-weight: 400;
 }
 
 .button {

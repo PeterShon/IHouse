@@ -1,0 +1,74 @@
+.category-field {
+  &__conteiner {}
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 118px;
+  }
+  &__title {
+    margin-bottom: 113px;
+  }
+  &__box {
+    width: 100%;
+    height: 80vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 24px;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $white;
+    font-weight: 600;
+    font-size: 24px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+
+    transition: 0.3s;
+    &_cushioned-furniture {
+      grid-column: 1 / 7;
+      background: url(../img/category_cushioned-furniture.jpg) center/cover no-repeat;
+    }
+    &_chair {
+      grid-column: 7 / 10;
+      background: url(../img/category_chair.jpg) center/cover no-repeat;
+    }
+    &_table {
+      grid-column: 10 / 13;
+      background: url(../img/category_table.jpg) center/cover no-repeat;
+    }
+    &_store {
+      grid-column: 1 / 5;
+      background: url(../img/category_store.jpg) center/cover no-repeat;
+    }
+    &_child-room {
+      grid-column: 5 / 9;
+      background: url(../img/category_child-room.jpg) center/cover no-repeat;
+    }
+    &_carpets {
+      grid-column: 9 / 13;
+      background: url(../img/category_carpets.jpg) center/cover no-repeat;
+    }
+    &_office {
+      grid-column: 1 / 7;
+      background: url(../img/category_office.jpg) center/cover no-repeat;
+    }
+    &_textile {
+      grid-column: 7 / 13;
+      background: url(../img/category_textile.jpg) center/cover no-repeat;
+    }
+    &:hover {
+      filter: grayscale(0);
+      color: $white-opacity-40;
+      font-size: 36px;
+    }
+  }
+}
