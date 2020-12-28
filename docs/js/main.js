@@ -55,3 +55,15 @@ $(`.collections__pagination-slider`).slick({
   asNavFor: `.collections__cards-slider`,
   focusOnSelect: true
 })
+
+$(`.brand-slider__slider`).slick({
+  centerMode: true,
+  slidesToShow: 4,
+  slidesToScroll: 0,
+  speed: 7000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: `linear`,
+  arrows: false
+})
+

@@ -20,10 +20,6 @@ export function intro() {
       url(img/intro-bg.jpg) center/cover no-repeat
       `
     }
-    if (document.querySelector('.subscribe-section__bg')) {
-      let bg_softness = document.querySelector('.subscribe-section__bg')
-      bg_softness.style.background = `linear-gradient(rgba(205, 247, 249, 0.2), rgba(205, 247, 249, 0.2)), url(img/softness.jpg) 50% calc(50% + ${posX / might_0}px)/cover no-repeat`
-    }
   }
   setTimeout(() => {
     document.addEventListener('mousemove', parallax)

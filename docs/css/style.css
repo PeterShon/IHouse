@@ -1379,7 +1379,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(205, 247, 249, 0.2), rgba(205, 247, 249, 0.2)), url(../img/softness.jpg) center/cover no-repeat;
+  background: linear-gradient(rgba(205, 247, 249, 0.2), rgba(205, 247, 249, 0.2)), url(../img/softness.jpg) center/cover fixed no-repeat;
   transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
@@ -1609,6 +1609,36 @@ a {
 
 .about-us__button {
   margin-right: 58px;
+}
+
+.brand-slider {
+  position: relative;
+  padding: 143px 0 143px;
+}
+
+.brand-slider:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #fff, transparent 5%, transparent 95%, #fff);
+}
+
+.brand-slider__header {
+  display: none;
+}
+
+.brand-slider__logo {
+  margin: 0 auto;
+  width: 265px;
+  height: 115px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .footer {
