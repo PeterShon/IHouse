@@ -1,0 +1,25 @@
+.catalog {
+  position: relative;
+  height: 400px;
+  background-color: #ddd;
+  &__widget-box {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 27px 79px 0;
+    width: 100%;
+    height: 44px;
+  }
+  &__widget {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__filter-panel {
+    display: none;
+  }
+  &__products {
+    display: none;
+  }
+}

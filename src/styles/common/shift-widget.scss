@@ -1,0 +1,162 @@
+.shift-widget {
+  width: 412px;
+  &__header {
+    position: relative;
+    padding: 10px 15px 10px 29px;
+
+    background-color: $intro-color;
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 18px;
+    color: $white;
+
+    transition: 0.3s;
+    &_by-date {
+      background-color: $background-shifter;
+    }
+    &:after {
+      content: url(../img/arrow-shift.svg);
+      position: absolute;
+      right: 15px;
+
+      transform: rotate(180deg);
+
+      transition: 0.3s;
+      .shift-widget_active & {
+        transform: rotate(360deg);
+      }
+    }
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $white;
+    border: 1px solid $border-grey;
+    border-top: 0px solid transparent;
+    padding: 18px 61px 28px;
+    &_transparent {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+    }
+    &.js_shift-body {
+      display: none;
+    }
+  }
+  &__line {
+    &_flex {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  &__input-wrapper {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: flex-end;
+
+    cursor: pointer;
+  }
+  &__label {
+    font-size: 14px;
+    color: $shift-black;
+
+    cursor: pointer;
+  }
+  &__input {
+    width: 76px;
+    height: 25px;
+    margin: 0 3px;
+    padding: 0 5px;
+
+    border: 1px solid $shift-black;
+    cursor: pointer;
+
+    color: $shift-black;
+    text-align: right;
+    font-size: 14px;
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+      appearance: none;
+    }
+  }
+  &__currency {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: $shift-black;
+
+    cursor: pointer;
+  }
+  &__ranger-wrapper {
+    margin-top: 15px;
+    & .irs {
+      &:hover {
+        & .irs-from, & .irs-to {
+          &::before {
+            transform: scale(1.8);
+          }
+        }
+      }
+    }
+    & .irs-from, & .irs-to, & .irs-single {
+      background-color: transparent;
+      color: $shift-black;
+
+      cursor: pointer;
+
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      &:before {
+        transform: translateX(-1px);
+        width: 5px; height: 5px;
+        border-radius: 50%;
+        background-color: $background-footer;
+
+        transition: 0.3s;
+      }
+    }
+    & .irs-single {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      &::before {
+        display: none;
+      }
+    }
+    & .irs-min, & .irs-max {
+      display: none;
+    }
+    & .irs-handle.from, & .irs-handle.to {
+      width: 1px; height: 15px;
+      background-color: $background-footer;
+      border: none;
+      // border-left: 2px solid transparent;
+      // border-right: 2px solid transparent;
+      // border-top: 0px solid transparent;
+      // border-bottom: 0px solid transparent;
+      & i {
+        display: none;
+      }
+    }
+    & .irs-bar{
+      top: auto;
+      bottom: 8px;
+      height: 1px; width: 100%;
+      background-color: $background-footer;
+    }
+    & .irs-line {
+      top: auto;
+      bottom: -40px;
+      height: 1px; width: 100%;
+    }
+  }
+  &__ranger {
+  }
+  &__button-by-date {}
+  &__checkbox {}
+  &__label {}
+  &_on-sale {}
+}

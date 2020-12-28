@@ -4,6 +4,7 @@ import { intro } from '../js/intro.js'
 import { cardProduct } from '../js/card-product.js'
 import { catalog } from '../js/catalog.js'
 import { sliders } from '../js/sliders.js'
+import { shiftWidget } from '../js/shift-widget.js'
 
 $(document).ready(() => {
   moveUp()
@@ -12,5 +13,6 @@ $(document).ready(() => {
   cardProduct()
   catalog()
   sliders()
+  shiftWidget()
   // eslint-disable-next-line no-console
 })
