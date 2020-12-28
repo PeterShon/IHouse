@@ -25,9 +25,9 @@ $(`.header__adress`).slick({
 $(`.product-slider__card-box-inner`).slick({
   slidesToShow: 4,
   slidesToScroll: 4,
-  speed: 400,
+  speed: 2000,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 2000,
   cssEase: `linear`,
 })
 

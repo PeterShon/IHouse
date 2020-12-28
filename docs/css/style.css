@@ -693,10 +693,6 @@ a {
   color: #004D77;
 }
 
-.header__nav-list ._active {
-  color: #004D77;
-}
-
 .header__translator-btn {
   background: transparent;
   padding: auto 9px;
@@ -1130,11 +1126,22 @@ a {
   padding: 108px 0 64px;
 }
 
+.collections_list .collections__header {
+  width: 100%;
+  padding: 108px 0 64px;
+  background: url(../img/intro-el1.png) -45% 40%/54% no-repeat, url(../img/intro-el4.png) 108% 73%/32% no-repeat, url(../img/intro-el2.png) 38.5% -500%/15% no-repeat, url(../img/intro-el3.png) 66.5% -200%/18% no-repeat, url(../img/intro-bg.jpg) center/cover no-repeat;
+  transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
 .collections__panel {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 109px;
+}
+
+.collections_list .collections__panel {
+  margin-top: 80px;
 }
 
 .collections__button {
@@ -1163,6 +1170,10 @@ a {
   margin-top: 85px;
 }
 
+.collections_list .collections__cards {
+  flex-direction: column;
+}
+
 .collections__cards-slider {
   display: flex;
   justify-content: center;
@@ -1173,6 +1184,10 @@ a {
 .collections__collection-card-wrapper {
   width: 100%;
   height: 738px;
+}
+
+.collections_list .collections__collection-card-wrapper {
+  margin-bottom: 51px;
 }
 
 .collections__pagination-slider {
@@ -1230,6 +1245,10 @@ a {
 
 .collections__pagination-item.slick-current {
   font-size: 36px;
+}
+
+.collections_list {
+  padding: 0px 0 51px;
 }
 
 .collection-card {
@@ -2247,10 +2266,6 @@ body.lock {
   transition: 0.3s;
 }
 
-.title_big h2 {
-  font-size: 56px;
-}
-
 .title:hover {
   color: #004D77;
 }
@@ -2259,6 +2274,10 @@ body.lock {
   margin: 0;
   font-weight: 400;
   font-size: 36px;
+}
+
+.title_big h2 {
+  font-size: 56px;
 }
 
 div.title:hover {
