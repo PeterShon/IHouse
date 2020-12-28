@@ -1,0 +1,39 @@
+.panel
+  .panel__box
+    .panel__header Категория
+      ul.panel__list
+        li.panel__title.panel__title_active
+          a(href="#") Мягкая мебель
+          ul
+            each val in ['Диваны', 'Угловые диваны', 'Диваны-кровати', 'Кресла']
+              li.panel__subtitle
+                a(href="#")= val
+        each val in ['Стулья', 'Столы', 'Спальня', 'Хранение', 'Детская', 'Офис', 'Текстиль', 'Ковры']
+          li.panel__title
+            a(href="#")= val
+  .panel__box
+    .panel__header Бренды
+      ul.panel__list
+        each val in ['Sits', 'Gaber', 'Benix', 'Nap', 'Subtila', 'Midj', 'Noctis', 'Nikoline', 'Fameg']
+          li.panel__title.panel__title_chb
+            label()
+              input(type="checkbox")
+              = val
+  .panel__box
+    .panel__header Наличие
+      ul.panel__list
+        each val in ['В наличии', 'На заказ', 'Ожидается поступление', 'Ожидается поступление']
+          li.panel__title.panel__title_chb
+            label()
+              input(type="checkbox")
+              = val
+  .panel__subscriber.subscriber.subscriber_small
+    .subscriber__title.title.title_big
+      h2 Подпишитесь
+    span.subscriber__description Чтобы быть в курсе всех акций и новинок
+    form.subscriber__form(action="#")
+      input.subscriber__input(type="email", placeholder="Введите e-mail*")
+      button.subscriber__button.button(type="submit") Подписаться
+
+
+

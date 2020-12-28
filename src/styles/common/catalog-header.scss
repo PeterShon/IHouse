@@ -1,0 +1,49 @@
+.catalog-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $background-grey-dark;
+  &__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 108px 0 64px;
+    background:
+    linear-gradient(#ffffff34, #ffffff34),
+    url(../img/catalog-bg.jpg) center/cover fixed no-repeat;
+  }
+  &__breadcrumbs {
+    position: absolute;
+    left: 25px; top: 20px;
+  }
+  &__title {}
+  &__panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  &__button {
+    width: 284px;
+    height: 43px;
+    margin: 0 1px;
+
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+
+    transition: 0.3s;
+    &:hover {
+      border: 1px solid $black-opacity-50;
+    }
+    &_active {
+      border: 1px solid $black;
+    }
+  }
+}

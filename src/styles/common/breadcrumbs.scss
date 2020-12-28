@@ -1,0 +1,28 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    list-style: none;
+    & li {
+      &:not(:last-child) {
+        position: relative;
+        margin-right: 30px;
+        &:after {
+          content: url(../img/arrow-breadcrumbs.svg);
+          position: absolute;
+          right: -25px;
+          top: -2px;
+        }
+        a {
+          font-weight: 600;
+          &:hover {
+            color: $active-link;
+          }
+        }
+      }
+      a {
+        color: $black;
+        font-size: 14px;
+      }
+    }
+  }
+}

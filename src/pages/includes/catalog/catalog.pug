@@ -1,0 +1,33 @@
+.catalog
+  .catalog__widget-box
+    .catalog__widget.shift-widget
+      .shift-widget__header диапазон цен
+      .shift-widget__body
+        .shift-widget__line
+          .shift-widget__input-wrapper
+            label.shift-widget__label(for="filter-price_before") от
+            input.shift-widget__input.js_price-before(type="text", placeholder='0', id='filter-price_before', value='0')
+            label.shift-widget__currency(for="filter-price_before") ₸
+          .shift-widget__input-wrapper
+            label.shift-widget__label(for="filter-price_after") до
+            input.shift-widget__input.js_price-after(type="text", placeholder='0', id='filter-price_after', value='0')
+            label.shift-widget__currency(for="filter-price_after") ₸
+        .shift-widget__line
+          .shift-widget__ranger-wrapper
+            input.shift-widget__ranger.js_price-range(type="text", data-min="5000", data-max="185000")
+    .catalog__widget.shift-widget
+      .shift-widget__header.shift-widget__header_by-date по новизне
+      .shift-widget__body
+        .shift-widget__line
+          button.shift-widget__button-by-date по возрастанию цены
+        .shift-widget__line
+          button.shift-widget__button-by-date по убыванию цены
+    .catalog__widget.shift-widget.shift-widget_on-sale
+      .shift-widget__body.shift-widget__body_transparent
+        .shift-widget__line
+          input.shift-widget_checkbox(type="checkbox", id='on-sale')
+          label.shift-widget__label(for="on-sale") Со скидкой
+  aside.catalog__filter-panel
+    include panel.pug
+  .catalog__products
+    include products.pug
