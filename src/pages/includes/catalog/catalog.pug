@@ -17,7 +17,7 @@
             input.shift-widget__ranger.js_price-range(type="text", data-min="5000", data-max="185000", data-step="1000")
     .catalog__widget.shift-widget.js_shift
       .shift-widget__header.shift-widget__header_by-date.js_shift-header по новизне
-      .shift-widget__body.js_shift-body
+      .shift-widget__body.shift-widget__body_small-padding.js_shift-body
         .shift-widget__line
           button.shift-widget__button-by-date по возрастанию цены
         .shift-widget__line
@@ -26,7 +26,7 @@
       .shift-widget__body.shift-widget__body_transparent
         .shift-widget__line
           input.shift-widget__checkbox(type="checkbox", id='on-sale')
-          label.shift-widget__label(for="on-sale") Со скидкой
+          label.shift-widget__label.shift-widget__label_chb(for="on-sale") Со скидкой
   aside.catalog__filter-panel
     include panel.pug
   .catalog__products

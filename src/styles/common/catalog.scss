@@ -1,11 +1,12 @@
 .catalog {
   position: relative;
-  height: 400px;
-  background-color: #ddd;
+  display: flex;
+
   &__widget-box {
     display: flex;
     justify-content: flex-start;
     position: absolute;
+    z-index: 1;
     top: 0; left: 0;
     padding: 27px 79px 0;
     width: 100%;
@@ -17,9 +18,13 @@
     }
   }
   &__filter-panel {
-    display: none;
+    max-width: 571px;
+    flex: 0 0 571px;
+    padding: 144px 151px 20px 115px;
+
+    background-color: $background-grey;
   }
   &__products {
-    display: none;
+    flex: 1 0 auto;
   }
 }

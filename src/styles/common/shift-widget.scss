@@ -1,5 +1,6 @@
 .shift-widget {
   width: 412px;
+  min-height: 44px;
   &__header {
     position: relative;
     padding: 10px 15px 10px 29px;
@@ -44,14 +45,21 @@
       border: none;
       padding: 0;
     }
+    &_small-padding {
+      padding: 25px 29px 21px;
+    }
     &.js_shift-body {
       display: none;
     }
   }
   &__line {
+    height: 33px;
     &_flex {
       display: flex;
       justify-content: space-around;
+    }
+    &:not(:first-child) {
+      margin-top: 16px;
     }
   }
   &__input-wrapper {
@@ -92,13 +100,18 @@
     cursor: pointer;
   }
   &__ranger-wrapper {
-    margin-top: 15px;
     & .irs {
       &:hover {
         & .irs-from, & .irs-to {
           &::before {
             transform: scale(1.8);
           }
+        }
+        & .irs-handle.from, & .irs-handle.to {
+          width: 3px;
+        }
+        & .irs-bar, & .irs-line {
+          height: 3px;
         }
       }
     }
@@ -115,8 +128,14 @@
         width: 5px; height: 5px;
         border-radius: 50%;
         background-color: $background-footer;
+        border-top-color: $background-footer;
 
         transition: 0.3s;
+      }
+    }
+    & .irs-to {
+      &:before {
+        transform: translateX(0px);
       }
     }
     & .irs-single {
@@ -133,10 +152,8 @@
       width: 1px; height: 15px;
       background-color: $background-footer;
       border: none;
-      // border-left: 2px solid transparent;
-      // border-right: 2px solid transparent;
-      // border-top: 0px solid transparent;
-      // border-bottom: 0px solid transparent;
+
+      cursor: pointer;
       & i {
         display: none;
       }
@@ -146,17 +163,68 @@
       bottom: 8px;
       height: 1px; width: 100%;
       background-color: $background-footer;
+      cursor: pointer;
+
+      transition: 0.1s;
     }
     & .irs-line {
       top: auto;
       bottom: -40px;
       height: 1px; width: 100%;
+
+      cursor: pointer;
     }
   }
   &__ranger {
   }
-  &__button-by-date {}
-  &__checkbox {}
-  &__label {}
-  &_on-sale {}
+  &__button-by-date {
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+    color: $shift-black;
+    font-size: 12px;
+    text-align: left;
+
+    transition: 0.3s;
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
+  &__checkbox {
+    display: none;
+    &:checked + label:after {
+      box-shadow:  inset 0 0 0 4px $white, inset 0 0 0 100px $black;
+    }
+  }
+  &__label {
+    &_chb {
+      display: block;
+      height: 23px;
+      position: relative;
+      padding-left: 40px;
+      font-size: 12px;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        display: block;
+        width: 28px; height: 26px;
+        background-color: transparent;
+        border: 1px solid $black;
+        transition: 0.3s;
+      }
+    }
+  }
+  &_on-sale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+  }
 }
