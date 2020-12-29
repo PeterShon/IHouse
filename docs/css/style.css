@@ -3608,7 +3608,7 @@ a {
 }
 
 .product-body__info-side {
-  padding: 35px 40px 10px 65px;
+  padding: 35px 40px 150px 65px;
   grid-area: info;
 }
 
