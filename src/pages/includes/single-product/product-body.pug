@@ -1,0 +1,81 @@
+.product-body
+  .product-body__header
+    .product-body__breadcrumbs.breadcrumbs
+      ul.breadcrumbs__list
+        li
+          a(href="index.html") Главная
+        li
+          a(href="catalog.html") Каталог
+        li
+          a._bold(href="catalog.html") Мягкая мебель
+        li
+          span Диван jenny
+  .product-body__media-side
+    .product-body__gallery
+      .product-body__slide.product-body__slide_main
+        a(href="./img/single-product_main.jpg")
+          img(src="./img/single-product_main.jpg", alt="товар")
+      .product-body__galery-box
+        .product-body__slide.product-body__slide_second
+          a(href="./img/single-product_second-1.jpg")
+            img(src="./img/single-product_second-1.jpg", alt="товар")
+        .product-body__slide.product-body__slide_second
+          a(href="./img/single-product_second-2.jpg")
+            img(src="./img/single-product_second-2.jpg", alt="товар")
+        .product-body__slide.product-body__slide_second
+          a(href="./img/single-product_second-3.jpg")
+            img(src="./img/single-product_second-3.jpg", alt="товар")
+        .product-body__slide.product-body__slide_second
+          a(href="./img/single-product_second-4.jpg")
+            img(src="./img/single-product_second-4.jpg", alt="товар")
+    .product-body__info-tabs
+      input(type="radio", name = 'product-body__info-tabs', id='specifications', checked).product-body__tab-ghost
+      .product-body__tab.product-body__tab_specifications
+        .product-body__tab-line
+          span.product-body__specification Вид дивана:
+          span.product-body__specification-value диван книжка
+        .product-body__tab-line
+          span.product-body__specification Цвета:
+          span.product-body__specification-value
+            span.product-body__specification-value-color(style='background-color: #ffffff')
+            span.product-body__specification-value-color(style='background-color: #C4C4C4')
+            span.product-body__specification-value-color(style='background-color: #FFDCDC')
+        .product-body__tab-line
+          span.product-body__specification Размеры:
+          span.product-body__specification-value 271×152×97×84/46 см
+        .product-body__tab-line
+          span.product-body__specification Бренд:
+          span.product-body__specification-value
+            img.product-body__specification-value-logo(src="./img/logo-sits.png", alt="logo sits")
+        .product-body__tab-line
+          span.product-body__specification Страна производителя:
+          span.product-body__specification-value Европа
+      label.product-body__tab-btn(for="specifications") Характеристики
+
+      input(type="radio", name = 'product-body__info-tabs', id='description').product-body__tab-ghost
+      .product-body__tab.product-body__tab_description
+        .product-body__tab-line
+          .product-body__tab-text
+            p.product-body__paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias provident necessitatibus ullam voluptatum incidunt! Sequi sed illo nesciunt corporis molestiae rem dicta quia molestias animi ad nostrum, dignissimos nihil consequatur.
+            p.product-body__paragraph Alias provident necessitatibus ullam voluptatum incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            p.product-body__paragraph Sequi sed illo nesciunt corporis molestiae rem dicta quia molestias animi ad nostrum, dignissimos nihil consequatur. Alias provident necessitatibus ullam voluptatum incidunt!
+      label.product-body__tab-btn(for="description") Описание
+
+      input(type="radio", name = 'product-body__info-tabs', id='delivery').product-body__tab-ghost
+      .product-body__tab.product-body__tab_delivery
+        .product-body__tab-line
+          img.product-body__icon(src="./img/car.svg", alt="доставка")
+          .product-body__about-option
+            p.product-body__paragraph - Осуществляем доставку по всему Казахстану (условия оговариваются индивидуально)
+            p.product-body__paragraph - Самовызов. 
+            a.product-body__paragraph.product-body__paragraph_link(href="#") Смотреть адрес
+        .product-body__tab-line
+          img.product-body__icon(src="./img/pay-cards.svg", alt="оплата")
+          .product-body__about-option
+            p.product-body__paragraph - Наличный расчет
+            p.product-body__paragraph - Безналичный расчет
+            p.product-body__paragraph - Оплата по счету- Осуществляем доставку по всему Казахстану (условия оговариваются индивидуально)
+      label.product-body__tab-btn(for="delivery") Доставка и оплата
+
+  .product-body__info-side
+    include ../../common/card-product_single-product.pug

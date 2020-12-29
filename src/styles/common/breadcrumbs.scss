@@ -17,9 +17,12 @@
           &:hover {
             color: $active-link;
           }
+          &._bold {
+            font-weight: 900;
+          }
         }
       }
-      a {
+      a, span {
         color: $black;
         font-size: 14px;
       }

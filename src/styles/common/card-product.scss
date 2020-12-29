@@ -37,7 +37,7 @@
       opacity: 1;
     }
   }
-  &_collection {
+  &_collection, &_single-product {
     justify-content: space-between;
     align-items: flex-start;
     height: 100%;
@@ -46,6 +46,11 @@
     &:hover {
       background: $white;
     }
+  }
+  &_single-product {
+    position: sticky;
+    top: 122px;
+    height: auto;
   }
   &__inner {
     position: relative;
@@ -59,7 +64,7 @@
     outline: none;
 
     color: $black;
-    .card-product_collection & {
+    .card-product_collection &, .card-product_single-product & {
       width: 100%;
       align-items: flex-start;
       padding: 0;
@@ -68,7 +73,7 @@
   &__image-wrapper {
     max-width: 353px;
     max-height: 233px;
-    .card-product_collection & {
+    .card-product_collection &, .card-product_single-product & {
       align-self: center;
       max-width: none;
       max-height: 334px;
@@ -90,21 +95,31 @@
     .card-product_collection & {
       padding: 0 20px;
     }
+    .card-product_single-product & {
+      font-size: 48px;
+    }
   }
   &__dimensions {
     margin-bottom: 26px;
 
     font-size: 14px;
     line-height: 1.79;
-    .card-product_collection & {
+    .card-product_collection &{
       padding: 0 20px;
+    }
+    .card-product_single-product & {
+      font-size: 18px;
     }
   }
   &__price {
     font-weight: 600;
-    .card-product_collection & {
+    .card-product_collection &, .card-product_single-product & {
       padding: 0 20px;
       margin-bottom: 24px;
+    }
+    .card-product_single-product & {
+      font-size: 24px;
+      padding: 0;
     }
   }
   &__sale {
@@ -129,7 +144,7 @@
       font-family: 'Roboto', sans-serif;
       font-weight: 700;
     }
-    .card-product_collection & {
+    .card-product_collection &, .card-product_single-product & {
       &_active {
         top: 0; right: 0;
       }
@@ -148,7 +163,7 @@
 
     transition: 0.2s;
     transition-delay: 0.1s;
-    .card-product_collection & {
+    .card-product_collection &, .card-product_single-product & {
       position: relative;
       top: 0; left: 0;
       bottom: auto;
@@ -156,9 +171,12 @@
       opacity: 1;
       margin: 0 20px;
     }
+    .card-product_single-product & {
+      margin: 53px 0 0;
+    }
   }
   &__description {
-    .card-product_collection & {
+    .card-product_collection &{
       padding: 0 20px;
     }
   }
