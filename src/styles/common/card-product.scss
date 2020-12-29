@@ -134,6 +134,9 @@
         top: 0; right: 0;
       }
     }
+    .card-product_no-margin & {
+      top: -20px; right: -7px;
+    }
   }
   &__button {
     position: absolute;
@@ -158,5 +161,8 @@
     .card-product_collection & {
       padding: 0 20px;
     }
+  }
+  &_no-margin {
+    margin: 0;
   }
 }

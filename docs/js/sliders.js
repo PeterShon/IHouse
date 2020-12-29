@@ -56,4 +56,14 @@ export function sliders() {
     cssEase: `linear`,
     arrows: false
   })
+
+  $(`.pagination__slider`).slick({
+    centerMode: true,
+    centerPadding: `5px`,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 1000,
+    cssEase: `linear`,
+    focusOnSelect: true
+  })
 }

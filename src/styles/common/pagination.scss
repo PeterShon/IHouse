@@ -1,0 +1,66 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  &__slider {
+    display: flex;
+    align-items: flex-end;
+    width: 247px;
+
+    transform: translateX(-43px);
+    & .slick-arrow {
+      flex: 0 0 60px;
+      bottom: 0;
+      z-index: 1;
+
+      height: 30px;
+
+      background-image: url(../img/arrow-slider_black.svg);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      border: none;
+      cursor: pointer;
+      outline: none;
+
+      font-size: 0;
+
+      transition: 0.3s;
+    }
+    & .slick-prev {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    & .slick-next {
+      right: 0;
+      transform: rotate(180deg);
+      &:hover {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+    & .slick-track {
+      display: flex;
+      align-items: flex-end;
+      height: 50px;
+    }
+  }
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-end;
+
+    margin: 0 5px;
+    color: $black;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    transition: 1s;
+    &.slick-current {
+      font-size: 36px;
+    }
+  }
+}
