@@ -19,6 +19,7 @@
           li.panel__title.panel__title_chb
             label()
               input(type="checkbox")
+              span
               = val
     .panel__box
       .panel__header Наличие
@@ -27,6 +28,7 @@
           li.panel__title.panel__title_chb
             label()
               input(type="checkbox")
+              span
               = val
     .panel__subscriber.subscriber.subscriber_small
       .subscriber__title.title.title_small
@@ -34,4 +36,4 @@
       span.subscriber__description Чтобы быть в курсе всех акций и новинок
       form.subscriber__form(action="#")
         input.subscriber__input(type="email", placeholder="Введите e-mail*")
-        button.subscriber__button.button(type="submit") Подписаться
+        button.subscriber__button.button.button_low(type="submit") Подписаться

@@ -7,11 +7,16 @@
   cursor: pointer;
 
   color: $white;
-  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.47;
   &_wide {
     width: 274px;
+  }
+  &_low {
+    padding: 11px 33px 7px;
+    font-size: 14px;
   }
   &:hover {
     background-color: $active-link;

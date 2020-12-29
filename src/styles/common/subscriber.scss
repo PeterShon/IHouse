@@ -47,6 +47,7 @@
     }
     .subscriber_small & {
       width: 100%;
+      height: 34px;
       margin-right: 0px;
       margin-bottom: 15px;
     }
@@ -62,6 +63,7 @@
   }
   &_small {
     width: auto;
+    height: auto;
     padding: 33px 46px;
 
     background-color: $background-subscriber;
