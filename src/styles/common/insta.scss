@@ -1,0 +1,21 @@
+.insta {
+  position: relative;
+  background-color: $background-blue;
+  &__conteiner {}
+  &__inner {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+  }
+  & .elfsight-app-05edb01e-dfb3-4879-bd01-dd2f868bae91 {}
+  &__hider {
+    position: absolute;
+    z-index: 99999;
+    width: 50%; height: 100px;
+    margin: 0 auto;
+    bottom: 50px;
+    background-color: $background-blue;
+  }
+}
+  
+  

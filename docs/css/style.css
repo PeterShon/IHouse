@@ -2938,6 +2938,27 @@ a {
   bottom: -93px;
 }
 
+.insta {
+  background: #BFE8E5;
+  position: relative;
+}
+
+.insta__inner {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.insta__hider {
+  background: #BFE8E5;
+  position: absolute;
+  z-index: 99999;
+  width: 50%;
+  height: 100px;
+  margin: 0 auto;
+  bottom: 50px;
+}
+
 .footer {
   background: url(../img/footer-bg.png) repeat fixed 0 0/40px #29969D;
   position: relative;
