@@ -1,0 +1,71 @@
+.feedback {
+  &__conteiner {}
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 0 53px;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0 31px 58px;
+  }
+  &__header {
+    margin-bottom: 33px;
+
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__call {}
+  &__form {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+  &__form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3.3fr;
+    grid-gap: 18px 31px;
+  }
+  &__form-item {
+    padding: 10px;
+    border: 1px solid $black;
+    border-radius: 0;
+
+    font-size: 12px;
+    &::placeholder {
+      color: $black;
+    }
+    &_email {}
+    &_phone {}
+    &_comment {
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+
+      resize: none;
+    }
+  }
+  &__submit {
+    align-self: flex-end;
+  }
+
+  &__invatation {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    padding: 29px 0 35px 52px;
+    background-color: $background-blue;
+  }
+  &__cover {
+    background: url(../img/invatation-bg.png) -10% center/cover no-repeat;
+
+    transition: 1s;
+    &:hover {
+      background: url(../img/invatation-bg.png) 0% center/cover no-repeat;
+    }
+  }
+}

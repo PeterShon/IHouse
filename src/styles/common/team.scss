@@ -1,0 +1,31 @@
+.team {
+  background-color: $background-grey;
+  &__conteiner {}
+  &__inner {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 107px 0 149px;
+  }
+  &__person {
+
+  }
+  &__position {
+    margin-bottom: 37px;
+
+    font-weight: 600;
+    font-size: 24px;
+  }
+  &__name {
+    margin-bottom: 27px;
+  }
+  &__link {
+    display: block;
+    color: $black;
+    &:hover {
+      color: $active-link;
+    }
+    &:not(:last-child) {
+      margin-bottom: 27px;
+    }
+  }
+}

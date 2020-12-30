@@ -1,0 +1,37 @@
+.card {
+  &__wrapper {
+    position: relative;
+  }
+  &__card {
+    width: 100%;
+    height: 740px;
+  }
+  &__info {
+    width: 407px;
+    padding: 39px 88px 49px 53px;
+    background-color: $active-link;
+    position: absolute;
+    top: 0;
+    right: 18.8%;
+  }
+  &__info-item {
+    &:not(:last-child) {
+      margin-bottom: 42px;
+    }
+  }
+  &__info-header {
+    color: $white;
+    font-weight: 700;
+  }
+  &__info-text {
+    color: $white;
+    margin-top: 6px;
+    & > a {
+      display: block;
+      color: $white;
+      &:hover {
+        color: $background-blue-lite;
+      }
+    }
+  }
+}

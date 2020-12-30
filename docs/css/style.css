@@ -2398,17 +2398,21 @@ a {
   line-height: 1.38;
 }
 
-.arrow-link_little {
-  font-size: 14px;
-  line-height: 1.78;
-}
-
 .arrow-link:after {
   content: url(../img/arrow-long.svg);
   position: absolute;
   left: 0;
   bottom: -12px;
   transition: 0.3s;
+}
+
+.arrow-link_little {
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+.arrow-link_little:after {
+  content: url(../img/arrow-short.svg);
 }
 
 .arrow-link:hover:after {
@@ -2809,6 +2813,86 @@ a {
   margin-top: 21px;
 }
 
+.feedback__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 0 53px;
+}
+
+.feedback__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 0 31px 58px;
+}
+
+.feedback__header {
+  margin-bottom: 33px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.feedback__form {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.feedback__form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3.3fr;
+  grid-gap: 18px 31px;
+}
+
+.feedback__form-item {
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 0;
+  font-size: 12px;
+}
+
+.feedback__form-item::-moz-placeholder {
+  color: #000000;
+}
+
+.feedback__form-item:-ms-input-placeholder {
+  color: #000000;
+}
+
+.feedback__form-item::placeholder {
+  color: #000000;
+}
+
+.feedback__form-item_comment {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  resize: none;
+}
+
+.feedback__submit {
+  align-self: flex-end;
+}
+
+.feedback__invatation {
+  background: #BFE8E5;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  padding: 29px 0 35px 52px;
+}
+
+.feedback__cover {
+  background: url(../img/invatation-bg.png) -10% center/cover no-repeat;
+  transition: 1s;
+}
+
+.feedback__cover:hover {
+  background: url(../img/invatation-bg.png) 0% center/cover no-repeat;
+}
+
 .subscriber {
   background: #BFE8E5;
   display: flex;
@@ -3041,6 +3125,80 @@ a {
 
 .about-us__invitation {
   width: 490px;
+}
+
+.card__wrapper {
+  position: relative;
+}
+
+.card__card {
+  width: 100%;
+  height: 740px;
+}
+
+.card__info {
+  background: #004D77;
+  width: 407px;
+  padding: 39px 88px 49px 53px;
+  position: absolute;
+  top: 0;
+  right: 18.8%;
+}
+
+.card__info-item:not(:last-child) {
+  margin-bottom: 42px;
+}
+
+.card__info-header {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.card__info-text {
+  color: #ffffff;
+  margin-top: 6px;
+}
+
+.card__info-text > a {
+  display: block;
+  color: #ffffff;
+}
+
+.card__info-text > a:hover {
+  color: #CDF7F9;
+}
+
+.team {
+  background: #f8f8f8;
+}
+
+.team__inner {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 107px 0 149px;
+}
+
+.team__position {
+  margin-bottom: 37px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.team__name {
+  margin-bottom: 27px;
+}
+
+.team__link {
+  display: block;
+  color: #000000;
+}
+
+.team__link:hover {
+  color: #004D77;
+}
+
+.team__link:not(:last-child) {
+  margin-bottom: 27px;
 }
 
 .brand-slider {

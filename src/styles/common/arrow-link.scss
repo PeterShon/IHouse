@@ -3,10 +3,6 @@
 
   color: $black;
   line-height: 1.38;
-  &_little {
-    font-size: 14px;
-    line-height: 1.78;
-  }
   &:after {
     content: url(../img/arrow-long.svg);
     position: absolute;
@@ -14,6 +10,13 @@
     bottom: -12px;
 
     transition: 0.3s;
+  }
+  &_little {
+    font-size: 14px;
+    line-height: 1.78;
+    &:after {
+      content: url(../img/arrow-short.svg);
+    }
   }
   &:hover {
     &:after {
