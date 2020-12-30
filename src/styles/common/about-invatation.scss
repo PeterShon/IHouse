@@ -1,0 +1,18 @@
+.about-invatation {
+  &__conteiner {
+    margin-top: 51px;
+    margin-bottom: 49px;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: $background-blue;
+  }
+  &__cover-side {
+    background: url(../img/invatation-bg.jpg) center/cover no-repeat;
+  }
+  &__info-side {
+    padding: 35px 192px 42px 105px;
+  }
+}

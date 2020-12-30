@@ -52,27 +52,6 @@
       background: url(../img/about-us-bg.jpg) top center/cover no-repeat;
     }
     &__invitation {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       width: 490px;
-      height: 380px;
-      position: relative;
-      z-index: 1;
     }
-    &__invation-title {
-      margin: 0 0 45px;
-      font-weight: 600;
-      font-size: 36px;
-      text-transform: uppercase;
-    }
-    &__invation-text {
-      flex: 1 0 auto;
-    }
-    &__buttons {
-    }
-    &__button {
-      margin-right: 58px;
-    }
-    &__link {}
 }

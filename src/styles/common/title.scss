@@ -15,8 +15,9 @@
     font-size: 36px;
   }
   &_big {
-    & h2 {
+    & h2, & h1 {
       font-size: 56px;
+      font-weight: 400;
     }
   }
   &_small {

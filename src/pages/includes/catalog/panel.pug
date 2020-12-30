@@ -4,14 +4,14 @@
       .panel__header Категория
       ul.panel__list
         li.panel__title.panel__title_active
-          a(href="#") Мягкая мебель
+          a(href="catalog.html") Мягкая мебель
           ul
             each val in ['Диваны', 'Угловые диваны', 'Диваны-кровати', 'Кресла']
               li.panel__subtitle
                 a(href="#")= val
         each val in ['Стулья', 'Столы', 'Спальня', 'Хранение', 'Детская', 'Офис', 'Текстиль', 'Ковры']
           li.panel__title
-            a(href="#")= val
+            a(href="catalog.html")= val
     .panel__box
       .panel__header Бренды
       ul.panel__list
