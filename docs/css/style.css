@@ -2873,6 +2873,10 @@ a {
   resize: none;
 }
 
+.feedback__form-item.js_error {
+  background: #ffbcbcb9;
+}
+
 .feedback__submit {
   align-self: flex-end;
 }

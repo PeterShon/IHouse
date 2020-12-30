@@ -7,6 +7,7 @@ import { sliders } from '../js/sliders.js'
 import { shiftWidget } from '../js/shift-widget.js'
 import { productBody } from '../js/product-body.js'
 import { card } from '../js/card.js'
+import { feedback } from '../js/feedback.js'
 
 
 $(document).ready(() => {
@@ -19,5 +20,6 @@ $(document).ready(() => {
   shiftWidget()
   productBody()
   card()
+  feedback()
   // eslint-disable-next-line no-console
 })

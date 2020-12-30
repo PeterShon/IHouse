@@ -9,3 +9,8 @@ mapbox - кастом карты для сайта
 
 ihousestudioofFurniture@gmail.com
 !qwerty1
+
+npm install --save-dev @babel/plugin-transform-runtime
+{
+  "plugins": ["@babel/plugin-transform-runtime"]
+}

@@ -6,11 +6,11 @@
         .feedback__call Заполните форму ниже
         form#form.feedback__form(action="#")
           .feedback__form-grid
-            input.feedback__form-item.feedback__form-item_name(type="name", placeholder = 'Имя*')
-            input.feedback__form-item.feedback__form-item_email(type="email", placeholder = 'e-mail*')
-            input.feedback__form-item.feedback__form-item_phone(type="phone", placeholder = 'телефон*')
-            textarea.feedback__form-item.feedback__form-item_comment(placeholder = 'Комментарий')
-          button.feedback__submit.button(type = 'submit' ) Отправить
+            input.feedback__form-item.feedback__form-item_name.js_req(type="text", name = 'name', placeholder = 'Имя*')
+            input.feedback__form-item.feedback__form-item_email.js_email.js_req(type="text", name='email', placeholder = 'e-mail*')
+            input.feedback__form-item.feedback__form-item_phone.js_req(type="text", name = 'phone', placeholder = 'телефон*')
+            textarea.feedback__form-item.feedback__form-item_comment(name = 'message', placeholder = 'Комментарий')
+          button.feedback__submit.button(type="submit") Отправить
       .feedback__invatation
         include ../../common/invation.pug
         .feedback__cover

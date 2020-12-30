@@ -49,6 +49,9 @@
 
       resize: none;
     }
+    &.js_error {
+      background-color: $error-bg;
+    }
   }
   &__submit {
     align-self: flex-end;
