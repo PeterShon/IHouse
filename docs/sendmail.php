@@ -15,7 +15,7 @@
  	 $mail->Username = 'ihousestudioofFurniture@gmail.com';
 	 $mail->Password = '!qwerty1';
 	 $mail->SMTPSecure = 'ssl';
-	 $mail->Port = 993;
+	 $mail->Port = 465;
 
    $mail->CharSet = 'UTF-8';
    $mail->setLanguage('ru', 'local-modules/phpmailer/language/');
