@@ -4,6 +4,6 @@ section.subscribe-section
     .subscriber__title.title.title_big
       h2 Подпишитесь
     span.subscriber__description Чтобы быть в курсе всех акций и новинок
-    form.subscriber__form(action="#")
-      input.subscriber__input(type="email", placeholder="Введите e-mail*")
+    form.subscriber__form.js_saver(action="#")
+      input.subscriber__input.js_email(type="text" placeholder="Введите e-mail*" name = 'email')
       button.subscriber__button.button(type="submit") Подписаться

@@ -32,6 +32,9 @@
       font-size: 12px;
       letter-spacing: .5px;
     }
+    &.js_error {
+      background-color: $error-bg;
+    }
   }
   &__submit {
     flex: 0 0 28.5%;

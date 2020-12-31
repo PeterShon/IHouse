@@ -40,11 +40,11 @@ footer.footer
           ПН — ВС  
           #[span.footer__hours &nbsp; 10:00 — 20:00]
       .footer__provider
-        form.footer__subscribe.subscribe(action="#")
+        form.footer__subscribe.subscribe.js_saver(action="#")
           span.subscribe__header Подпишитесь 
           span.subscribe__description Чтобы быть в курсе всех акций и новинок
           .subscribe__input-wrapper
-            input.subscribe__input(type="email" placeholder="Введите e-mail*")
+            input.subscribe__input.js_email(type="text" placeholder="Введите e-mail*" name = 'email')
             button.subscribe__submit(type="submit")
         a.footer__created-by(href="https://gradmedia.kz/digital")
           img.footer__creared-by-img(src="./img/logo-grad.svg", alt="grad media group logo")

@@ -14,11 +14,11 @@
 	 $mail->SMTPAuth = true;
  	 $mail->Username = 'ihousestudioofFurniture@gmail.com';
 	 $mail->Password = '!qwerty1';
-	 $mail->SMTPSecure = 'ssl';
+    $mail->SMTPSecure = 'ssl';
 	 $mail->Port = 465;
 
    $mail->CharSet = 'UTF-8';
-   $mail->setLanguage('ru', 'local-modules/phpmailer/language/');
+   $mail->setLanguage('ru', 'modules/phpmailer/language/');
    $mail->IsHTML(true);
 
    //от кого письмо

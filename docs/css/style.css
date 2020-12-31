@@ -2966,6 +2966,10 @@ a {
   margin-bottom: 15px;
 }
 
+.subscriber__input.js_error {
+  background: #ffbcbcb9;
+}
+
 .subscriber__button {
   margin-left: 14px;
   border: 1px solid transparent;
@@ -4243,6 +4247,10 @@ a {
   font-style: italic;
   font-size: 12px;
   letter-spacing: .5px;
+}
+
+.subscribe__input.js_error {
+  background: #ffbcbcb9;
 }
 
 .subscribe__submit {

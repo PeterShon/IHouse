@@ -51,6 +51,9 @@
       margin-right: 0px;
       margin-bottom: 15px;
     }
+    &.js_error {
+      background-color: $error-bg;
+    }
   }
   &__button {
     margin-left: 14px;

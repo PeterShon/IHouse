@@ -14,3 +14,5 @@ npm install --save-dev @babel/plugin-transform-runtime
 {
   "plugins": ["@babel/plugin-transform-runtime"]
 }
+
+запись данных в файл
