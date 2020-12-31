@@ -9,6 +9,7 @@ import { productBody } from '../js/product-body.js'
 import { card } from '../js/card.js'
 import { feedback } from '../js/feedback.js'
 import { sendToTXT } from '../js/send-to-txt.js'
+import { search } from '../js/search.js'
 
 
 $(document).ready(() => {
@@ -23,5 +24,6 @@ $(document).ready(() => {
   card()
   feedback()
   sendToTXT()
+  search()
   // eslint-disable-next-line no-console
 })

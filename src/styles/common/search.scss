@@ -1,0 +1,51 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  padding: 0 18% 0 22.5%;
+  min-height: calc(80vh - 224px);
+  &__title {
+  }
+  &__request {
+    font-size: 36px;
+    &:after {
+      content: attr(data-request);
+      display: inline-block;
+      font-weight: 700;
+    }
+  }
+  &__result {
+    padding: 37px 0 56px 0;
+  }
+  &__card-product {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    } 
+  }
+  &__finder {
+    align-self: flex-start;
+    margin-top: 69px;
+  }
+  &__finder-input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__finder-input {
+    width: 354px;
+
+    padding: 13px 40px 11px 17px;
+
+    font-size: 16px;
+    line-height: 1.71;
+    &::placeholder {
+      color: $black-opacity-50;
+    }
+  }
+  &__finder-input-icon {
+    position: absolute;
+    width: 18px; height: 18px;
+    margin-right: 19px;
+    align-self: flex-end;
+  }
+}

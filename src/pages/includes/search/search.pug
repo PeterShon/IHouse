@@ -1,0 +1,12 @@
+.search
+  .search__title
+    p.search__request(data-request='Диван') Результаты поиска:&nbsp;
+  .search__finder.js_dust
+    .search__finder-input-wrapper
+      input.search__finder-input.js_focus(placeholder='Введите свой запрос')
+      img.search__finder-input-icon(src="./img/magnifier.svg", alt="поиск")
+  .search__result
+    .search__card-product.js_unit
+      include ../../common/card-product_search.pug
+    .search__card-product.js_unit
+      include ../../common/card-product_search.pug
