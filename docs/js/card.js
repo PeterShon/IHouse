@@ -1,5 +1,5 @@
 export function card() {
-  if (document.getElementById('card')) {
+  if (document.getElementById('map')) {
     let map;
 
     DG.then(function () {

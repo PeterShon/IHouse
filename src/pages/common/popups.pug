@@ -115,3 +115,26 @@
         .popup__finder-input-wrapper
           input.popup__finder-input.js_focus(placeholder='Введите свой запрос')
           img.popup__finder-input-icon(src="./img/magnifier.svg", alt="поиск")
+
+//popup-delivery
+#popup-delivery.popup
+  .popup__body
+    .popup__content.popup__content_delivery-grid
+      a.popup__close.popup__close_near(href="#")
+      .popup__delivery-title.title.title_big
+        h2 Доставка и оплата
+      .popup__delivery-wrapper
+        img.popup__delivery-icon(src="./img/car.svg", alt="icon")
+        .popup__delivery-list
+          p.popup__delivery-item - Осуществляем доставку по всему Казахстану (условия оговариваются индивидуально)
+          p.popup__delivery-item
+            span - Самовызов.
+            a(href="address.html") &nbsp;Смотреть адреса
+          a.popup__delivery-item.arrow-link(href="address.html") Подробней
+    .popup__content.popup__content_blue.popup__content_delivery-grid
+      .popup__delivery-wrapper.popup__delivery-wrapper_pay
+        img.popup__delivery-icon(src="./img/pay-cards.svg", alt="icon")
+        .popup__delivery-list
+          p.popup__delivery-item - Наличный расчет
+          p.popup__delivery-item - Безналичный расчет
+          p.popup__delivery-item - Оплата по счету

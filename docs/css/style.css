@@ -22,6 +22,7 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .slick-list:focus {
@@ -4421,7 +4422,7 @@ a {
 
 .pseudo-item:hover > *,
 .pseudo-item:focus > * {
-  background: rgba(205, 247, 249, 0.9);
+  background: #CDF7F9;
 }
 
 .pseudo-item:hover > *:after,
@@ -4448,7 +4449,7 @@ a {
 
 .pseudo-item__link:hover,
 .pseudo-item__link:focus {
-  background: rgba(205, 247, 249, 0.9);
+  background: #CDF7F9;
   text-decoration: underline;
 }
 
@@ -4464,7 +4465,7 @@ a {
 }
 
 .pseudo-item__modal {
-  background: rgba(205, 247, 249, 0.9);
+  background: #CDF7F9;
   position: absolute;
   z-index: 3;
   width: 100%;
@@ -4583,6 +4584,7 @@ body.lock {
   transition: 0.3s;
   /*popups - category*/
   /*popups - finder*/
+  /*popups - delivery*/
 }
 
 .popup.open {
@@ -4606,6 +4608,7 @@ body.lock {
 .popup__body {
   min-height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 30px 10px;
@@ -4633,6 +4636,11 @@ body.lock {
 
 .popup__content_blue {
   background: #CDF7F9;
+}
+
+.popup__content_delivery-grid {
+  display: flex;
+  flex-direction: column;
 }
 
 .popup__close {
@@ -4759,6 +4767,54 @@ body.lock {
   height: 18px;
   margin-right: 19px;
   align-self: flex-end;
+}
+
+.popup__delivery-title {
+  margin-top: 52px;
+  margin-bottom: 83px;
+}
+
+.popup__delivery-wrapper {
+  display: grid;
+  grid-template-columns: 94px minmax(200px, 350px);
+  grid-column-gap: 59px;
+  margin: 0 260px;
+}
+
+.popup__delivery-wrapper_pay {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.popup__delivery-icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: top center;
+  object-position: top center;
+}
+
+.popup__delivery-list {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.popup__delivery-item {
+  margin: 0;
+}
+
+.popup__delivery-item:not(:last-child) {
+  margin-bottom: 27px;
+}
+
+.popup__delivery-item a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.popup__delivery-item a:hover {
+  color: #004D77;
 }
 
 .title {
