@@ -171,3 +171,31 @@
           .popup__policy-item
             .popup__policy-title Соблюдение Вашей конфиденциальности на уровне компании
             .popup__policy-text Чтобы убедиться, что Ваша персональная информация находится в безопасности, мы доводим нормы соблюдения конфиденциальности и безопасности до наших сотрудников и строго следим за исполнением мер соблюдения конфиденциальности.
+
+//popup-feedback
+#popup-feedback.popup
+  .popup__body
+    .popup__content.popup__content_delivery-grid
+      a.popup__close.popup__close_near(href="#")
+      .popup__feedback
+        .popup__feedback-header
+          .popup__feedback-title
+          .popup__feedback-subtitle Заполните форму и мы свяжемся с вами!
+        form.popup__feedback-form(action="#")
+          input.popup__product-name(type='text' readonly name='product-name')
+          input.popup__feedback-input.js_req(type="text" placeholder='Имя*' name='name')
+          input.popup__feedback-input.js_req(type="text" placeholder='Телефон*' name='phone')
+          button.popup__feedback-submit.button.button_max-wide(type='submit') Оставить заявку
+//popup-feedback-consultation
+#popup-feedback-consultation.popup
+  .popup__body
+    .popup__content.popup__content_delivery-grid
+      a.popup__close.popup__close_near(href="#")
+      .popup__feedback.popup__feedback_consultation
+        .popup__feedback-header
+          .popup__feedback-title Закажите онлайн консультацию
+        form.popup__feedback-form(action="#")
+          input.popup__product-name(type='text' readonly name='product-name')
+          input.popup__feedback-input.js_req(type="text" placeholder='Имя*' name='name')
+          input.popup__feedback-input.js_req(type="text" placeholder='Телефон*' name='phone')
+          button.popup__feedback-submit.button.button_max-wide(type='submit') Заказать консультацию

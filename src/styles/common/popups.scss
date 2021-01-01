@@ -96,6 +96,9 @@ body.lock {
       transform: rotate(90deg);
     }
   }
+  &__product-name {
+    display: none;
+  }
   /*popups - category*/
   &__category-card {
     display: flex;
@@ -237,5 +240,49 @@ body.lock {
     font-weight: 700;
     display: block;
   }
-  &__policy-text {}
+    
+  /*popups - feedback*/
+  &__feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+  }
+  &__feedback-header {
+    margin-top: 20px;
+    margin-bottom: 77px;
+    text-align: center;
+  }
+  &__feedback-title {
+    font-size: 48px;
+    .popup__feedback_consultation & {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 36px;
+    }
+  }
+  &__feedback-subtitle {
+    margin-top: 25px;
+    font-size: 24px;
+  }
+  &__feedback-form {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 29px;
+    width: 302px;
+    margin-bottom: 140px;
+  }
+  &__feedback-input {
+    padding: 15px 15px 19px;
+
+    border: 1px solid $black;
+
+    font-size: 14px;
+    &::placeholder {
+      color: $black;
+    }
+  }
+  &__feedback-submit {
+    margin-top: 10px;
+  }
 }

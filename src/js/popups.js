@@ -15,7 +15,7 @@ export function popups() {
       popupLink.addEventListener("click", function (e) {
         const popupName = popupLink.getAttribute("href").replace("#", "");
         const curentPopup = document.getElementById(popupName);
-        popupOpen(curentPopup);
+        popupOpen(curentPopup, e.target);
         e.preventDefault(); //запрет перезагружать страницу
       });
     }
@@ -32,7 +32,7 @@ export function popups() {
     }
   }
 
-  function popupOpen(curentPopup) {
+  function popupOpen(curentPopup, curentButton) {
     if (curentPopup && unlock) {
       const popupActive = document.querySelector(".popup.open");
       if (popupActive) {
@@ -45,6 +45,18 @@ export function popups() {
         setTimeout(() => {
           document.querySelector(".js_focus").focus();
         }, 200);
+      }
+      if (curentButton.closest('.card-product')) {
+        let curentCard = curentButton.closest('.card-product')
+        let curentProduct = curentCard.querySelector('.card-product__header').innerHTML
+        let productBox = curentPopup.querySelector('.popup__product-name')
+        let productTitle = curentPopup.querySelector('.popup__feedback-title')
+        if (curentPopup.querySelector('.popup__feedback-form')) {
+          setTimeout(() => {
+            productBox.value = curentProduct;
+            productTitle.innerHTML = curentProduct;
+          }, 200);
+        }
       }
       curentPopup.addEventListener("click", function (e) {
         if (!e.target.closest(".popup__content")) {

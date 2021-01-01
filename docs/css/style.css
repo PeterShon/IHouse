@@ -4586,6 +4586,7 @@ body.lock {
   /*popups - finder*/
   /*popups - delivery*/
   /*popups - delivery*/
+  /*popups - feedback*/
 }
 
 .popup.open {
@@ -4666,6 +4667,10 @@ body.lock {
 
 .popup__close:hover {
   transform: rotate(90deg);
+}
+
+.popup__product-name {
+  display: none;
 }
 
 .popup__category-card {
@@ -4839,6 +4844,62 @@ body.lock {
   display: block;
 }
 
+.popup__feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 40px;
+}
+
+.popup__feedback-header {
+  margin-top: 20px;
+  margin-bottom: 77px;
+  text-align: center;
+}
+
+.popup__feedback-title {
+  font-size: 48px;
+}
+
+.popup__feedback_consultation .popup__feedback-title {
+  font: italic 36px 'Playfair Display', serif;
+}
+
+.popup__feedback-subtitle {
+  margin-top: 25px;
+  font-size: 24px;
+}
+
+.popup__feedback-form {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 29px;
+  width: 302px;
+  margin-bottom: 140px;
+}
+
+.popup__feedback-input {
+  padding: 15px 15px 19px;
+  border: 1px solid #000000;
+  font-size: 14px;
+}
+
+.popup__feedback-input::-moz-placeholder {
+  color: #000000;
+}
+
+.popup__feedback-input:-ms-input-placeholder {
+  color: #000000;
+}
+
+.popup__feedback-input::placeholder {
+  color: #000000;
+}
+
+.popup__feedback-submit {
+  margin-top: 10px;
+}
+
 .title {
   font-family: 'Playfair Display', serif;
   font-style: italic;
@@ -4889,6 +4950,10 @@ div.title:hover {
 
 .button_wide {
   width: 274px;
+}
+
+.button_max-wide {
+  width: 100%;
 }
 
 .button_low {
