@@ -179,6 +179,7 @@ body.lock {
     margin-right: 19px;
     align-self: flex-end;
   }
+
   /*popups - delivery*/
   &__delivery-title {
     margin-top: 52px;
@@ -217,4 +218,24 @@ body.lock {
       }
     }
   }
+  
+  /*popups - delivery*/
+  &__policy {}
+  &__policy-title {
+    margin-top: 13px;
+  }
+  &__policy-text-box {
+    margin-top: 56px;
+  }
+  &__policy-item {
+    font-size: 16px;
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+  &__policy-title {
+    font-weight: 700;
+    display: block;
+  }
+  &__policy-text {}
 }

@@ -4585,6 +4585,7 @@ body.lock {
   /*popups - category*/
   /*popups - finder*/
   /*popups - delivery*/
+  /*popups - delivery*/
 }
 
 .popup.open {
@@ -4815,6 +4816,27 @@ body.lock {
 
 .popup__delivery-item a:hover {
   color: #004D77;
+}
+
+.popup__policy-title {
+  margin-top: 13px;
+}
+
+.popup__policy-text-box {
+  margin-top: 56px;
+}
+
+.popup__policy-item {
+  font-size: 16px;
+}
+
+.popup__policy-item:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.popup__policy-title {
+  font-weight: 700;
+  display: block;
 }
 
 .title {
