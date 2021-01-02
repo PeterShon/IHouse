@@ -40,23 +40,26 @@ export function popups() {
       } else {
         bodyLock();
       }
-      curentPopup.classList.add("open");
-      if (curentPopup.querySelector('.js_focus')) {
-        setTimeout(() => {
-          document.querySelector(".js_focus").focus();
-        }, 200);
-      }
       if (curentButton.closest('.card-product')) {
         let curentCard = curentButton.closest('.card-product')
         let curentProduct = curentCard.querySelector('.card-product__header').innerHTML
         let productBox = curentPopup.querySelector('.popup__product-name')
         let productTitle = curentPopup.querySelector('.popup__feedback-title')
         if (curentPopup.querySelector('.popup__feedback-form')) {
-          setTimeout(() => {
-            productBox.value = curentProduct;
-            productTitle.innerHTML = curentProduct;
-          }, 200);
+          productBox.value = curentProduct;
+          productTitle.innerHTML = curentProduct;
         }
+      }
+      curentPopup.classList.add("open");
+      if (curentPopup.querySelector('.js_focus')) {
+        setTimeout(() => {
+          document.querySelector(".js_focus").focus();
+        }, 200);
+      }
+      if (curentPopup.classList.contains('js_close')) {
+        setTimeout(() => {
+          popupClose(curentPopup)
+        }, 2000);
       }
       curentPopup.addEventListener("click", function (e) {
         if (!e.target.closest(".popup__content")) {

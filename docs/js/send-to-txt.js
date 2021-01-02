@@ -11,6 +11,7 @@ export function sendToTXT() {
           url: 'saver.php',
           data: $(child).serialize(),
           success: function (data) {
+            e.target.querySelector('.js_popup-thx').click();
           } //Здесь пишем функцию, которая произойдет при успешной отправке
         })
       } else {

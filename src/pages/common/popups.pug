@@ -182,10 +182,12 @@
           .popup__feedback-title
           .popup__feedback-subtitle Заполните форму и мы свяжемся с вами!
         form.popup__feedback-form(action="#")
+          //при открытии поле .popup__product-name получает имя продукта с карточки
           input.popup__product-name(type='text' readonly name='product-name')
           input.popup__feedback-input.js_req(type="text" placeholder='Имя*' name='name')
           input.popup__feedback-input.js_req(type="text" placeholder='Телефон*' name='phone')
           button.popup__feedback-submit.button.button_max-wide(type='submit') Оставить заявку
+          a.popup__feedback-nextlink(href="thanks.html")
 //popup-feedback-consultation
 #popup-feedback-consultation.popup
   .popup__body
@@ -199,3 +201,13 @@
           input.popup__feedback-input.js_req(type="text" placeholder='Имя*' name='name')
           input.popup__feedback-input.js_req(type="text" placeholder='Телефон*' name='phone')
           button.popup__feedback-submit.button.button_max-wide(type='submit') Заказать консультацию
+          a.popup__feedback-nextlink(href="thanks.html")
+
+//popup-thx
+#popup-thx.popup.js_close
+  .popup__body
+    .popup__content.popup__content_delivery-grid.popup__content_blue
+      a.popup__close.popup__close_near(href="#")
+      .popup__thx-wrapper
+        .popup__thx-header Спасибо!
+        .popup__thx-message Ваши данные получены.

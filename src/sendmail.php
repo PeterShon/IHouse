@@ -13,7 +13,7 @@
 	 $mail->Host = "smtp.gmail.com";
 	 $mail->SMTPAuth = true;
  	 $mail->Username = 'ihousestudioofFurniture@gmail.com';
-	 $mail->Password = '!qwerty1';
+	 $mail->Password = 'asdTOWpo54,';
     $mail->SMTPSecure = 'ssl';
 	 $mail->Port = 465;
 
@@ -48,13 +48,13 @@
    $mail->Body = $body;
 
    //обработчик отправки
-   if (!$mail->send()) {
-      $message = 'Ошибка';
-   } else {
-      $message = 'Данные отправлены!';
-   }
+    if (!$mail->send()) {
+       $message = 'Ошибка';
+    } else {
+       $message = 'Данные отправлены!';
+    }
 
-   $response = ['message' => $message];
+    $response = ['message' => $message];
 
    header('Content-type: application/json');
    echo json_encode($response);

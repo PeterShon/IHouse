@@ -44,13 +44,13 @@
    $mail->Body = $body;
 
    //обработчик отправки
-   if (!$mail->send()) {
-      $message = 'Ошибка';
-   } else {
-      $message = 'Данные отправлены!';
-   }
+    if (!$mail->send()) {
+       $message = 'Ошибка';
+    } else {
+       $message = 'Данные отправлены!';
+    }
 
-   $response = ['message' => $message];
+    $response = ['message' => $message];
 
    header('Content-type: application/json');
    echo json_encode($response);

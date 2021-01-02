@@ -18,8 +18,9 @@ export function feedback() {
         });
         if (response.ok) {
           let result = await response.json();
-          alert(result.message);
+          console.log(result.message);
           form.reset();
+          e.target.querySelector('.js_popup-thx').click();
         } else {
           alert('Ошибка');
         }
@@ -30,7 +31,7 @@ export function feedback() {
 
     function formValidate(form) {
       let error = 0;
-      let formReq = document.querySelectorAll('.js_req') //require - обязательное поле //создаёт объект со всеми элементами с классом обязательности
+      let formReq = form.querySelectorAll('.js_req') //require - обязательное поле //создаёт объект со всеми элементами с классом обязательности
       //присвоение каждому обязательному объекту определённого результата
       for (let index = 0; index < formReq.length; index++) {
         const input = formReq[index];

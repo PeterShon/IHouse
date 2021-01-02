@@ -20,8 +20,9 @@ export function feedbackPopup() {
           });
           if (response.ok) {
             let result = await response.json();
-            alert(result.message);
+            console.log(result.message);
             form.reset();
+            e.target.querySelector('.popup__feedback-nextlink').click();
           } else {
             alert('Ошибка');
           }

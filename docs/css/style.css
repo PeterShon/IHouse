@@ -4327,18 +4327,29 @@ a {
 }
 
 .footer__created-by {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
   margin-top: 25px;
 }
 
-.footer__created-by:hover img {
+.footer__created-by svg {
+  width: 175px;
+  height: 54px;
+  transition: 0.3s;
+}
+
+.footer__created-by svg use {
+  fill: #ffffff;
+  transition: 0.3s;
+}
+
+.footer__created-by:hover svg {
   transform: scale(1.06);
 }
 
-.footer__creared-by-img {
-  display: block;
-  margin-left: auto;
-  transition: 0.6s;
+.footer__created-by:hover svg use {
+  fill: #b1e426;
+  transition: 1.5s;
 }
 
 .footer * {
@@ -4567,6 +4578,10 @@ body.lock {
   overflow: hidden;
 }
 
+.js_popup-thx {
+  display: none;
+}
+
 .popup {
   background: rgba(0, 77, 119, 0.6);
   position: fixed;
@@ -4587,6 +4602,7 @@ body.lock {
   /*popups - delivery*/
   /*popups - delivery*/
   /*popups - feedback*/
+  /*popups - thx*/
 }
 
 .popup.open {
@@ -4896,8 +4912,30 @@ body.lock {
   color: #000000;
 }
 
+.popup__feedback-input.js_error {
+  background: #ffbcbcb9;
+}
+
 .popup__feedback-submit {
   margin-top: 10px;
+}
+
+.popup__feedback-nextlink {
+  display: none;
+}
+
+.popup__thx-wrapper {
+  text-align: center;
+  font-size: 36px;
+  margin: 60px 250px 60px;
+}
+
+.popup__thx-header {
+  font-family: 'Playfair Display', serif;
+}
+
+.popup__thx-message {
+  margin-top: 63px;
 }
 
 .title {

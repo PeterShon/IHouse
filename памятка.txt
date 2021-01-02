@@ -8,8 +8,8 @@ mapbox - кастом карты для сайта
 
 
 ihousestudioofFurniture@gmail.com
-!qwerty1
-asdTOWpo54,
+!qwerty1 - elfsight.com
+asdTOWpo54, - google.com
 
 npm install --save-dev @babel/plugin-transform-runtime
 {

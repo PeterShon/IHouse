@@ -1,7 +1,9 @@
 body.lock {
   overflow: hidden;
 }
-
+.js_popup-thx {
+  display: none;
+}
 .popup {
   position: fixed;
   z-index: 20;
@@ -281,8 +283,28 @@ body.lock {
     &::placeholder {
       color: $black;
     }
+    &.js_error {
+      background-color: $error-bg;
+    }
   }
   &__feedback-submit {
     margin-top: 10px;
+  }
+  &__feedback-nextlink {
+    display: none;
+  }
+    
+  /*popups - thx*/
+  &__thx-wrapper {
+    text-align: center;
+    font-size: 36px;
+    margin: 60px 250px 60px;
+  }
+  &__thx-header {
+    font-family: 'Playfair Display', serif;
+
+  }
+  &__thx-message {
+    margin-top: 63px;
   }
 }

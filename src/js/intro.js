@@ -33,7 +33,7 @@ export function intro() {
     }
     if (document.querySelector('.main-message__bg')) {
       let mmbg = document.querySelector('.main-message__bg')
-      mmbg.style.background = `url(../img/main-message-bg.png) calc(80% + ${posX / might_1}px) calc(40% + ${posY / might_1}px)/20% no-repeat`
+      mmbg.style.background = `url(img/main-message-bg.png) calc(80% + ${posX / might_1}px) calc(40% + ${posY / might_1}px)/20% no-repeat`
     }
   }
   setTimeout(() => {
