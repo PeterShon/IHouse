@@ -1,6 +1,5 @@
 .pseudo-item {
   position: relative;
-  padding: 0 !important;
   &:hover > *, &:focus > *{
     background-color: $background-blue-lite;
     &:after {
@@ -51,6 +50,9 @@
     &:hover, &:focus {
       visibility: visible;
       opacity: 1;
+    }
+    @include media-custom(890px)  {
+      display: none;
     }
   }
   &__part {

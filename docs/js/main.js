@@ -11,6 +11,7 @@ import { feedback } from '../js/feedback.js'
 import { feedbackPopup } from '../js/feedback-popup.js'
 import { sendToTXT } from '../js/send-to-txt.js'
 import { search } from '../js/search.js'
+import { header } from '../js/header.js'
 
 
 $(document).ready(() => {
@@ -27,5 +28,6 @@ $(document).ready(() => {
   feedbackPopup()
   sendToTXT()
   search()
+  header(popups)
   // eslint-disable-next-line no-console
 })

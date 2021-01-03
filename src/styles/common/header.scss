@@ -1,6 +1,9 @@
 .header {
   &__conteiner {
-
+    @include media-custom(890px)  {
+      padding: 0;
+      height: 66px;
+    }
   }
   &__inner {
     display: flex;
@@ -10,18 +13,122 @@
 
     padding-top: 30px;
     padding-bottom: $header-padding + $category-high;
+    @include media-custom(1350px)  {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 30px;
+    }
+    @include media-custom(890px)  {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100vh;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 66px 1fr auto auto;
+      grid-column-gap: 30px;
+      padding: 0;
+
+      background-color: $white;
+      &::after, &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 10px;
+        height: 100%;
+
+        background: linear-gradient(to bottom, $white 66px, $background-blue 66px);
+        overflow: hidden;
+        opacity: 0;
+
+        transition: 0s;
+      }
+      &::before { right: 0; left: auto;}
+      &_active {
+        z-index: 3;
+        &::after, &::before {
+          overflow: visible;
+          opacity: 1;
+          transition: 0.5s;
+        }
+      }
+    }
+    @include media-custom-horisontal(595px)  {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 66px 1fr auto auto;
+    }
   }
   &__logo {
     width: 189.33px;
     height: 47px;
+    @include media-custom(1350px)  {
+      grid-row: 1/-1;
+    }
+    @include media-custom(890px)  {
+      grid-row: 1/2;
+      padding: 20px 0;
+      height: 100%;
+      width: 100%;
+      margin-left: 10px;
+    }
   }
   &__logo-img {
     width: 100%;
     height: 100%;
+    @include media-custom(890px)  {
+      object-fit: contain;
+      object-position: left center;
+    }
   }
   &__nav {
     display: flex;
     justify-content: space-between;
+    @include media-custom(1760px)  {
+      flex: 1 0 auto;
+      justify-content: center;
+    }
+    @include media-custom(1350px)  {
+      position: absolute;
+      top: 0; left: 0%;
+
+      visibility: hidden;
+      opacity: 0;
+
+      transition: 0s;
+    }
+    @include media-custom(890px)  {
+      position: relative;
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      @include media-custom-horisontal(595px)  {
+        grid-row: 2/-1;
+        grid-column: 1/3;
+      }
+    }
+    &_active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      z-index: 3;
+      height: 107px;
+      width: 100%;
+      
+      background-color: $white;
+      visibility: visible;
+      opacity: 1;
+
+      transition: 0.3s;
+      @include media-custom(890px)  {
+        height: 100%;
+        padding-top: 30px;
+
+        background-color: $background-blue;
+      }
+    }
   }
   &__nav-list {
     display: flex;
@@ -31,8 +138,27 @@
     font-size: 12px;
     font-weight: 600;
     list-style: none;
+    @include media-custom(890px)  {
+      flex-direction: column;
+    }
     & li {
       padding: 12px 27.5px 12px;
+      &:last-child {
+        padding: 0;
+      }
+      @include media-custom(1760px)  {
+        padding: 12px 20px 12px;
+      }
+      @include media-custom(1625px)  {
+        padding: 12px 12px 12px;
+      }
+      @include media-custom(890px)  {
+        text-align: center;
+        padding: 10px 0;
+        &:last-child {
+          padding: 10px 0;
+        }
+      }
     }
     & a {
       color: $black;
@@ -42,11 +168,27 @@
     }
   }
   &__pseudo-item {
-    
+    @include media-custom(890px)  {
+      padding: 10px 0;
+    }
   }
 
   &__translator {
-
+    @include media-custom(1350px)  {
+      grid-row: 1/2;
+      grid-column: 3/4;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+    }
+    @include media-custom(890px)  {
+      grid-row: 1/2;
+      grid-column: 2/3;
+      padding: 20px 0;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &__translator-btn {
     padding: auto 9px;
@@ -62,6 +204,12 @@
     &:hover {
       color: $active-link;
     }
+    @include media-custom(1350px)  {
+      line-height: 1;
+    }
+    @include media-custom(890px)  {
+      font-size: 18px;
+    }
   }
   &__find {
     width: 14px; height: 14px;
@@ -76,15 +224,110 @@
     &:hover {
       background-size: 65%;
     }
+    @include media-custom(1350px)  {
+      grid-row: 2/3;
+      grid-column: 3/4;
+      margin: 0 auto;
+      background-position: center 80%;
+    }
+    @include media-custom(890px)  {
+      position: relative;
+      z-index: 3;
+
+      grid-row: 3/4;
+      grid-column: 1/-1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 35px 0;
+      height: 20px;
+      width: 100%;
+
+      background-size: 20px;
+      background-position: calc(50% - 30px) center;
+      background-color: $background-blue;
+      border-top: 1px solid $intro-color;
+      border-bottom: 1px solid $intro-color;
+      visibility: hidden;
+      opacity: 0;
+            
+      transition: 0.3s;
+      @include media-custom-horisontal(595px)  {
+        grid-row: 4/5;
+        grid-column: 3/-1;
+      }
+      &:hover {
+        background-size: 20px;
+      }
+      &::after {
+        content: 'Поиск';
+        display: inline-block;
+        color: $black;
+        margin-left: 33px;
+        font-size: 14px;
+      }
+      .header__inner_active & {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
   &__connection {
     flex: 0 1 480px;
     min-width: 0; //slider-fix
+    @include media-custom(1625px)  {
+      flex: 0 1 350px;
+    }
+    @include media-custom(1420px)  {
+      flex: 0 1 300px;
+    }
+    @include media-custom(1350px)  {
+      grid-row: 1/-1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    @include media-custom(890px)  {
+      position: relative;
+      z-index: 3;
+
+      grid-row: 4/5;
+      grid-column: 1/-1;
+      justify-content: center;
+      padding-top: 25px;
+      padding-bottom: 30px;
+
+      visibility: hidden;
+      opacity: 0;
+      background-color: $background-blue;
+
+      transition: 0.3s;
+      .header__inner_active & {
+        visibility: visible;
+        opacity: 1;
+      }
+      @include media-custom-horisontal(595px)  {
+        grid-row: 2/4;
+        grid-column: 3/-1;
+      }
+    }
   }
   &__adress {
     font-size: 12px;
     color: $black;
     text-align: right;
+    @include media-custom(1350px)  {
+      width: 480px;
+      display: flex;
+      text-align: left;
+    }
+    @include media-custom(890px)  {
+      width: 100%;
+      text-align: center;
+    }
   }
   &__adress-first {
     color: $black;
@@ -109,8 +352,72 @@
     &:hover {
       color: $active-link;
     }
-  }
-  @include media-tablet {
-
+    @include media-custom(1350px)  {
+      display: flex;
+      text-align: left;
+      margin-top: 0;
     }
+    @include media-custom(890px)  {
+      justify-content: center;
+      padding-top: 14px;
+    }
+  }
+  /* header --- burger */
+  &__burger {
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    padding: 17px 33px 17px 30px;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background-color: transparent;
+    outline: none;
+
+    transition: 0.3s;
+    & span {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      flex: 1 0 40px;
+      height: 3px;
+      background-color: $black;
+      transition: 0.2s;
+      &::after, &::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+
+        background-color: $black;
+
+        transition: 0.2s;
+      }
+      &::after {transform: translateY(-10px);}
+      &::before {transform: translateY(10px);}
+    }
+    &_active {
+      & span {
+        background-color: transparent;
+        &::after {transform: translateY(0px) rotate(45deg);}
+        &::before {transform: translateY(0px) rotate(-45deg);;}
+      }
+    }
+    @include media-custom(1350px)  {
+      grid-row: 1 / -1;
+      display: flex;
+      position: relative;
+      z-index: 3;
+    }
+    @include media-custom(890px)  {
+      grid-row: 1/2;
+      grid-column: 3/4;
+      margin-left: auto;
+    }
+  }
 }

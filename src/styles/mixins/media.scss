@@ -30,3 +30,10 @@
         @content;
     }
 }
+
+@mixin media-custom-horisontal($height) {
+
+  @media all and (orientation: landscape) and (max-height: $height) and (max-width: 890px){
+      @content;
+  }
+}

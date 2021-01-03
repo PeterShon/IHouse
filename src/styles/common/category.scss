@@ -3,6 +3,9 @@
   top: $category-high;
   width: 100%;
   min-height: calc(100% - 112px);
+  @include media-custom(890px)  {
+    display: none;
+  }
   &__inner {
     position: sticky;
     z-index: 2;

@@ -181,7 +181,6 @@
     & svg {
       width: 175px;
       height: 54px;
-      transition: 0.3s;
       & use {
         fill: $white;
         transition: 0.3s;
@@ -189,7 +188,6 @@
     }
     &:hover {
       & svg {
-        transform: scale(1.06);
         & use {
           fill: $grad;
           transition: 1.5s;
