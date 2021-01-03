@@ -4,7 +4,7 @@ footer.footer
       a.footer__logo(href="index.html")
         .footer__logo-wrapper
           img.footer__logo-img(src="./img/logo-white.svg", alt="logo")
-        span.footer__copyright © 2015-2020 TOO I‘HOUSE
+        span.footer__copyright.footer__copyright_hide © 2015-2020 TOO I‘HOUSE
       a.footer__address(href="address.html")
         span.footer__city ​г. Алматы
         span.footer__full-address пр-т Жибек Жолы, 135​, ТЦ Жибек Жолы​, 3 этаж; бутик C25/26 
@@ -24,7 +24,7 @@ footer.footer
       nav.footer__navigation
         ul.footer__navigation-list
           li
-            a.js_popup-link(href="#popup-category") Каталог
+            a.js_category.js_popup-link(href="#popup-category") Каталог
           li
             a(href="collection.html") Коллекции
           li
@@ -47,6 +47,13 @@ footer.footer
             input.subscribe__input.js_email(type="text" placeholder="Введите e-mail*" name = 'email')
             button.subscribe__submit(type="submit")
             a.js_popup-thx.js_popup-link(href="#popup-thx")
-        a.footer__created-by(href="https://gradmedia.kz/digital" target="_blank")
+        a.footer__created-by.footer__created-by_hide(href="https://gradmedia.kz/digital" target="_blank")
           svg
             use(xlink:href="./img/sprite.svg#logo-grad")
+      span.footer__copyright.footer__copyright_mobile © 2015-2020 TOO I‘HOUSE
+      a.footer__created-by.footer__created-by_mobile(href="https://gradmedia.kz/digital" target="_blank")
+        svg
+          use(xlink:href="./img/sprite.svg#logo-grad")
+      .footer__line.footer__line_1
+      .footer__line.footer__line_2
+      .footer__line.footer__line_3

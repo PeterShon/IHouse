@@ -26,6 +26,9 @@
     font-size: 12px;
     background-color: transparent;
     color: $white;
+    @include media-custom(590px)  {
+      flex: 1 0 auto;
+    }
     &::placeholder {
       color: $white;
       font-style: italic;
@@ -48,6 +51,9 @@
     background-position: center;
 
     transition: 0.3s;
+    @include media-custom(590px)  {
+      flex: 0 0 69px;
+    }
     &:hover {
       background-size: 27%;
     }

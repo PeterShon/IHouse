@@ -4,11 +4,10 @@ export function header(fPopups) {
   let burgerItem = document.querySelector('.header__burger');
   let header = document.querySelector('.header__inner')
   let pseudo = document.querySelector('.pseudo-item__link')
-  let category = document.querySelector('.js_category')
+  let category = document.querySelectorAll('.js_category')
   burgerItem.addEventListener('click', burgerStateShow);
   changeLink();
   window.addEventListener('resize', changeLink)
-
   function burgerStateShow() {
     if (window.matchMedia("(max-width: 1350px)").matches) {
       if (!nav.classList.contains('header__nav_active')) {
@@ -25,6 +24,7 @@ export function header(fPopups) {
     }
   }
   function changeLink() {
+
     if (window.matchMedia("(max-width: 890px)").matches) {
       pseudo.classList.add('js_popup-link');
       pseudo.href = "#popup-delivery"
@@ -33,13 +33,18 @@ export function header(fPopups) {
       pseudo.classList.remove('js_popup-link');
       pseudo.href = "#"
     }
-    if (window.matchMedia("(max-width: 1250px)").matches) {
-      category.classList.remove('js_popup-link');
-      category.href = "catalog.html"
-    } else {
-      category.classList.add('js_popup-link');
-      category.href = "#popup-delivery"
-      fPopups();
+
+    for (let i = 0; i < category.length; i++) {
+      let cat = category[i];
+      if (window.matchMedia("(max-width: 1250px)").matches) {
+        cat.classList.remove('js_popup-link');
+        cat.href = "catalog.html"
+      } else {
+        cat.classList.add('js_popup-link');
+        cat.href = "#popup-category"
+        fPopups();
+      }
     }
+
   }
 }
