@@ -17,6 +17,9 @@
     color: $black;
 
     transition: 0.3s;
+    @include media-custom(890px)  {
+      font-size: 14px;
+    }
     &:after {
       content: url(../img/arrow-bottom.svg);
       margin-left: 10px;

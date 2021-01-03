@@ -16,7 +16,9 @@ export function popups() {
         const popupName = popupLink.getAttribute("href").replace("#", "");
         const curentPopup = document.getElementById(popupName);
         popupOpen(curentPopup, e.target);
-        e.preventDefault(); //запрет перезагружать страницу
+        if (popupLink.classList.contains('js_popup-link')) {
+          e.preventDefault(); //запрет перезагружать страницу
+        }
       });
     }
   }

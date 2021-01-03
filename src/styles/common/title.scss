@@ -18,6 +18,12 @@
     & h2, & h1 {
       font-size: 56px;
       font-weight: 400;
+      @include media-custom(700px)  {
+        font-size: 46px;
+      }
+      @include media-custom(400px)  {
+        font-size: 30px;
+      }
     }
   }
   &_small {

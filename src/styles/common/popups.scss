@@ -58,10 +58,21 @@ body.lock {
     transform: perspective(600px) translate(0, -50%) rotateX(5deg);
     opacity: 0;
     transition: 0.3s;
+    @include media-custom(810px)  {
+      padding: 30px 10px 20px;
+    }
     &_small {
       max-width: 616px;
       max-height: 184px;
       padding: 66px 131px;
+      @include media-custom(890px)  {
+        padding: 50px 40px;
+      }
+    }
+    &_delivery {
+      @include media-custom(700px)  {
+        width: 100%;
+      }
     }
     &_blue {
       background-color: $background-blue-lite;
@@ -109,6 +120,9 @@ body.lock {
 
     padding: 56px 48px;
     transition: 0.3s;
+    @include media-custom(1500px)  {
+      padding: 25px 15px;
+    }
     &_phantom {
       visibility: hidden;
     }
@@ -177,6 +191,9 @@ body.lock {
     &::placeholder {
       color: $black-opacity-50;
     }
+    @include media-custom(890px)  {
+      width: 230px;
+    }
   }
   &__finder-input-icon {
     position: absolute;
@@ -189,15 +206,35 @@ body.lock {
   &__delivery-title {
     margin-top: 52px;
     margin-bottom: 83px;
+    @include media-custom(810px)  {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
   }
   &__delivery-wrapper {
     display: grid;
     grid-template-columns: 94px minmax(200px, 350px);
     grid-column-gap: 59px;
     margin: 0 260px;
+    @include media-custom(1350px)  {
+      margin: 0 100px;
+    }
+    @include media-custom(810px)  {
+      margin: 0 50px;
+    }
+    @include media-custom(700px)  {
+      margin: 0;
+      grid-column-gap: 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: 40px auto;
+    }
     &_pay {
       margin-top: 30px;
       margin-bottom: 100px;
+      @include media-custom(810px)  {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
     }
   }
   &__delivery-icon {
@@ -205,15 +242,24 @@ body.lock {
     height: 100%;
     object-fit: contain;
     object-position: top center;
+    @include media-custom(700px)  {
+      object-position: top left;
+    }
   }
   &__delivery-list {
     display: grid;
     grid-template-rows: auto auto auto;
+    @include media-custom(700px)  {
+      margin-top: 10px;
+    }
   }
   &__delivery-item {
     margin: 0;
     &:not(:last-child) {
       margin-bottom: 27px;
+      @include media-custom(810px)  {
+        margin-bottom: 10px;
+      }
     }
     & a {
       color: $black;

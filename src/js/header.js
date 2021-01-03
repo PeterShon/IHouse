@@ -4,6 +4,7 @@ export function header(fPopups) {
   let burgerItem = document.querySelector('.header__burger');
   let header = document.querySelector('.header__inner')
   let pseudo = document.querySelector('.pseudo-item__link')
+  let category = document.querySelector('.js_category')
   burgerItem.addEventListener('click', burgerStateShow);
   changeLink();
   window.addEventListener('resize', changeLink)
@@ -31,6 +32,14 @@ export function header(fPopups) {
     } else {
       pseudo.classList.remove('js_popup-link');
       pseudo.href = "#"
+    }
+    if (window.matchMedia("(max-width: 1250px)").matches) {
+      category.classList.remove('js_popup-link');
+      category.href = "catalog.html"
+    } else {
+      category.classList.add('js_popup-link');
+      category.href = "#popup-delivery"
+      fPopups();
     }
   }
 }
