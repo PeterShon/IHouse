@@ -2342,8 +2342,8 @@ a {
   display: none;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   padding: 17px 33px 17px 30px;
   cursor: pointer;
   border: none;
@@ -2357,7 +2357,7 @@ a {
   display: flex;
   justify-content: center;
   position: relative;
-  flex: 1 0 40px;
+  flex: 1 0 30px;
   height: 3px;
   transition: 0.2s;
 }
@@ -2367,17 +2367,17 @@ a {
   background: #000000;
   content: '';
   position: absolute;
-  width: 40px;
+  width: 30px;
   height: 3px;
   transition: 0.2s;
 }
 
 .header__burger span::after {
-  transform: translateY(-13px);
+  transform: translateY(-10px);
 }
 
 .header__burger span::before {
-  transform: translateY(13px);
+  transform: translateY(10px);
 }
 
 .header__burger_active span {
@@ -2865,6 +2865,7 @@ a {
 
 @media (max-width: 890px) {
   .card-product {
+    margin: 24px 15px 0;
     background: none;
   }
 }
@@ -3038,6 +3039,7 @@ a {
 @media (max-width: 890px) {
   .card-product__dimensions {
     font-size: 9px;
+    margin-bottom: 13px;
   }
 }
 
@@ -3944,8 +3946,20 @@ a {
   padding-top: 118px;
 }
 
+@media (max-width: 1350px) {
+  .category-field__inner {
+    padding-top: 50px;
+  }
+}
+
 .category-field__title {
   margin-bottom: 113px;
+}
+
+@media (max-width: 1350px) {
+  .category-field__title {
+    margin-bottom: 40px;
+  }
 }
 
 .category-field__box {
@@ -3955,6 +3969,20 @@ a {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 24px;
+}
+
+@media (max-width: 690px) {
+  .category-field__box {
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 590px) {
+  .category-field__box {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 204px);
+    height: auto;
+  }
 }
 
 .category-field__item {
@@ -3969,6 +3997,28 @@ a {
   background-size: cover;
   filter: grayscale(100%);
   transition: 0.3s;
+}
+
+@media (max-width: 890px) {
+  .category-field__item {
+    filter: grayscale(0%);
+  }
+}
+
+@media (max-width: 690px) {
+  .category-field__item {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 590px) {
+  .category-field__item:nth-child(odd) {
+    grid-column: 1 / 2;
+  }
+
+  .category-field__item:nth-child(even) {
+    grid-column: 2 / 3;
+  }
 }
 
 .category-field__item_cushioned-furniture {
@@ -4015,6 +4065,12 @@ a {
   filter: grayscale(0);
   color: rgba(255, 255, 255, 0.4);
   font-size: 36px;
+}
+
+@media (max-width: 690px) {
+  .category-field__item:hover {
+    font-size: 24px;
+  }
 }
 
 .about-us {

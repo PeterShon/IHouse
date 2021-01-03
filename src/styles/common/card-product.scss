@@ -17,6 +17,7 @@
     margin: 48px 15px 0;
   }
   @include media-custom(890px)  {
+    margin: 24px 15px 0;
     background: none;
   }
   &:after {
@@ -154,6 +155,7 @@
     line-height: 1.79;
     @include media-custom(890px)  {
       font-size: 9px;
+      margin-bottom: 13px;
     }
     .card-product_collection &{
       padding: 0 20px;

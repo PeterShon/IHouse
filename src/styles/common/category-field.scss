@@ -6,9 +6,15 @@
     align-items: center;
     width: 100%;
     padding-top: 118px;
+    @include media-custom(1350px)  {
+      padding-top: 50px;
+    }
   }
   &__title {
     margin-bottom: 113px;
+    @include media-custom(1350px)  {
+      margin-bottom: 40px;
+    }
   }
   &__box {
     width: 100%;
@@ -17,6 +23,14 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 24px;
+    @include media-custom(690px)  {
+      grid-gap: 10px;
+    }
+    @include media-custom(590px)  {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 204px);
+      height: auto;
+    }
   }
   &__item {
     display: flex;
@@ -33,6 +47,16 @@
     filter: grayscale(100%);
 
     transition: 0.3s;
+    @include media-custom(890px)  {
+      filter: grayscale(0%);
+    }
+    @include media-custom(690px)  {
+      font-size: 18px;
+    }
+    @include media-custom(590px)  {
+      &:nth-child(odd) {grid-column: 1 / 2;}
+      &:nth-child(even) {grid-column: 2 / 3;}
+    }
     &_cushioned-furniture {
       grid-column: 1 / 7;
       background: url(../img/category_cushioned-furniture.jpg) center/cover no-repeat;
@@ -69,6 +93,9 @@
       filter: grayscale(0);
       color: $white-opacity-40;
       font-size: 36px;
+      @include media-custom(690px)  {
+        font-size: 24px;
+      }
     }
   }
 }
