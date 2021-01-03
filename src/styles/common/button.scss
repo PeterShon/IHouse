@@ -1,5 +1,6 @@
 .button {
   width: 219px;
+  height: 46px;
   padding: 11px 33px;
 
   background-color: $background-button;
@@ -14,6 +15,7 @@
   text-align: center;
   @include media-custom(890px)  {
     width: 179px;
+    height: 37px;
     font-size: 12px;
   }
   &_wide {

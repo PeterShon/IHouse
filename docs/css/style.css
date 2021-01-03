@@ -3645,6 +3645,18 @@ a {
   height: 631px;
 }
 
+@media (max-width: 1350px) {
+  .subscribe-section {
+    height: 400px;
+  }
+}
+
+@media (max-width: 590px) {
+  .subscribe-section {
+    height: 362px;
+  }
+}
+
 .subscribe-section__bg {
   position: absolute;
   top: 0;
@@ -3858,8 +3870,32 @@ a {
   height: 286px;
 }
 
+@media (max-width: 1350px) {
+  .subscriber {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  .subscriber {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 890px) {
+  .subscriber {
+    width: calc(100vw - 40px);
+  }
+}
+
 .subscriber__title {
   margin-bottom: 24px;
+}
+
+@media (max-width: 590px) {
+  .subscriber__title {
+    margin-bottom: 15px;
+  }
 }
 
 .subscriber_small .subscriber__title {
@@ -3869,6 +3905,16 @@ a {
 .subscriber__description {
   margin-bottom: 45px;
   font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 590px) {
+  .subscriber__description {
+    margin-bottom: 25px;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 
 .subscriber_small .subscriber__description {
@@ -3887,12 +3933,26 @@ a {
   padding: 0 11px;
 }
 
+@media (max-width: 590px) {
+  .subscriber__form {
+    flex-direction: column;
+    width: calc(100% - 20px);
+  }
+}
+
 .subscriber__input {
   height: 46px;
   width: 219px;
   padding: 11px 5px 7px 16px;
   margin-right: 14px;
   font-size: 12px;
+}
+
+@media (max-width: 590px) {
+  .subscriber__input {
+    background-color: #BFE8E5;
+    width: 100%;
+  }
 }
 
 .subscriber__input::-moz-placeholder {
@@ -3924,6 +3984,14 @@ a {
 .subscriber__button {
   margin-left: 14px;
   border: 1px solid transparent;
+}
+
+@media (max-width: 590px) {
+  .subscriber__button {
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 100% !important;
+  }
 }
 
 .subscriber_small .subscriber__button {
@@ -6254,9 +6322,9 @@ body.lock {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 590px) {
   .title_big * {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 
@@ -6277,6 +6345,7 @@ div.title:hover {
   font: 600 18px/1.47 'Roboto', sans-serif;
   background: #197BB0;
   width: 219px;
+  height: 46px;
   padding: 11px 33px;
   border: none;
   cursor: pointer;
@@ -6287,6 +6356,7 @@ div.title:hover {
 @media (max-width: 890px) {
   .button {
     width: 179px;
+    height: 37px;
     font-size: 12px;
   }
 }

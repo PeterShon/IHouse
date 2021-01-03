@@ -7,8 +7,20 @@
   background-color: $background-blue;
   width: 47vw;
   height: 286px;
+  @include media-custom(1350px)  {
+    width: 60vw;
+  }
+  @include media-custom(1100px)  {
+    width: 80vw;
+  }
+  @include media-custom(890px)  {
+    width: calc(100vw - 40px);
+  }
   &__title {
     margin-bottom: 24px;
+    @include media-custom(590px)  {
+      margin-bottom: 15px;
+    }
     .subscriber_small & {
       margin-bottom: 17px;
     }
@@ -17,6 +29,14 @@
     margin-bottom: 45px;
 
     font-weight: 600;
+    text-align: center;
+    @include media-custom(590px)  {
+      margin-bottom: 25px;
+      padding: 0 30px;
+
+      font-size: 14px;
+      font-weight: 400;
+    }
     .subscriber_small & {
       margin-bottom: 19px;
 
@@ -33,6 +53,10 @@
       flex-wrap: wrap;
       padding: 0 11px;
     }
+    @include media-custom(590px)  {
+      flex-direction: column;
+      width: calc(100% - 20px);
+    }
   }
   &__input {
     height: 46px;
@@ -41,6 +65,10 @@
     margin-right: 14px;
 
     font-size: 12px;
+    @include media-custom(590px)  {
+      background-color: $background-blue;
+      width: 100%;
+    }
     &::placeholder {
       color: $black;
       font-style: italic;
@@ -59,6 +87,11 @@
     margin-left: 14px;
 
     border: 1px solid transparent;
+    @include media-custom(590px)  {
+      margin-left: 0px;
+      margin-top: 10px;
+      width: 100% !important;
+    }
     .subscriber_small & {
       width: 100%;
       margin-left: 0px;
