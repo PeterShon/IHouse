@@ -300,9 +300,16 @@ body.lock {
     margin-top: 20px;
     margin-bottom: 77px;
     text-align: center;
+    @include media-custom(550px)  {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
   }
   &__feedback-title {
     font-size: 48px;
+    @include media-custom(550px)  {
+      font-size: 28px;
+    }
     .popup__feedback_consultation & {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -312,6 +319,12 @@ body.lock {
   &__feedback-subtitle {
     margin-top: 25px;
     font-size: 24px;
+    @include media-custom(550px)  {
+      font-size: 16px;
+      margin-top: 15px;
+      width: auto;
+      max-width: 300px;
+    }
   }
   &__feedback-form {
     display: grid;
@@ -319,6 +332,10 @@ body.lock {
     grid-row-gap: 29px;
     width: 302px;
     margin-bottom: 140px;
+    @include media-custom(550px)  {
+      width: 100%;
+      margin-bottom: 30px;
+    }
   }
   &__feedback-input {
     padding: 15px 15px 19px;
@@ -335,6 +352,10 @@ body.lock {
   }
   &__feedback-submit {
     margin-top: 10px;
+    @include media-custom(550px)  {
+      margin-top: 0px;
+      height: 52px !important;
+    }
   }
   &__feedback-nextlink {
     display: none;

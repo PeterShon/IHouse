@@ -7,6 +7,12 @@
   padding: 108px 0 64px;
 
   background-color: $background-grey-dark;
+  @include media-custom(890px)  {
+    padding: 70px 0 50px;
+  }
+  @include media-custom(590px)  {
+    padding: 50px 0 0px;
+  }
   &__header{
     .collections_list & {
       width: 100%;
@@ -20,7 +26,11 @@
       transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
     }
   }
-  &__container {}
+  &__conteiner {
+    @include media-custom(590px)  {
+      padding: 0;
+    }
+  }
   &__inner {}
   &__title {}
   &__panel {
@@ -28,8 +38,40 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 109px;
+    @include media-custom(890px)  {
+      margin-top: 50px;
+    }
+    @include media-custom(790px)  {
+      position: relative;
+      align-items: center;
+      margin: 20px auto 0;
+      max-width: calc(100vw - 140px);
+    }
+    @include media-custom(590px)  {
+      margin-top: 30px;
+    }
     .collections_list &{
       margin-top: 80px;
+    }
+    & .slick-arrow {
+      position: absolute;
+
+      width: 29px;
+      height: 30px;
+      padding: 0;
+
+      background: url(../img/arrow-slider-m.svg) no-repeat center/contain transparent;
+      background-color: transparent;
+      border: none;
+
+      font-size: 0;
+    }
+    & .slick-next {
+      transform: rotate(180deg);
+      right: -50px;
+    }
+    & .slick-prev {
+      left: -50px;
     }
   }
   &__button {
@@ -42,11 +84,25 @@
     cursor: pointer;
 
     transition: 0.3s;
+    @include media-custom(1200px)  {
+      width: 200px;
+    }
+    @include media-custom(890px)  {
+      width: 180px;
+    }
     &:hover {
       border: 1px solid $black-opacity-50;
     }
     &_active {
       border: 1px solid $black;
+      @include media-custom(790px)  {
+        border: 1px solid transparent;
+      }
+    }
+    @include media-custom(790px)  {
+      &.slick-current {
+        border: 1px solid $black;
+      }
     }
   }
   &__cards {
@@ -55,6 +111,12 @@
     justify-content: center;
     align-items: flex-end;
     margin-top: 85px;
+    @include media-custom(890px)  {
+      margin-top: 60px;
+    }
+    @include media-custom(590px)  {
+      margin-top: 30px;
+    }
     .collections_list &{
       flex-direction: column;
     }
@@ -64,9 +126,21 @@
     justify-content: center;
     position: relative;
     min-width: 0;
+    width: 100%;
+    max-width: calc(100vw - 40px);
+    @include media-custom(590px)  {
+      max-width: calc(100vw - 0px);
+    }
   }
   &__collection-card-wrapper {
     width: 100%; height: 738px;
+    min-width: 0;
+    @include media-custom(1250px)  {
+      height: 600px;
+    }
+    @include media-custom(1100px)  {
+      height: auto;
+    }
     .collections_list &{
       margin-bottom: 51px;
     }
@@ -78,6 +152,14 @@
     bottom: 40px;
     width: 247px;
     margin-left: 17vw;
+    @include media-custom(1250px)  {
+      margin-left: 5vw;
+    }
+    @include media-custom(1100px)  {
+      margin-left: 0vw;
+      bottom: auto;
+      top: 270px;
+    }
     & .slick-arrow {
       flex: 0 0 60px;
       bottom: 0;

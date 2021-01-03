@@ -111,6 +111,32 @@ export function sliders() {
     focusOnSelect: true
   })
 
+  function slickify() {
+    $('.collections__panel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 1000,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      cssEase: `linear`,
+      focusOnSelect: true,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 790,
+          settings: 'unslick'
+        }
+      ]
+    })
+  }
+  slickify();
+  $(window).resize(function () {
+    var $windowWidth = $(window).width();
+    if ($windowWidth < 790) {
+      slickify();
+    }
+  });
+
   $(`.brand-slider__slider`).slick({
     centerMode: true,
     slidesToShow: 4,
@@ -161,7 +187,7 @@ export function sliders() {
       {
         breakpoint: 430,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1.7,
           centerMode: false,
           speed: 5000
         }

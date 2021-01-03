@@ -1,6 +1,12 @@
 .collection-card {
   display: flex;
   height: 738px;
+  @include media-custom(1250px)  {
+    height: 100%;
+  }
+  @include media-custom(1100px)  {
+    flex-direction: column;
+  }
   &__cover-side {
     position: relative;
     flex: 1 0 69%;
@@ -8,11 +14,17 @@
     &__image-wrapper {
       width: 100%; height: 100%;
       overflow: hidden;
+      @include media-custom(1100px)  {
+        height: 330px;
+      }
     }
     &__image {
       width: 100%; height: 100%;
       object-fit: cover;
       object-position: center;
+      @include media-custom(590px)  {
+        object-position: 37% center;
+      }
     }
     &__brand {
       position: absolute;
@@ -26,6 +38,12 @@
       padding: 30px 100px 50px 50px;
 
       background-color: $background-blue;
+      @include media-custom(1250px)  {
+        padding: 35px 9px 35px 30px;
+      }
+      @include media-custom(590px)  {
+        left: 10px;
+      }
     }
     &__brand-img {
       max-width: 133px;
@@ -34,6 +52,11 @@
 
       object-fit: contain;
       object-position: center;
+      @include media-custom(1250px)  {
+        max-width: 79px;
+        max-height: 44px;
+        margin-bottom: 8px;
+      }
     }
     &__about-collection {
       margin-bottom: 22px;
@@ -42,6 +65,11 @@
       font-weight: 700;
       font-style: italic;
       font-size: 23px;
+      @include media-custom(1250px)  {
+        font-size: 16px;
+        margin-bottom: 9px;
+        max-width: 249px;
+      }
     }
     &__link {}
 
@@ -53,5 +81,11 @@
     &__wrapper {
       height: 100%;
       padding: 10px 17px 43px 14px;
+      @include media-custom(890px)  {
+        padding: 10px 10px 20px 10px;
+      }
+      @include media-custom(590px)  {
+        padding: 0px 10px 20px 10px;
+      }
     }
 }
