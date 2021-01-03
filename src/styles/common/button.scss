@@ -11,6 +11,11 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 1.47;
+  text-align: center;
+  @include media-custom(890px)  {
+    width: 179px;
+    font-size: 12px;
+  }
   &_wide {
     width: 274px;
   }

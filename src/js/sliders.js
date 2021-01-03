@@ -16,9 +16,75 @@ export function sliders() {
     slidesToShow: 4,
     slidesToScroll: 4,
     speed: 2000,
-    autoplay: true,
+    //autoplay: true,
     autoplaySpeed: 2000,
     cssEase: `linear`,
+    responsive: [
+      {
+        breakpoint: 1380,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '250px',
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '200px',
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '150px',
+          speed: 1000,
+          //autoplay: true,
+          autoplaySpeed: 2000,
+          cssEase: `linear`,
+        }
+      },
+      {
+        breakpoint: 660,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '100px',
+          speed: 1000,
+          //autoplay: true,
+          autoplaySpeed: 2000,
+          cssEase: `linear`,
+        }
+      },
+      {
+        breakpoint: 470,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '50px',
+          speed: 1000,
+          //autoplay: true,
+          autoplaySpeed: 2000,
+          cssEase: `linear`,
+        }
+      }
+    ]
   })
 
   $(`.collections__cards-slider`).slick({
@@ -54,7 +120,53 @@ export function sliders() {
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: `linear`,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1380,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+          centerPadding: '150px'
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+          centerPadding: '100px'
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+          centerPadding: '50px',
+          speed: 5000
+        }
+      },
+      {
+        breakpoint: 430,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+          speed: 5000
+        }
+      }]
   })
 
   $(`.pagination__slider`).slick({

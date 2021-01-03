@@ -13,6 +13,12 @@
     url(../img/product-border-right-bottom.svg) 95% 95%/38px no-repeat;
 
   transition: 0.2s;
+  @include media-custom(1250px)  {
+    margin: 48px 15px 0;
+  }
+  @include media-custom(890px)  {
+    background: none;
+  }
   &:after {
     content: '';
     display: block;
@@ -29,12 +35,23 @@
       url(../img/product-border-left-top.svg) 0% 0%/38px no-repeat,
       url(../img/product-border-right-top.svg) 100% 0%/38px no-repeat,
       url(../img/product-border-right-bottom.svg) 100% 100%/38px no-repeat;
+    @include media-custom(890px)  {
+      background: none;
+    }
     &:after {
       background-color: #ffffff00;
     }
     & .card-product__button {
       visibility: visible;
       opacity: 1;
+      @include media-custom(890px)  {
+        visibility: hidden;
+        opacity: 0;
+        .slick-current & {
+          visibility: visible;
+          opacity: 1;
+        } 
+      }
     }
   }
   &_collection, &_single-product, &_search {
@@ -64,6 +81,9 @@
     outline: none;
 
     color: $black;
+    @include media-custom(550px)  {
+      padding: 0px 0px 100px;
+    }
     .card-product_collection &, .card-product_single-product &{
       width: 100%;
       align-items: flex-start;
@@ -111,6 +131,10 @@
 
     font-size: 24px;
     font-weight: 600;
+    text-align: center;
+    @include media-custom(890px)  {
+      font-size: 14px;
+    }
     .card-product_collection & {
       padding: 0 20px;
     }
@@ -128,6 +152,9 @@
 
     font-size: 14px;
     line-height: 1.79;
+    @include media-custom(890px)  {
+      font-size: 9px;
+    }
     .card-product_collection &{
       padding: 0 20px;
     }
@@ -138,6 +165,9 @@
   }
   &__price {
     font-weight: 600;
+    @include media-custom(890px)  {
+      font-size: 11px;
+    }
     .card-product_collection &, .card-product_single-product & {
       padding: 0 20px;
       margin-bottom: 24px;
@@ -174,6 +204,12 @@
 
       font-family: 'Roboto', sans-serif;
       font-weight: 700;
+      @include media-custom(1250px)  {
+        top: -15px; right: -15px;
+      }
+      @include media-custom(1000px)  {
+        width: 60px; height: 60px;
+      }
     }
     .card-product_collection &, .card-product_single-product &, .card-product_search & {
       &_active {
@@ -194,6 +230,14 @@
 
     transition: 0.2s;
     transition-delay: 0.1s;
+    @include media-custom(890px)  {
+      transition: 1s;
+      transition-delay: 0s;
+      .slick-current & {
+        visibility: visible;
+        opacity: 1;
+      } 
+    }
     .card-product_collection &, .card-product_single-product & {
       position: relative;
       top: 0; left: 0;

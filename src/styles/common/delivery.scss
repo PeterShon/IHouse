@@ -1,40 +1,86 @@
 .delivery {
   display: flex;
+  @include media-custom(1400px)  {
+    flex-direction: column;
+  }
   &__header {
     display: none;
   }
   &__info-side {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: space-evenly;
 
     flex: 0 0 50%;
-    padding: 120px 150px 112px 330px;
+    padding: 0px 150px 0px 0px;
 
     background-color: $background-blue;
+    @include media-custom(1400px)  {
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 40px 40px;
+    }
+    @include media-custom(890px)  {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__info-box {
     display: flex;
+    width: 491px;
+    max-height: 157px;
+    @include media-custom(890px) {
+      width: 100%;
+      &:last-child {
+        margin-top: 40px;
+      }
+    }
+    @include media-custom(440px) {
+      flex-direction: column;
+      max-height: none;
+    }
   }
   &__icon-wrapper {
     margin-right: 63px;
     flex: 0 0 88px;
+    @include media-custom(1100px)  {
+      flex: 0 0 60px;
+      margin-right: 20px;
+    }
+    @include media-custom(440px) {
+      height: 60px;
+      margin-bottom: 20px;
+    }
   }
   &__icon {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: top center;
+    @include media-custom(440px) {
+      object-position: top left;
+    }
   }
   &__text {
     display: flex;
     flex-direction: column;
     width: 345px;
+    @include media-custom(440px) {
+      width: 100%;
+    }
   }
   &__text-item {
     display: block;
     font-weight: 600;
+    @include media-custom(1100px)  {
+      font-size: 14px;
+    }
+    & a {
+      color: $black;
+      text-decoration: underline;
+      text-underline-position: under;
+    }
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -43,6 +89,9 @@
   &__text-item {}
   &__cover-side {
     flex: 0 0 50%;
+    @include media-custom(1400px)  {
+      height: 300px;
+    }
   }
   &__img-wrapper {
     width: 100%; height: 100%;
@@ -51,5 +100,8 @@
     width: 100%; height: 100%;
     object-fit: cover;
     object-position: center;
+    @include media-custom(1400px)  {
+      object-position: 100% 30%;
+    }
   }
 }

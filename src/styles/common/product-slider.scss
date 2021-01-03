@@ -1,14 +1,24 @@
 .product-slider {
-  &__conteriner {}
+  &__conteriner {
+    @include media-custom(890px)  {
+      padding: 0;
+    }
+  }
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 85px 0 45px 0;
+    @include media-custom(890px)  {
+      padding: 40px 0 0px 0;
+    }
   }
   &__title {
     margin-bottom: 88px;
+    @include media-custom(1250px)  {
+      margin-bottom: 0;
+    }
   }
   &__card-box {
     width: 100%;
@@ -40,6 +50,10 @@
       font-size: 0;
 
       transition: 0.3s;
+      @include media-custom(890px)  {
+        display: none;
+        visibility: hidden;
+      }
     }
     & .slick-prev {
       &:hover {
@@ -55,6 +69,5 @@
     }
   }
   &__card {
-
   }
 }

@@ -1,6 +1,9 @@
 .brand-slider {
   position: relative;
-  padding: 143px 0 143px; //68
+  padding: 143px 0 143px;
+  @include media-custom(890px)  {
+    padding: 50px 0;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -23,5 +26,9 @@
     height: 115px;
     object-fit: contain;
     object-position: center;
+    @include media-custom(890px)  {
+      width: 132px;
+      height: 60px;
+    }
   }
 }

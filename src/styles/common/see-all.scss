@@ -6,7 +6,16 @@
   width: 100%;
   height: 136px;
   background-color: $background-grey;
+  @include media-custom(890px)  {
+    background-color: $white;
+    height: 70px;
+    font-size: 14px;
+    transform: translateX(-30px);
+  }
   &__link {
     margin-top: 25px;
+    @include media-custom(890px)  {
+      margin-top: 0;
+    }
   }
 }

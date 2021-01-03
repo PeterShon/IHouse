@@ -9,13 +9,16 @@
   &:hover {
     color: $active-link;
   }
-  & h2 {
+  & * {
     margin: 0;
     font-weight: 400;
     font-size: 36px;
+    @include media-custom(890px)  {
+      font-size: 26px;
+    }
   }
   &_big {
-    & h2, & h1 {
+    & * {
       font-size: 56px;
       font-weight: 400;
       @include media-custom(700px)  {
@@ -27,12 +30,12 @@
     }
   }
   &_small {
-    & h2 {
+    & * {
       font-size: 22px;
     }
   }
   &_huge {
-    & h1 {
+    & * {
       font-size: 108px;
       margin: 0;
     }
