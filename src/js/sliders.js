@@ -16,7 +16,7 @@ export function sliders() {
     slidesToShow: 4,
     slidesToScroll: 4,
     speed: 2000,
-    //autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     cssEase: `linear`,
     responsive: [
@@ -53,7 +53,6 @@ export function sliders() {
           centerMode: true,
           centerPadding: '150px',
           speed: 1000,
-          //autoplay: true,
           autoplaySpeed: 2000,
           cssEase: `linear`,
         }
@@ -66,7 +65,6 @@ export function sliders() {
           centerMode: true,
           centerPadding: '100px',
           speed: 1000,
-          //autoplay: true,
           autoplaySpeed: 2000,
           cssEase: `linear`,
         }
@@ -79,13 +77,14 @@ export function sliders() {
           centerMode: true,
           centerPadding: '50px',
           speed: 1000,
-          //autoplay: true,
+
           autoplaySpeed: 2000,
           cssEase: `linear`,
         }
       }
     ]
   })
+  $(`.product-slider__card-box-inner`).slick("refresh");
 
   $(`.collections__cards-slider`).slick({
     slidesToShow: 1,
