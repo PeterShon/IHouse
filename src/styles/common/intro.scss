@@ -4,6 +4,12 @@
   justify-content: center;
   height: calc(100vh - 224px);
   width: 100%;
+  @include media-custom(1250px)  {
+    height: 415px;
+  }
+  @include media-custom(890px)  {
+    height: 315px;
+  }
   &__bg {
     width: 100%; height: 100%;
     background:
@@ -13,6 +19,30 @@
       url(../img/intro-el3.png) 66.5% 29%/18% no-repeat,
       url(../img/intro-bg.jpg) center/cover no-repeat;
     transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    @include media-custom(620px)  {
+      background:
+      url(../img/intro-el1.png) -150% 135%/75% no-repeat,
+      url(../img/intro-el4.png) 130% 110%/50% no-repeat,
+      url(../img/intro-el2.png) 25% 20%/18% no-repeat,
+      url(../img/intro-el3.png) 75% 29%/20% no-repeat,
+      url(../img/intro-bg.jpg) center/cover no-repeat;
+    }
+    @include media-custom(490px)  {
+      background:
+      url(../img/intro-el1.png) -180% 125%/80% no-repeat,
+      url(../img/intro-el4.png) 160% 130%/60% no-repeat,
+      url(../img/intro-el2.png) 25% 20%/25% no-repeat,
+      url(../img/intro-el3.png) 75% 29%/27% no-repeat,
+      url(../img/intro-bg.jpg) center/cover no-repeat;
+    }
+    @include media-custom(390px)  {
+      background:
+      url(../img/intro-el1.png) -280px 200%/120% no-repeat,
+      url(../img/intro-el4.png) 340% 150%/80% no-repeat,
+      url(../img/intro-el2.png) 0% 20%/35% no-repeat,
+      url(../img/intro-el3.png) 105% 20%/37% no-repeat,
+      url(../img/intro-bg.jpg) center/cover no-repeat;
+    }
   }
   &__frame {
     display: flex;
@@ -33,6 +63,12 @@
     font-size: 47px;
     font-weight: 400;
     text-transform: uppercase;
+    @include media-custom(890px)  {
+      font-size: 31px;
+    }
+    @include media-custom(590px)  {
+      font-size: 24px;
+    }
   }
   &__of {
     position: absolute;
@@ -41,11 +77,23 @@
     font-size: 46px;
     font-style: italic;
     font-weight: 400;
+    @include media-custom(890px)  {
+      font-size: 30px;
+    }
+    @include media-custom(590px)  {
+      font-size: 23px;
+    }
   }
   &__subtitle {
     margin: 17px 0 0;
     font-size: 47px;
     font-weight: 400;
     text-transform: uppercase;
+    @include media-custom(890px)  {
+      font-size: 31px;
+    }
+    @include media-custom(590px)  {
+      font-size: 24px;
+    }
   }
 }

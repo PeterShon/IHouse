@@ -1,4 +1,16 @@
 export function intro() {
+  window.addEventListener('resize', () => {
+    setFunc()
+  })
+
+  function setFunc() {
+    if (window.matchMedia("(max-width: 1250px)").matches) {
+      document.removeEventListener('mousemove', parallax)
+    } else {
+      document.addEventListener('mousemove', parallax)
+    }
+  }
+
   function parallax(e) {
     let clientWidth = window.innerWidth
     let clientHeight = window.innerHeight
@@ -36,7 +48,4 @@ export function intro() {
       mmbg.style.background = `url(img/main-message-bg.png) calc(80% + ${posX / might_1}px) calc(40% + ${posY / might_1}px)/20% no-repeat`
     }
   }
-  setTimeout(() => {
-    document.addEventListener('mousemove', parallax)
-  }, 0);
 }
