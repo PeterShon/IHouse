@@ -191,6 +191,8 @@
     }
   }
   &__find {
+    position: relative;
+
     width: 14px; height: 14px;
     padding: 13px;
 
@@ -202,6 +204,12 @@
     transition: 0.3s;
     &:hover {
       background-size: 65%;
+    }
+    & > a {
+      position: absolute;
+      top: 0; left: 0;
+      width: 30px;
+      height: 30px;
     }
     @include media-custom(1350px)  {
       grid-row: 2/3;
@@ -230,6 +238,10 @@
             
       transition: 0.3s;
       & > a {
+        position: relative;
+        top: auto; left: auto;
+        width: auto; height: auto;
+
         width: calc(100% - 20px);
         height: 100%;
         margin: 0 auto;

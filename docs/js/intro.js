@@ -1,4 +1,5 @@
 export function intro() {
+  setFunc()
   window.addEventListener('resize', () => {
     setFunc()
   })

@@ -187,7 +187,7 @@ export function sliders() {
       {
         breakpoint: 430,
         settings: {
-          slidesToShow: 1.7,
+          slidesToShow: 2,
           centerMode: false,
           speed: 5000
         }

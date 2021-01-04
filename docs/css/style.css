@@ -2140,6 +2140,7 @@ a {
 
 .header__find {
   background: url(../img/magnifier.svg) no-repeat center/45%;
+  position: relative;
   width: 14px;
   height: 14px;
   padding: 13px;
@@ -2148,6 +2149,14 @@ a {
 
 .header__find:hover {
   background-size: 65%;
+}
+
+.header__find > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 1350px) {
@@ -2179,6 +2188,11 @@ a {
   }
 
   .header__find > a {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
     width: calc(100% - 20px);
     height: 100%;
     margin: 0 auto;
@@ -3422,6 +3436,49 @@ a {
   transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
+@media (max-width: 1250px) {
+  .collections_list .collections__header {
+    background: url(../img/intro-el1.png) -45% 40%/54% no-repeat, url(../img/intro-el4.png) 108% 73%/32% no-repeat, url(../img/intro-el2.png) 38.5% 0%/15% no-repeat, url(../img/intro-el3.png) 66.5% 0%/18% no-repeat, url(../img/intro-bg.jpg) center/cover no-repeat;
+  }
+}
+
+@media (max-width: 890px) {
+  .collections_list .collections__header {
+    background: url(../img/intro-el1.png) -250% -500%/80% no-repeat, url(../img/intro-el4.png) 138% 173%/40% no-repeat, url(../img/intro-el2.png) 20% -50%/25% no-repeat, url(../img/intro-el3.png) 80% 0%/25% no-repeat, url(../img/intro-bg.jpg) center/cover no-repeat;
+  }
+}
+
+@media (max-width: 815px) {
+  .collections_list .collections__header {
+    background: url(../img/intro-el1.png) -150% 300%/70% no-repeat, url(../img/intro-el4.png) 138% 173%/40% no-repeat, url(../img/intro-el2.png) 20% 0%/25% no-repeat, url(../img/intro-el3.png) 80% 30%/25% no-repeat, url(../img/intro-bg.jpg) center/cover no-repeat;
+  }
+}
+
+@media (max-width: 720px) {
+  .collections_list .collections__header {
+    padding: 50px 0 30px;
+    background: url(../img/intro-el1.png) -80% -100%/60% no-repeat, url(../img/intro-el4.png) 138% 173%/40% no-repeat, url(../img/intro-el2.png) 20% 0%/25% no-repeat, url(../img/intro-el3.png) 80% 30%/25% no-repeat, url(../img/intro-bg.jpg) center/cover no-repeat;
+  }
+}
+
+@media (max-width: 490px) {
+  .collections_list .collections__header {
+    background: url(../img/intro-el1.png) -150% -400%/70% no-repeat, url(../img/intro-el4.png) 138% 173%/40% no-repeat, url(../img/intro-el2.png) 20% 0%/25% no-repeat, url(../img/intro-el3.png) 80% 30%/25% no-repeat, url(../img/intro-bg.jpg) center/cover no-repeat;
+  }
+}
+
+@media (max-width: 390px) {
+  .collections_list .collections__header {
+    background: url(../img/intro-el1.png) -180% 600%/75% no-repeat, url(../img/intro-el4.png) 138% 173%/40% no-repeat, url(../img/intro-el2.png) 20% 0%/25% no-repeat, url(../img/intro-el3.png) 80% 30%/25% no-repeat, url(../img/intro-bg.jpg) center/cover no-repeat;
+  }
+}
+
+@media (max-width: 360px) {
+  .collections_list .collections__header {
+    background: url(../img/intro-el1.png) -180% 400%/75% no-repeat, url(../img/intro-el4.png) 110% 173%/40% no-repeat, url(../img/intro-el2.png) 20% 0%/25% no-repeat, url(../img/intro-el3.png) 80% 30%/25% no-repeat, url(../img/intro-bg.jpg) center/cover no-repeat;
+  }
+}
+
 @media (max-width: 590px) {
   .collections__conteiner {
     padding: 0;
@@ -3458,6 +3515,18 @@ a {
 
 .collections_list .collections__panel {
   margin-top: 80px;
+}
+
+@media (max-width: 720px) {
+  .collections_list .collections__panel {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 490px) {
+  .collections_list .collections__panel {
+    margin-top: 20px;
+  }
 }
 
 .collections__panel .slick-arrow {

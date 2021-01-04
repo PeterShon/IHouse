@@ -24,6 +24,63 @@
       url(../img/intro-el3.png) 66.5% -200%/18% no-repeat,
       url(../img/intro-bg.jpg) center/cover no-repeat;
       transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+      @include media-custom(1250px)  {
+        background:
+        url(../img/intro-el1.png) -45% 40%/54% no-repeat,
+        url(../img/intro-el4.png) 108% 73%/32% no-repeat,
+        url(../img/intro-el2.png) 38.5% 0%/15% no-repeat,
+        url(../img/intro-el3.png) 66.5% 0%/18% no-repeat,
+        url(../img/intro-bg.jpg) center/cover no-repeat;
+      }
+      @include media-custom(890px)  {
+        background:
+        url(../img/intro-el1.png) -250% -500%/80% no-repeat,
+        url(../img/intro-el4.png) 138% 173%/40% no-repeat,
+        url(../img/intro-el2.png) 20% -50%/25% no-repeat,
+        url(../img/intro-el3.png) 80% 0%/25% no-repeat,
+        url(../img/intro-bg.jpg) center/cover no-repeat;
+      }
+      @include media-custom(815px)  {
+        background:
+        url(../img/intro-el1.png) -150% 300%/70% no-repeat,
+        url(../img/intro-el4.png) 138% 173%/40% no-repeat,
+        url(../img/intro-el2.png) 20% 0%/25% no-repeat,
+        url(../img/intro-el3.png) 80% 30%/25% no-repeat,
+        url(../img/intro-bg.jpg) center/cover no-repeat;
+      }
+      @include media-custom(720px)  {
+        padding: 50px 0 30px;
+        background:
+        url(../img/intro-el1.png) -80% -100%/60% no-repeat,
+        url(../img/intro-el4.png) 138% 173%/40% no-repeat,
+        url(../img/intro-el2.png) 20% 0%/25% no-repeat,
+        url(../img/intro-el3.png) 80% 30%/25% no-repeat,
+        url(../img/intro-bg.jpg) center/cover no-repeat;
+      }
+      @include media-custom(490px)  {
+        background:
+        url(../img/intro-el1.png) -150% -400%/70% no-repeat,
+        url(../img/intro-el4.png) 138% 173%/40% no-repeat,
+        url(../img/intro-el2.png) 20% 0%/25% no-repeat,
+        url(../img/intro-el3.png) 80% 30%/25% no-repeat,
+        url(../img/intro-bg.jpg) center/cover no-repeat;
+      }
+      @include media-custom(390px)  {
+        background:
+        url(../img/intro-el1.png) -180% 600%/75% no-repeat,
+        url(../img/intro-el4.png) 138% 173%/40% no-repeat,
+        url(../img/intro-el2.png) 20% 0%/25% no-repeat,
+        url(../img/intro-el3.png) 80% 30%/25% no-repeat,
+        url(../img/intro-bg.jpg) center/cover no-repeat;
+      }
+      @include media-custom(360px)  {
+        background:
+        url(../img/intro-el1.png) -180% 400%/75% no-repeat,
+        url(../img/intro-el4.png) 110% 173%/40% no-repeat,
+        url(../img/intro-el2.png) 20% 0%/25% no-repeat,
+        url(../img/intro-el3.png) 80% 30%/25% no-repeat,
+        url(../img/intro-bg.jpg) center/cover no-repeat;
+      }
     }
   }
   &__conteiner {
@@ -52,6 +109,12 @@
     }
     .collections_list &{
       margin-top: 80px;
+      @include media-custom(720px)  {
+        margin-top: 40px;
+      }
+      @include media-custom(490px)  {
+        margin-top: 20px;
+      }
     }
     & .slick-arrow {
       position: absolute;
