@@ -9,6 +9,8 @@ export function popups() {
 
   const timeout = 300;
 
+  popupsFilter(false)
+
   if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++) {
       const popupLink = popupLinks[index];
@@ -76,6 +78,7 @@ export function popups() {
       popupActive.classList.remove("open");
       if (doUnlock) {
         bodyUnLock();
+        popupsFilter(popupActive)
       }
     }
   }
@@ -126,6 +129,68 @@ export function popups() {
       popupClose(popupActive);
     }
   });
+
+
+  function popupsFilter(curentPopup) {
+    const notification = document.querySelector('#popup-notification-filter')
+    const durationsTime = 3000;
+    //нажатие на кнопки
+    popupFilterButtons()
+    checkboxes()
+    //кнопки
+    function popupFilterButtons() {
+      const notification = document.querySelector('#popup-notification-filter')
+      const popupFilters = document.querySelectorAll('.popup_filter')
+      if (popupFilters) {
+        for (let i = 0; i < popupFilters.length; i++) {
+          const popup = popupFilters[i];
+          const buttons = popup.querySelectorAll('button')
+          if (buttons) {
+            for (let i = 0; i < buttons.length; i++) {
+              const button = buttons[i];
+              button.addEventListener('click', (e) => {
+                notification.innerHTML = 'фильтр "' + e.target.innerHTML + '" выбран'
+                notification.classList.remove('notification_play')
+                notification.classList.add('notification_play')
+                setTimeout(() => {
+                  notification.classList.remove('notification_play')
+                }, 3000);
+              })
+            }
+          }
+        }
+      }
+    }
+
+    function checkboxes() {
+      if (curentPopup) {
+        const popupCloser = curentPopup.querySelector('.popup__close')
+        if (curentPopup.classList.contains('popup_filter')) {
+          //нажатие на чекбоксы
+          const chbs = curentPopup.querySelectorAll('.js_filter-chb')
+          let chb_counter = 0;
+          chbNotification()
+          function chbNotification() {
+            for (let i = 0; i < chbs.length; i++) {
+              const chb = chbs[i];
+              if (chb.checked) {
+                chb_counter++
+              }
+            }
+            if (chb_counter > 0) {
+              notification.innerHTML = 'в разделе "' + popupCloser.innerHTML + '" выбрано опций: ' + chb_counter;
+              notification.classList.remove('notification_play')
+              notification.classList.add('notification_play')
+              setTimeout(() => {
+                notification.classList.remove('notification_play')
+              }, durationsTime);
+            }
+            chb_counter = 0;
+          }
+        }
+      }
+    }
+  }
 
   //полифиллы
   (function () {

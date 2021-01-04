@@ -1,6 +1,23 @@
 .shift-widget {
   width: 412px;
   min-height: 44px;
+  @include media-custom(1024px)  {
+    width: 300px;
+  }
+  @include media-custom(768px)  {
+    width: auto;
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(3) {
+      flex: 1 0 210px;
+    }
+  }
+  @include media-custom(620px)  {
+    &:nth-child(3) {
+      flex: 1 0 130px;
+    }
+  }
   &__header {
     position: relative;
     padding: 10px 15px 10px 29px;
@@ -13,6 +30,9 @@
     color: $white;
 
     transition: 0.3s;
+    @include media-custom(425px)  {
+      font-size: 12px;
+    }
     &_by-date {
       background-color: $background-shifter;
     }
@@ -27,9 +47,15 @@
       .shift-widget_active & {
         transform: rotate(360deg);
       }
+      @include media-custom(425px)  {
+        content: url(../img/arrow-shift_m.svg);
+      }
     }
     &:hover {
       letter-spacing: 1px;
+      @include media-custom(768px)  {
+        letter-spacing: 0px;
+      }
     }
   }
   &__body {
@@ -40,13 +66,31 @@
     border: 1px solid $border-grey;
     border-top: 0px solid transparent;
     padding: 18px 61px 28px;
+    @include media-custom(1024px)  {
+      padding: 10px 30px 20px;
+    }
+    @include media-custom(768px)  {
+      padding: 10px 30px 20px;
+    }
+    @include media-custom(620px)  {
+      &:nth-child(2) {
+        padding: 10px 10px 20px;
+      }
+    }
     &_transparent {
       background-color: transparent;
       border: none;
       padding: 0;
+      @include media-custom(768px)  {
+        width: 100%;
+      }
     }
     &_small-padding {
       padding: 25px 29px 21px;
+    }
+    &_filters {
+      border: none;
+      margin-top: 24px;
     }
     &.js_shift-body {
       display: none;
@@ -57,6 +101,14 @@
     &_flex {
       display: flex;
       justify-content: space-around;
+      @include media-custom(768px)  {
+        flex-direction: column;
+      }
+      .shift-widget__body_filters & {
+        @include media-custom(768px)  {
+          flex-direction: row;
+        }
+      }
     }
     &:not(:first-child) {
       margin-top: 16px;
@@ -68,8 +120,19 @@
     align-items: flex-end;
 
     cursor: pointer;
+    @include media-custom(768px)  {
+      justify-content: center;
+      margin-top: 5px;
+    }
+    &:last-child {
+      margin-left: 5px;
+      @include media-custom(768px)  {
+        margin-left: 0px;
+      }
+    }
   }
   &__label {
+    width: 20px;
     font-size: 14px;
     color: $shift-black;
 
@@ -88,6 +151,9 @@
     text-align: right;
     font-size: 14px;
     -moz-appearance: textfield;
+    @include media-custom(768px)  {
+      flex: 1 0 auto;
+    }
     &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
       appearance: none;
     }
@@ -209,6 +275,11 @@
       position: relative;
       padding-left: 40px;
       font-size: 12px;
+      @include media-custom(768px)  {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
       &:after {
         content: '';
         position: absolute;
@@ -226,5 +297,45 @@
     align-items: center;
     justify-content: center;
     width: 140px;
+    @include media-custom(768px)  {
+      position: relative;
+      z-index: 1;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+
+  &_filter {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    min-height: auto;
+    padding: 10px 0;
+    position: relative;
+
+    background-color: $intro-color;
+
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 18px; height: 18px;
+      margin-right: 80px;
+      background: url(../img/filter.svg) center/contain no-repeat;
+      @include media-custom(425px)  {
+        width: 12px; height: 12px;
+        margin-right: 50px;
+      }
+    }
+    @include media-custom(768px)  {
+      display: flex;
+    }
+    @include media-custom(425px)  {
+      font-size: 12px;
+    }
   }
 }

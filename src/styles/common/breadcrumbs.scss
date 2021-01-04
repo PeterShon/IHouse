@@ -2,6 +2,9 @@
   &__list {
     display: flex;
     list-style: none;
+    @include media-custom(425px)  {
+      padding: 0;
+    }
     & li {
       &:not(:last-child) {
         position: relative;

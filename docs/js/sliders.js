@@ -112,27 +112,48 @@ export function sliders() {
   })
 
   function slickify() {
-    $('.collections__panel').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed: 1000,
-      autoplay: true,
-      autoplaySpeed: 10000,
-      cssEase: `linear`,
-      focusOnSelect: true,
-      mobileFirst: true,
-      responsive: [
-        {
-          breakpoint: 790,
-          settings: 'unslick'
-        }
-      ]
-    })
+    if (!$('.collections__panel').hasClass('slick-slider')) {
+      $('.collections__panel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1000,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        cssEase: `linear`,
+        focusOnSelect: true,
+        mobileFirst: true,
+        responsive: [
+          {
+            breakpoint: 790,
+            settings: 'unslick'
+          }
+        ]
+      });
+    }
+
+    if (!$('.catalog-header__panel').hasClass('slick-slider')) {
+      $('.catalog-header__panel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1000,
+        cssEase: `linear`,
+        focusOnSelect: true,
+        mobileFirst: true,
+        responsive: [
+          {
+            breakpoint: 790,
+            settings: 'unslick'
+          }
+        ]
+      })
+    }
   }
+
   slickify();
   $(window).resize(function () {
     var $windowWidth = $(window).width();
     if ($windowWidth < 790) {
+      console.log("окно меньше 790")
       slickify();
     }
   });

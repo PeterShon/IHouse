@@ -110,6 +110,11 @@
         grid-template-rows: minmax(auto, 223px) repeat(3, auto) 1fr;
       }
     }
+    .card-product_no-margin & {
+      @include media-custom(425px)  {
+        padding: 0px 0px 50px;
+      }
+    }
   }
   &__image-wrapper {
     max-width: 353px;
@@ -255,6 +260,11 @@
     }
     .card-product_no-margin & {
       top: -20px; right: -7px;
+      @include media-custom(425px)  {
+        width: 50px; height: 50px;
+        top: 10px; right: 10px;
+        font-size: 14px;
+      }
     }
   }
   &__button {
@@ -273,7 +283,11 @@
       .slick-current & {
         visibility: visible;
         opacity: 1;
-      } 
+      }
+      .products__item & {
+        visibility: visible;
+        opacity: 1;
+      }
     }
     .card-product_collection &, .card-product_single-product & {
       position: relative;
@@ -293,6 +307,12 @@
       }
       @include media-custom(590px)  {
         align-self: center;
+      }
+    }
+    .card-product_no-margin & {
+      @include media-custom(425px)  {
+        width: 100% !important;
+        bottom: 0px;
       }
     }
   }

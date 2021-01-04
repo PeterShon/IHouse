@@ -103,5 +103,8 @@
     padding: 33px 46px;
 
     background-color: $background-subscriber;
+    @include media-custom(1024px)  {
+      padding: 10px 15px;
+    }
   }
 }
