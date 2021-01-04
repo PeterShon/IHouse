@@ -6,6 +6,12 @@
     display: flex;
     justify-content: center;
     padding: 100px 0;
+    @include media-custom(1024px)  {
+      padding: 60px 0;
+    }
+    @include media-custom(724px)  {
+      padding: 50px 0;
+    }
   }
   & .elfsight-app-05edb01e-dfb3-4879-bd01-dd2f868bae91 {}
   &__hider {
@@ -15,6 +21,14 @@
     margin: 0 auto;
     bottom: 50px;
     background-color: $background-blue;
+    @include media-custom(1024px)  {
+      width: 80%;
+      bottom: 10px;
+    }
+    @include media-custom(890px)  {
+      width: 80%;
+      bottom: 6px;
+    }
   }
 }
   

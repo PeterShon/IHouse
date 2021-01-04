@@ -11,10 +11,16 @@
     font-weight: 600;
     font-size: 36px;
     text-transform: uppercase;
+    @include media-custom(890px)  {
+      font-size: 24px;
+    }
   }
   &__text {
     flex: 1 0 100%;
     display: block;
+    @include media-custom(890px)  {
+      font-size: 14px;
+    }
   }
   &__buttons {
     align-self: flex-end;
@@ -22,6 +28,12 @@
     display: flex;
     align-items: flex-end;
     margin-top: 86px;
+    @include media-custom(720px)  {
+      margin-top: 31px;
+    }
+    @include media-custom(1500px)  {
+      flex-wrap: wrap;
+    }
   }
   &__button {
     display: block;
@@ -30,5 +42,11 @@
   &__link {
     display: block;
     transform: translateY(-4px);
+    @include media-custom(1500px)  {
+      margin-right: 30px;
+    }
+    @include media-custom(1302px)  {
+      margin-top: 14px;
+    }
   }
 }
