@@ -3,20 +3,31 @@
   &__conteiner {}
   &__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 107px 0 149px;
+    padding: 67px 0 109px;
+    @include media-custom(1024px)  {
+      padding: 40px 0 70px;
+    }
   }
   &__person {
-
+    margin: 40px 20px;
   }
   &__position {
     margin-bottom: 37px;
 
     font-weight: 600;
     font-size: 24px;
+    @include media-custom(1024px)  {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
   }
   &__name {
     margin-bottom: 27px;
+    @include media-custom(1024px)  {
+      margin-bottom: 15px;
+    }
   }
   &__link {
     display: block;
@@ -26,6 +37,9 @@
     }
     &:not(:last-child) {
       margin-bottom: 27px;
+      @include media-custom(1024px)  {
+        margin-bottom: 15px;
+      }
     }
   }
 }
