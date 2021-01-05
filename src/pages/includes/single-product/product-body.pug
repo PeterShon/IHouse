@@ -13,20 +13,22 @@
   .product-body__media-side
     .product-body__gallery
       .product-body__slide.product-body__slide_main
-        a(href="./img/single-product_main.jpg")
+        a.js_gallery-image(href="./img/single-product_main.jpg")
           img(src="./img/single-product_main.jpg", alt="товар")
+      .product-body__info-mobile
+        include ../../common/card-product_single-product.pug
       .product-body__galery-box
         .product-body__slide.product-body__slide_second
-          a(href="./img/single-product_second-1.jpg")
+          a.js_gallery-image(href="./img/single-product_second-1.jpg")
             img(src="./img/single-product_second-1.jpg", alt="товар")
         .product-body__slide.product-body__slide_second
-          a(href="./img/single-product_second-2.jpg")
+          a.js_gallery-image(href="./img/single-product_second-2.jpg")
             img(src="./img/single-product_second-2.jpg", alt="товар")
         .product-body__slide.product-body__slide_second
-          a(href="./img/single-product_second-3.jpg")
+          a.js_gallery-image(href="./img/single-product_second-3.jpg")
             img(src="./img/single-product_second-3.jpg", alt="товар")
         .product-body__slide.product-body__slide_second
-          a(href="./img/single-product_second-4.jpg")
+          a.js_gallery-image(href="./img/single-product_second-4.jpg")
             img(src="./img/single-product_second-4.jpg", alt="товар")
     .product-body__info-tabs
       input(type="radio", name = 'product-body__info-tabs', id='specifications', checked).product-body__tab-ghost
@@ -50,7 +52,7 @@
         .product-body__tab-line
           span.product-body__specification Страна производителя:
           span.product-body__specification-value Европа
-      label.product-body__tab-btn(for="specifications") Характеристики
+      label.product-body__tab-btn.product-body__tab-btn_specifications(for="specifications") Характеристики
 
       input(type="radio", name = 'product-body__info-tabs', id='description').product-body__tab-ghost
       .product-body__tab.product-body__tab_description
@@ -59,7 +61,7 @@
             p.product-body__paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias provident necessitatibus ullam voluptatum incidunt! Sequi sed illo nesciunt corporis molestiae rem dicta quia molestias animi ad nostrum, dignissimos nihil consequatur.
             p.product-body__paragraph Alias provident necessitatibus ullam voluptatum incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit.
             p.product-body__paragraph Sequi sed illo nesciunt corporis molestiae rem dicta quia molestias animi ad nostrum, dignissimos nihil consequatur. Alias provident necessitatibus ullam voluptatum incidunt!
-      label.product-body__tab-btn(for="description") Описание
+      label.product-body__tab-btn.product-body__tab-btn_description(for="description") Описание
 
       input(type="radio", name = 'product-body__info-tabs', id='delivery').product-body__tab-ghost
       .product-body__tab.product-body__tab_delivery
@@ -75,7 +77,7 @@
             p.product-body__paragraph - Наличный расчет
             p.product-body__paragraph - Безналичный расчет
             p.product-body__paragraph - Оплата по счету
-      label.product-body__tab-btn(for="delivery") Доставка и оплата
+      label.product-body__tab-btn.product-body__tab-btn_delivery(for="delivery") Доставка и оплата
 
   .product-body__info-side
     include ../../common/card-product_single-product.pug

@@ -149,11 +149,39 @@ export function sliders() {
     }
   }
 
+  function slickifymin() {
+    if (!$('.product-body__galery-box').hasClass('slick-slider')) {
+      $('.product-body__galery-box').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '80px',
+        speed: 1000,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: `linear`,
+        focusOnSelect: true,
+        mobileFirst: true,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 425,
+            settings: 'unslick'
+          }
+        ]
+      });
+    }
+  }
+
   slickify();
+  slickifymin();
   $(window).resize(function () {
     var $windowWidth = $(window).width();
     if ($windowWidth < 790) {
       slickify();
+    }
+    if ($windowWidth < 425) {
+      slickifymin();
     }
   });
 
