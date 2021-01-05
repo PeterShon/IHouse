@@ -123,13 +123,14 @@ export function popups() {
   }
 
   //закрытие модалки по escape
-  document.addEventListener("keydown", function (e) {
-    if (e.which === 27) {
-      const popupActive = document.querySelector(".popup.open");
-      popupClose(popupActive);
-    }
-  });
-
+  if (document.querySelector(".popup.open")) {
+    document.addEventListener("keydown", function (e) {
+      if (e.which === 27) {
+        const popupActive = document.querySelector(".popup.open");
+        popupClose(popupActive);
+      }
+    });
+  }
 
   function popupsFilter(curentPopup) {
     const notification = document.querySelector('#popup-notification-filter')

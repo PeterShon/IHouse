@@ -153,7 +153,6 @@ export function sliders() {
   $(window).resize(function () {
     var $windowWidth = $(window).width();
     if ($windowWidth < 790) {
-      console.log("окно меньше 790")
       slickify();
     }
   });

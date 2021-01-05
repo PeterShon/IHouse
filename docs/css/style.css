@@ -4318,6 +4318,17 @@ a {
   margin-bottom: 17px;
 }
 
+.subscriber_wide {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .subscriber_wide {
+    display: flex;
+  }
+}
+
 .subscriber__description {
   margin-bottom: 45px;
   font-weight: 600;
@@ -4400,6 +4411,12 @@ a {
 .subscriber__button {
   margin-left: 14px;
   border: 1px solid transparent;
+}
+
+@media (max-width: 769px) {
+  .subscriber__button {
+    height: 46px !important;
+  }
 }
 
 @media (max-width: 590px) {
@@ -4984,6 +5001,12 @@ a {
 .catalog {
   position: relative;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    flex-direction: column;
+  }
 }
 
 .catalog__widget-box {

@@ -4,7 +4,7 @@ import { intro } from '../js/intro.js'
 import { cardProduct } from '../js/card-product.js'
 import { catalog } from '../js/catalog.js'
 import { sliders } from '../js/sliders.js'
-import { shiftWidget } from '../js/shift-widget.js'
+import { shiftWidget } from '../js/shift-widget.js' /**/
 import { productBody } from '../js/product-body.js'
 import { card } from '../js/card.js'
 import { feedback } from '../js/feedback.js'

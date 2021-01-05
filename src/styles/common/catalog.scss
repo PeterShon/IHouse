@@ -1,7 +1,9 @@
 .catalog {
   position: relative;
   display: flex;
-
+  @include media-custom(768px)  {
+    flex-direction: column;
+  }
   &__widget-box {
     display: flex;
     justify-content: flex-start;
