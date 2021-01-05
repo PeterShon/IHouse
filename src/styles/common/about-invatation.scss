@@ -2,17 +2,44 @@
   &__conteiner {
     margin-top: 51px;
     margin-bottom: 49px;
+    @include media-custom(465px)  {
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid $black-opacity-25;
+    }
   }
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     background-color: $background-blue;
+    @include media-custom(1440px)  {
+      grid-template-columns: 1fr 3fr;
+    }
+    @include media-custom(768px)  {
+      grid-template-columns: 1fr;
+      grid-template-rows: 300px auto;
+    }
   }
   &__cover-side {
     background: url(../img/invatation-bg.jpg) center/cover no-repeat;
+    @include media-custom(768px)  {
+      background: url(../img/invatation-bg.jpg) center/cover fixed no-repeat;
+    }
+    @include media-custom(425px)  {
+      background: url(../img/invatation-bg.jpg) center/cover no-repeat;
+    }
   }
   &__info-side {
     padding: 35px 192px 42px 105px;
+    @include media-custom(1024px)  {
+      padding: 30px 60px 40px 50px;
+    }
+    @include media-custom(768px)  {
+      padding: 30px 30px 40px;
+    }
+    @include media-custom(465px)  {
+      padding: 10px 10px 40px;
+    }
   }
 }

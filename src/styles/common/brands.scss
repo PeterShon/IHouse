@@ -8,6 +8,13 @@
     justify-content: space-between;
     margin: 0 -45px;
     padding: 56px 0 70px;
+    @include media-custom(1650px)  {
+      justify-content: center;
+    }
+    @include media-custom(768px)  {
+      margin: 0 -20px;
+      padding: 25px 0 35px;
+    }
   }
   @keyframes resize {
     5% {transform: scale(1.2);}
@@ -24,6 +31,13 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-delay: 26.4s;
+    @include media-custom(1024px)  {
+      max-width: 200px;
+    }
+    @include media-custom(768px)  {
+      max-width: 150px;
+      margin: 20px;
+    }
     &:nth-child(1) {animation-delay: 0s;}
     &:nth-child(2) {animation-delay: 2.2s;}
     &:nth-child(3) {animation-delay: 4.4s;}

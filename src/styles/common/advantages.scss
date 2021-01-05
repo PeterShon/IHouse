@@ -3,36 +3,74 @@
   grid-template-columns: 566px 1fr;
   grid-auto-rows: auto;
   background-color: $background-blue;
+  @include media-custom(1440px)  {
+    grid-template-columns: 1fr 2fr;
+  }
+  @include media-custom(1024px)  {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include media-custom(768px)  {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px auto;
+  }
   &__cover {
     background: url(../img/advantages-bg.jpg) center/cover no-repeat;
+    @include media-custom(768px)  {
+      background: url(../img/advantages-bg.jpg) center/cover fixed no-repeat;
+    }
   }
   &__info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 113px 80px 123px;
+    @include media-custom(1650px)  {
+      padding: 80px 60px 80px;
+    }
+    @include media-custom(1024px)  {
+      padding: 40px 20px;
+    }
   }
   &__title {}
   &__advantage-list {
     padding-left: 76px;
     margin-top: 94px;
+    @include media-custom(1650px)  {
+      padding-left: 0px;
+    }
+    @include media-custom(1440px)  {
+      margin-top: 50px;
+    }
   }
   &__advantage {
     display: flex;
     &:not(:last-child) {
       margin-bottom: 57px;
+      @include media-custom(1650px)  {
+        margin-bottom: 40px;
+      }
     }
   }
   &__icon {
     object-fit: contain;
     object-position: center top;
     transform: translateY(-10px);
+    @include media-custom(1024px)  {
+      width: 40px;
+      transform: translateY(-7px);
+    }
   }
   &__description {
     display: flex;
     flex-direction: column;
     font-size: 24px;
     padding-left: 30px;
+    @include media-custom(1024px)  {
+      font-size: 18px;
+    }
+    @include media-custom(1024px)  {
+      padding-left: 10px;
+    }
   }
   &__description-header {
     font-weight: 600;
