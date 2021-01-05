@@ -4,8 +4,6 @@
   width: 80%;
   margin: 0 auto;
   min-height: calc(80vh - 224px);
-  &__title {
-  }
   &__request {
     font-size: 36px;
     @include media-custom(1024px)  {

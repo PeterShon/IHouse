@@ -347,7 +347,6 @@ body.lock {
   }
   
   /*popups - delivery*/
-  &__policy {}
   &__policy-title {
     margin-top: 13px;
   }
@@ -387,7 +386,7 @@ body.lock {
       font-size: 28px;
     }
     .popup__feedback_consultation & {
-      font-family: 'Playfair Display', serif;
+      font-family: 'PlayfairDisplay', serif;
       font-style: italic;
       font-size: 36px;
     }
@@ -444,7 +443,7 @@ body.lock {
     margin: 60px 250px 60px;
   }
   &__thx-header {
-    font-family: 'Playfair Display', serif;
+    font-family: 'PlayfairDisplay', serif;
 
   }
   &__thx-message {

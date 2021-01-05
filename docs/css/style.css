@@ -2728,7 +2728,7 @@ a {
 }
 
 .intro__of {
-  font: italic 400 46px 'Playfair Display', serif;
+  font: italic 400 46px 'PlayfairDisplay', serif;
   position: absolute;
   color: #3EBBB0;
 }
@@ -4097,7 +4097,7 @@ a {
 }
 
 .collection-card__about-collection {
-  font: italic 700 23px 'Playfair Display', serif;
+  font: italic 700 23px 'PlayfairDisplay', serif;
   margin-bottom: 22px;
 }
 
@@ -5218,7 +5218,7 @@ a {
 }
 
 .about-us__title {
-  font: italic 56px 'Playfair Display', serif;
+  font: italic 56px 'PlayfairDisplay', serif;
   margin: 0 0 70px 0;
 }
 
@@ -8228,7 +8228,7 @@ body.lock {
 }
 
 .popup__feedback_consultation .popup__feedback-title {
-  font: italic 36px 'Playfair Display', serif;
+  font: italic 36px 'PlayfairDisplay', serif;
 }
 
 .popup__feedback-subtitle {
@@ -8304,7 +8304,7 @@ body.lock {
 }
 
 .popup__thx-header {
-  font-family: 'Playfair Display', serif;
+  font-family: 'PlayfairDisplay', serif;
 }
 
 .popup__thx-message {
@@ -8385,7 +8385,7 @@ body.lock {
 }
 
 .title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'PlayfairDisplay', serif;
   font-style: italic;
   font-weight: 400;
   color: #000000;

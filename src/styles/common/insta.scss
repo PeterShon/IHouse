@@ -1,7 +1,6 @@
 .insta {
   position: relative;
   background-color: $background-blue;
-  &__conteiner {}
   &__inner {
     display: flex;
     justify-content: center;
@@ -13,7 +12,6 @@
       padding: 50px 0;
     }
   }
-  & .elfsight-app-05edb01e-dfb3-4879-bd01-dd2f868bae91 {}
   &__hider {
     position: absolute;
     z-index: 99999;

@@ -41,12 +41,6 @@
       height: 100%;
 
       overflow: hidden;
-      @include media-custom(425px)  {
-        //width: auto;
-        //display: flex;
-        //justify-content: center;
-      }
-      &_main {}
       &_second {
         @include media-custom(425px)  {
           display: flex;
@@ -281,9 +275,6 @@
       width: 100px;
       object-fit: contain;
       object-position: left top;
-    }
-    &__about-option {
-
     }
     &__tab-btn {
       display: flex;
