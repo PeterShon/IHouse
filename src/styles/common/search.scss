@@ -1,12 +1,19 @@
 .search {
   display: flex;
   flex-direction: column;
-  padding: 0 18% 0 22.5%;
+  width: 80%;
+  margin: 0 auto;
   min-height: calc(80vh - 224px);
   &__title {
   }
   &__request {
     font-size: 36px;
+    @include media-custom(1024px)  {
+      font-size: 30px;
+    }
+    @include media-custom(768px)  {
+      font-size: 24px;
+    }
     &:after {
       content: attr(data-request);
       display: inline-block;
@@ -24,6 +31,9 @@
   &__finder {
     align-self: flex-start;
     margin-top: 69px;
+    @include media-custom(440px)  {
+      margin-top: 20px;
+    }
   }
   &__finder-input-wrapper {
     position: relative;
@@ -40,6 +50,10 @@
     line-height: 1.71;
     &::placeholder {
       color: $black-opacity-50;
+    }
+    @include media-custom(440px)  {
+      width: 100%;
+      margin: 0 auto;
     }
   }
   &__finder-input-icon {

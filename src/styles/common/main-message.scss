@@ -10,6 +10,12 @@
     height: 100%;
     background: url(../img/main-message-bg.png) 80% 40%/20% no-repeat;
     transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    @include media-custom(1024px)  {
+      background: url(../img/main-message-bg.png) 80% 40%/40% no-repeat;
+    }
+    @include media-custom(425px)  {
+      background: url(../img/main-message-bg.png) 80% 40%/60% no-repeat;
+    }
   }
   &__inner {
     position: relative;
@@ -19,13 +25,34 @@
     width: 651px;
     max-height: 430px;
     margin: 129px 0 159px;
+    @include media-custom(1250px)  {
+      margin: 80px 0 90px;
+    }
+    @include media-custom(1024px)  {
+      margin: 60px 0 70px;
+    }
+    @include media-custom(1024px)  {
+      padding: 0 10px;
+    }
   }
   &__title {
     margin-bottom: 129px;
+    @include media-custom(1250px)  {
+      margin-bottom: 80px;
+    }
+    @include media-custom(1024px)  {
+      margin-bottom: 20px;
+    }
   }
   &__text {
     margin-bottom: 86px;
     font-size: 24px;
+    @include media-custom(1250px)  {
+      margin-bottom: 60px;
+    }
+    @include media-custom(1024px)  {
+      margin-bottom: 50px;
+    }
     & > p {
       margin: 0;
       text-align: center;
