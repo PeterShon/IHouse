@@ -3,44 +3,43 @@
   justify-content: center;
   &__slider {
     display: flex;
+    justify-content: center;
     align-items: flex-end;
     width: 247px;
-    & .slick-arrow {
-      flex: 0 0 60px;
-      bottom: 0;
-      z-index: 1;
+  }
+  &__arrow {
+    flex: 0 0 60px;
 
-      height: 30px;
+    bottom: 0;
+    z-index: 1;
 
-      background-image: url(../img/arrow-slider_black.svg);
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      border: none;
-      cursor: pointer;
-      outline: none;
+    height: 30px;
 
-      font-size: 0;
+    background-image: url(../img/arrow-slider_black.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
 
-      transition: 0.3s;
-    }
-    & .slick-prev {
+    font-size: 0;
+
+    transition: 0.3s;
+    &_prev {
+      margin-right: 13px;
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.1) translateX(-6px);
       }
     }
-    & .slick-next {
+    &_next {
+      margin-left: 13px;
       right: 0;
       transform: rotate(180deg);
       &:hover {
-        transform: rotate(180deg) scale(1.1);
+        transform: rotate(180deg) scale(1.1) translateX(-6px);
       }
-    }
-    & .slick-track {
-      display: flex;
-      align-items: flex-end;
-      height: 50px;
     }
   }
   &__item {
@@ -56,9 +55,16 @@
     background-color: transparent;
     border: none;
 
-    transition: 1s;
-    &.slick-current {
+    transform: translateY(-4px);
+
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.5) translateY(-5px);
+    }
+    &_active {
       font-size: 36px;
+      pointer-events: none;
+      transform: translateY(0px);
     }
   }
 }

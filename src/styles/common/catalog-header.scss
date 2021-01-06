@@ -14,12 +14,10 @@
     width: 100%;
     padding: 108px 0 64px;
     background:
-    linear-gradient(#ffffff34, #ffffff34),
-    url(../img/catalog-bg.webp) center 30%/cover fixed no-repeat;
+    url(../img/catalog-bg.webp) 40% 0%/140% fixed no-repeat;
     @include media-custom(425px)  {
       padding: 108px 0 38px;
       background:
-      linear-gradient(#ffffff34, #ffffff34),
       url(../img/catalog-bg.webp) center 70%/300% fixed no-repeat;
     }
   }

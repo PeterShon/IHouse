@@ -7,6 +7,7 @@ import { sliders } from '../js/sliders.js'
 import { shiftWidget } from '../js/shift-widget.js' /**/
 import { productBody } from '../js/product-body.js'
 import { card } from '../js/card.js'
+import { collections } from '../js/collections.js'
 import { feedback } from '../js/feedback.js'
 import { feedbackPopup } from '../js/feedback-popup.js'
 import { sendToTXT } from '../js/send-to-txt.js'
@@ -23,6 +24,7 @@ $(document).ready(() => {
   shiftWidget()
   productBody()
   card()
+  collections()
   feedback()
   feedbackPopup()
   sendToTXT()

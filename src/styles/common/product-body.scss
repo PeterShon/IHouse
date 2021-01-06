@@ -246,7 +246,7 @@
       }
     }
     &__specification-value-logo {
-      height: 47px;
+      height: 30px;
       object-fit: contain;
       object-position: center;
       transform: translateY(25%);
@@ -316,7 +316,7 @@
       }
     }
   &__info-side {
-    padding: 35px 40px 150px 65px;
+    padding: 52px 65px 150px 65px;
     grid-area: info;
     @include media-custom(1400px)  {
       padding: 35px 30px 100px 50px;

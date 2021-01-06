@@ -13,6 +13,10 @@
   @include media-custom(590px)  {
     padding: 50px 0 0px;
   }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
   &__header{
     .collections_list & {
       width: 100%;
@@ -172,6 +176,15 @@
     justify-content: center;
     align-items: flex-end;
     margin-top: 85px;
+
+    visibility: hidden;
+    display: none;
+    &_active {
+      visibility: visible;
+      display: flex;
+      min-width: 0;
+      width: 100%;
+    }
     @include media-custom(890px)  {
       margin-top: 60px;
     }

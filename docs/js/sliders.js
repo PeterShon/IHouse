@@ -15,10 +15,10 @@ export function sliders() {
   $(`.product-slider__card-box-inner`).slick({
     slidesToShow: 4,
     slidesToScroll: 4,
-    speed: 2000,
+    speed: 500,
     autoplay: true,
     autoplaySpeed: 2000,
-    cssEase: `linear`,
+    cssEase: `ease-out`,
     responsive: [
       {
         breakpoint: 1380,
@@ -242,13 +242,13 @@ export function sliders() {
       }]
   })
 
-  $(`.pagination__slider`).slick({
-    centerMode: true,
-    centerPadding: `5px`,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 1000,
-    cssEase: `linear`,
-    focusOnSelect: true
-  })
+  // $(`.pagination__slider`).slick({
+  //   centerMode: true,
+  //   centerPadding: `5px`,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   speed: 1000,
+  //   cssEase: `linear`,
+  //   focusOnSelect: true
+  // })
 }
