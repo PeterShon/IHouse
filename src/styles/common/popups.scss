@@ -451,67 +451,99 @@ body.lock {
   }
 
   /*popups - filter*/
+  &__filter-button-comfirm {
+    position: sticky;
+    align-self: center;
+    bottom: 20px
+  }
+
   &__filter-list {
     list-style: none;
-    margin: 10px 0 0 0;
+    margin: 10px 0 40px 0;
     padding: 0;
-
-    & li {
+    &_lvl2 {
+      margin: 0;
+    }
+  }
+  &__filter-item {
+    display: flex;
+    padding: 0 0px 0 10px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $black-opacity-25;
+    }
+    & label, & div, & a {
       display: flex;
-      padding: 0 14px 0 10px;
-      &:not(:last-child) {
-        border-bottom: 1px solid $black-opacity-25;
-      }
-      & > * {
-        padding: 25px 0;
+      align-items: center;
+      padding: 25px 0;
 
-        background-color: transparent;
-        border: none;
-        outline: none;
+      background-color: transparent;
+      border: none;
+      outline: none;
 
-        font-size: 16px;
-        font-weight: 500;
-        color: $black;
-        text-align: left;
-        &:nth-child(1) {
-          flex: 1 0 auto;
-        }
-        &:nth-child(2) {
-          display: flex;
-          align-items: center;
-          position: relative;
-          padding-right: 13px;
-          padding-left: 20px;
-
-          font-size: 12px;
-          font-weight: 400;
-          &::after {
-            content: '';
-            width: 4px; height: 100%;
-            display: block;
-            position: absolute;
-            right: 0;
-            background: url(../img/arrow-filter.svg) center/contain no-repeat;
-            transform: rotate(180deg);
-          }
+      font-size: 16px;
+      font-weight: 500;
+      color: $black;
+      text-align: left;
+      & input {
+        display: none;
+        &:checked + span {
+          box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 100px #000000;
         }
       }
-      & label {
+      & span {
+        display: block;
+        width: 14px; height: 14px;
+        margin-right: 6px;
+        border: 1px solid $black;
+
+        transition: 0.3s;
+      }
+      &:nth-child(1) {
+        flex: 1 0 auto;
+      }
+      &:nth-child(2) {
         display: flex;
         align-items: center;
-        & input {
-          display: none;
-          &:checked + span {
-            box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 100px #000000;
-          }
-        }
-        & span {
-          display: block;
-          width: 14px; height: 14px;
-          margin-right: 6px;
-          border: 1px solid $black;
+        justify-content: center;
+        position: relative;
+        width: 60px;
 
+        font-size: 0px;
+        font-weight: 400;
+        &::after {
+          content: '';
+          width: 8px; height: 18px;
+          display: block;
+          position: absolute;
+          background: url(../img/arrow-filter.svg) center/contain no-repeat;
+          transform: rotate(-90deg);
           transition: 0.3s;
+        }
+      }
+    }
+    &.js_open {
+      & div {
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    &_to-lvl2 {
+      padding: 0 0px 0 21px;
+      display: none;
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+      & > ul {
+        width: 100%;
+        & > li {
+          text-transform: lowercase;
+          &:not(:last-child) {
+            border-bottom: none;
+          }
+          & label, & div {
+            padding: 10px 0;
+          }
         }
       }
     }

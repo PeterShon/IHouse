@@ -222,13 +222,13 @@
       .popup__filter-header
         a.popup__close(href="#") Фильтр
       ul.popup__filter-list
-        li
+        li.popup__filter-item
           a.js_popup-link(href="#popup-filter-category") Категория
-        li
+        li.popup__filter-item
           a.js_popup-link(href="#popup-filter-brands") Бренды
-        li
+        li.popup__filter-item
           a.js_popup-link(href="#popup-filter-availability") Наличие
-        li
+        li.popup__filter-item
           a.js_popup-link(href="#popup-filter-price") Диапазон цен
 
 //popup-filter-category
@@ -238,47 +238,36 @@
       .popup__filter-header
         a.popup__close.js_popup-link(href="#popup-main-filter") Категории
       ul.popup__filter-list
-        li
-          button Мягкая мебель
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-        li
-          button Стулья
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-        li
-          button Столы
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-        li
-          button Спальня
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-        li
-          button Хранение
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-        li
-          button Детская
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-        li
-          button Офис
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-        li
-          button Текстиль
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-        li
-          button Ковры
-          a.js_popup-link(href="#popup-filter-category-inner") Все
-#popup-filter-category-inner.popup.popup_filter
-  .popup__body
-    .popup__content.popup__content_filter
-      .popup__filter-header
-        a.popup__close.js_popup-link(href="#popup-filter-category") Мягкая мебель
-      ul.popup__filter-list
-        li
-          button Диваны
-        li
-          button Угловые диваны
-        li
-          button Диваны-кровати 
-        li
-          button Кресла
+        each val in ['Мягкая мебель', 'Стулья', 'Столы', 'Спальня', 'Хранение', 'Детская', 'Офис', 'Текстиль', 'Ковры']
+          li.popup__filter-item
+            label
+              input.js_filter-chb(type="checkbox" name='category-lvl-1')
+              span
+              |#{val}
+            .popup__filter-arrow
+          li.popup__filter-item.popup__filter-item_to-lvl2
+            ul.popup__filter-list.popup__filter-list_lvl2
+              li.popup__filter-item
+                label
+                  input.js_filter-chb(type="checkbox" name='category-lvl-2')
+                  span
+                  | Диваны
+              li.popup__filter-item
+                label
+                  input.js_filter-chb(type="checkbox" name='category-lvl-2')
+                  span
+                  | Угловые диваны
+              li.popup__filter-item
+                label
+                  input.js_filter-chb(type="checkbox" name='category-lvl-2')
+                  span
+                  | Диваны-кровати 
+              li.popup__filter-item
+                label
+                  input.js_filter-chb(type="checkbox" name='category-lvl-2')
+                  span
+                  | Кресла
+      button.popup__filter-button-comfirm.button Подтвердить
 
 #popup-filter-brands.popup.popup_filter
   .popup__body
@@ -286,51 +275,52 @@
       .popup__filter-header
         a.popup__close.js_popup-link(href="#popup-main-filter") Бренды
       ul.popup__filter-list
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Sits
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Gaber
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Benix
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Nap
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Subtila
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Midj
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Noctis
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Nicoline
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='brand')
             span
             | Fameg
+      button.popup__filter-button-comfirm.button Подтвердить
 
 #popup-filter-availability.popup.popup_filter
   .popup__body
@@ -338,26 +328,27 @@
       .popup__filter-header
         a.popup__close.js_popup-link(href="#popup-main-filter") Наличие
       ul.popup__filter-list
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='availability')
             span
             | В наличии
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='availability')
             span
             | На заказ
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='availability')
             span
             | Ожидается поступление
-        li
+        li.popup__filter-item
           label
             input.js_filter-chb(type="checkbox" name='availability')
             span
             | Ожидается поступление
+      button.popup__filter-button-comfirm.button Подтвердить
 
 #popup-filter-price.popup.popup_filter
   .popup__body
@@ -379,3 +370,4 @@
             .shift-widget__line
               .shift-widget__ranger-wrapper
                 input.shift-widget__ranger.js_price-range(type="text", data-min="5000", data-max="185000", data-step="1000")
+      button.popup__filter-button-comfirm.button Подтвердить

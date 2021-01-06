@@ -193,6 +193,70 @@ export function popups() {
     }
   }
 
+
+  //фильтры
+  openFilterBlock()
+  checkForChildren()
+  checkOffChildren()
+  //сворачивание и разворачивание эл-ов
+  function openFilterBlock() {
+    $('.popup__filter-arrow').unbind().click(function (e) {
+      if ($(this).parent(".popup__filter-item").hasClass('js_open')) {
+        $(this).parent(".popup__filter-item").next($('.popup__filter-item_to-lvl2')).slideUp();
+        $(this).parent(".popup__filter-item").removeClass('js_open');
+      } else {
+        $('.popup__filter-arrow').parent(".popup__filter-item").next($('.popup__filter-item_to-lvl2')).slideUp();
+        $('.popup__filter-arrow').parent(".popup__filter-item").removeClass('js_open');
+        $(this).parent(".popup__filter-item").next($('.popup__filter-item_to-lvl2')).slideDown();
+        $(this).parent(".popup__filter-item").addClass('js_open');
+      }
+    })
+  }
+  //чекбоксы для детей
+  function checkForChildren() {
+    $('.popup__filter-item').find('.js_filter-chb').click(function (e) {
+      if (!($(this).closest('.popup__filter-item_to-lvl2').length)) {
+        if ($(this).is(':checked')) {
+          $(this)
+            .closest('.popup__filter-item')
+            .next('.popup__filter-item_to-lvl2')
+            .find('.js_filter-chb')
+            .prop('checked', true)
+        } else {
+          $(this)
+            .closest('.popup__filter-item')
+            .next('.popup__filter-item_to-lvl2')
+            .find('.js_filter-chb')
+            .prop('checked', false)
+        }
+      }
+    })
+  }
+  //чекбокс для родителя
+  function checkOffChildren() {
+    $('.popup__filter-item').find('.js_filter-chb').click(function (e) {
+      if (($(this).closest('.popup__filter-item_to-lvl2').length)) {
+        let main_chb =
+          $(this)
+            .closest('.popup__filter-list')
+            .closest('.popup__filter-item')
+            .prev('.popup__filter-item')
+            .find('.js_filter-chb')
+        let neighbour_chb = $(this).closest('.popup__filter-list').find('.js_filter-chb')
+        let counter = 0;
+        for (let i = 0; i < neighbour_chb.length; i++) {
+          const el = neighbour_chb[i];
+          counter = counter + $(el).is(':checked')
+        }
+        if (neighbour_chb.length != counter) {
+          main_chb.prop('checked', false)
+        } else {
+          main_chb.prop('checked', true)
+        }
+      }
+    })
+  }
+
   //полифиллы
   (function () {
     //проверяем поддержку

@@ -16,7 +16,6 @@ import { header } from '../js/header.js'
 
 $(document).ready(() => {
   moveUp()
-  popups()
   intro()
   cardProduct()
   catalog()
