@@ -6,6 +6,9 @@ const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack
 const eslint = require('gulp-eslint')
 
 module.exports = function script() {
+  gulp.src('src/js/libs/**/*')
+    .pipe(gulp.dest('docs/js/libs'))
+
   return gulp.src('src/js/main.js')
     .pipe(plumber())
     .pipe(eslint({
@@ -40,7 +43,6 @@ module.exports = function script() {
         new DuplicatePackageCheckerPlugin()
       ]
     }))
-    .pipe(gulp.src('src/js/**/*.js'))
     .pipe(gulp.dest('docs/js'))
 }
 
