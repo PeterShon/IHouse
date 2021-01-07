@@ -16,9 +16,15 @@
   &__inner {
     display: flex;
     flex-direction: column;
+    @include media-custom(790px)  {
+      align-items: center;
+    }
   }
   &__header{
     .collections_list & {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       width: 100%;
       padding: 108px 0 64px;
       background:
@@ -93,6 +99,7 @@
     }
   }
   &__panel {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -103,8 +110,9 @@
     @include media-custom(790px)  {
       position: relative;
       align-items: center;
-      margin: 20px auto 0;
+      margin: 20px 0 0;
       max-width: calc(100vw - 140px);
+      width: 100%;
     }
     @include media-custom(590px)  {
       margin-top: 30px;
@@ -118,25 +126,29 @@
         margin-top: 20px;
       }
     }
-    & .slick-arrow {
-      position: absolute;
+  }
+  &__arrow {
+    position: absolute;
 
-      width: 29px;
-      height: 30px;
-      padding: 0;
+    width: 29px;
+    height: 30px;
+    padding: 0;
 
-      background: url(../img/arrow-slider-m.svg) no-repeat center/contain transparent;
-      background-color: transparent;
-      border: none;
+    background: url(../img/arrow-slider-m.svg) no-repeat center/contain transparent;
+    background-color: transparent;
+    border: none;
 
-      font-size: 0;
+    font-size: 0;
+    display: none;
+    @include media-custom(790px)  {
+      display: block;
     }
-    & .slick-next {
+    &_prev {
+      left: -50px;
+    }
+    &_next {
       transform: rotate(180deg);
       right: -50px;
-    }
-    & .slick-prev {
-      left: -50px;
     }
   }
   &__button {
@@ -155,18 +167,18 @@
     @include media-custom(890px)  {
       width: 180px;
     }
+    @include media-custom(790px)  {
+      width: 100%;
+      display: none;
+    }
     &:hover {
       border: 1px solid $black-opacity-50;
     }
     &_active {
       border: 1px solid $black;
       @include media-custom(790px)  {
-        border: 1px solid transparent;
-      }
-    }
-    @include media-custom(790px)  {
-      &.slick-current {
-        border: 1px solid $black;
+        //border: 1px solid transparent;
+        display: block;
       }
     }
   }

@@ -41,12 +41,13 @@
     padding: 144px 151px 20px 115px;
 
     background-color: $background-grey;
-    @include media-custom(1440px)  {
+    @include media-custom(1600px)  {
       padding: 100px 105px 20px 85px;
-      flex: 0 0 495px;
+      flex: 0 0 400px;
+      max-width: 400px;
     }
     @include media-custom(1024px)  {
-      padding: 80px 70px 20px 60px;
+      padding: 80px 70px 20px 80px;
       flex: 0 0 30%;
     }
     @include media-custom(768px)  {

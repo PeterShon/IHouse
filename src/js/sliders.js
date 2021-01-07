@@ -14,8 +14,8 @@ export function sliders() {
 
   $(`.product-slider__card-box-inner`).slick({
     slidesToShow: 4,
-    slidesToScroll: 4,
-    speed: 500,
+    slidesToScroll: 1,
+    speed: 300,
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: `ease-out`,
@@ -112,24 +112,26 @@ export function sliders() {
   })
 
   function slickify() {
-    if (!$('.collections__panel').hasClass('slick-slider')) {
-      $('.collections__panel').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 1000,
-        autoplay: true,
-        autoplaySpeed: 10000,
-        cssEase: `linear`,
-        focusOnSelect: true,
-        mobileFirst: true,
-        responsive: [
-          {
-            breakpoint: 790,
-            settings: 'unslick'
-          }
-        ]
-      });
-    }
+    // if (!$('.collections__panel').hasClass('slick-slider')) {
+    //   $('.collections__panel').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     speed: 1000,
+    //     cssEase: `linear`,
+    //     focusOnSelect: true,
+    //     mobileFirst: true,
+    //     responsive: [
+    //       {
+    //         breakpoint: 790,
+    //         settings: 'unslick'
+    //       }
+    //     ]
+    //   });
+    // }
+
+    // $('.collections__panel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    //   console.log('hello');
+    // });
 
     if (!$('.catalog-header__panel').hasClass('slick-slider')) {
       $('.catalog-header__panel').slick({
@@ -241,14 +243,4 @@ export function sliders() {
         }
       }]
   })
-
-  // $(`.pagination__slider`).slick({
-  //   centerMode: true,
-  //   centerPadding: `5px`,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   speed: 1000,
-  //   cssEase: `linear`,
-  //   focusOnSelect: true
-  // })
 }

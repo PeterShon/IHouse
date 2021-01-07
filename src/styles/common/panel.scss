@@ -15,6 +15,9 @@
     justify-content: flex-start;
     padding: 0 56px;
     margin-bottom: 50px;
+    @include media-custom(1600px)  {
+      padding: 0;
+    }
   }
   &__header {
     margin: 0 0 20px 0;
@@ -89,5 +92,8 @@
         color: $active-link;
       }
     }
+  }
+  &__subscriber {
+    margin-bottom: 54px;
   }
 }
