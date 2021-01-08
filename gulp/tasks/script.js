@@ -6,8 +6,11 @@ const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack
 const eslint = require('gulp-eslint')
 
 module.exports = function script() {
-  gulp.src('src/js/libs/**/*')
-    .pipe(gulp.dest('docs/js/libs'))
+  //gulp.src('src/js/libs/**/*')
+  // .pipe(gulp.dest('docs/js/libs'))
+
+  gulp.src('src/js/**/*')
+    .pipe(gulp.dest('docs/js/'))
 
   return gulp.src('src/js/main.js')
     .pipe(plumber())
@@ -17,7 +20,7 @@ module.exports = function script() {
       }
     }))
     .pipe(eslint.format())
-    .pipe(webpack({
+    /*.pipe(webpack({
       mode: process.env.NODE_ENV,
       devtool: "source-map", //убирает минификацию кода, делает его многострочным
       output: {
@@ -46,7 +49,7 @@ module.exports = function script() {
         new CircularDependencyPlugin(),
         new DuplicatePackageCheckerPlugin()
       ]
-    }))
+    }))*/
     .pipe(gulp.dest('docs/js'))
 }
 
