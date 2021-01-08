@@ -15,10 +15,14 @@
     padding: 108px 0 64px;
     background:
     url(../img/catalog-bg.webp) 40% 0%/140% fixed no-repeat;
+    @include media-custom(768px)  {
+      background:
+      url(../img/catalog-bg.webp) center/cover fixed no-repeat;
+    }
     @include media-custom(425px)  {
       padding: 108px 0 38px;
       background:
-      url(../img/catalog-bg.webp) center 70%/300% fixed no-repeat;
+      url(../img/catalog-bg.webp) center 70%/cover fixed no-repeat;
     }
   }
   &__breadcrumbs {

@@ -5667,10 +5667,16 @@ a {
   background: url(../img/catalog-bg.webp) 40% 0%/140% fixed no-repeat;
 }
 
+@media (max-width: 768px) {
+  .catalog-header__header {
+    background: url(../img/catalog-bg.webp) center/cover fixed no-repeat;
+  }
+}
+
 @media (max-width: 425px) {
   .catalog-header__header {
     padding: 108px 0 38px;
-    background: url(../img/catalog-bg.webp) center 70%/300% fixed no-repeat;
+    background: url(../img/catalog-bg.webp) center 70%/cover fixed no-repeat;
   }
 }
 
