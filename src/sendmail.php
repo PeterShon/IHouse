@@ -24,7 +24,7 @@
    //от кого письмо
    $mail->setFrom('ihousestudioofFurniture@gmail.com', 'IHause');
    //кому отправить
-   $mail->addAddress('petershonpublic@gmail.com');
+   $mail->addAddress('ihousestudioofFurniture@gmail.com');
    //тема письма
    $mail->Subject = 'Письмо обратной связи';
 

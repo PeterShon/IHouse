@@ -19,9 +19,10 @@ module.exports = function script() {
     .pipe(eslint.format())
     .pipe(webpack({
       mode: process.env.NODE_ENV,
+      devtool: "source-map", //убирает минификацию кода, делает его многострочным
       output: {
-        filename: '[name].min.js',
-      },
+        filename: '[name].js',
+      }, //'[name].min.js' при вяключенном минификаторе
       module: {
         rules: [
           {
@@ -37,6 +38,9 @@ module.exports = function script() {
             }
           }
         ]
+      },
+      optimization: {
+        minimize: false
       },
       plugins: [
         new CircularDependencyPlugin(),
