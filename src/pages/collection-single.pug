@@ -1,0 +1,20 @@
+extends common/layout
+
+block content
+  main.main.collection-single
+    .collection-single__header
+      .collection-single__breadcrumbs.breadcrumbs
+        ul.breadcrumbs__list
+          li
+            a(href="index.html") Главная
+          li
+            a(href="collection.html") Коллекции
+          li
+            span Sits: Coctail & Design
+      include common/collection-card_header.pug
+    .collection-single__text
+      span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .collection-single__products
+      include includes/collection-single/products.pug
+    include includes/collection-single/collections.pug
+    include common/insta.pug

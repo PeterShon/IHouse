@@ -182,6 +182,10 @@
       }
     }
   }
+  &__product {
+    width: 100%;
+    background-color: $white;
+  }
   &__cards {
     position: relative;
     display: flex;

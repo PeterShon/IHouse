@@ -1,0 +1,35 @@
+.collection-single {
+  position: relative;
+  &__breadcrumbs {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 19px;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 21px;
+    & span {
+      width: 50%;
+      font-size: 12px;
+      text-align: center;
+      @include media-custom(1650px)  {
+        width: 80%;
+      }
+    }
+  }
+  &__products {
+    width: 100%;
+    padding: 0 160px;
+    margin-bottom: 10px;
+    @include media-custom(1650px)  {
+      padding: 0 100px;
+    }
+    @include media-custom(1500px)  {
+      padding: 0 50px;
+    }
+  }
+}
