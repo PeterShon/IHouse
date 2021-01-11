@@ -8,7 +8,7 @@ module.exports = {
   src,
   buildPath: path.join(root, '/docs'),
   pug2html: {
-    beautifyHtml: false
+    beautifyHtml: true //сжатый или однострочный html
   },
   lighthouse: {
     reportPath: path.join(root, 'reports'),

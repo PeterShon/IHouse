@@ -4155,10 +4155,18 @@ a {
   left: 59px;
 }
 
-@media (max-width: 410px) {
+@media (max-width: 550px) {
   .collection-card_header .collection-card__brand {
     top: 50px;
+    left: 59px;
+  }
+}
+
+@media (max-width: 410px) {
+  .collection-card_header .collection-card__brand {
+    top: auto;
     left: 30px;
+    bottom: 50px;
   }
 }
 
@@ -4237,14 +4245,14 @@ a {
 }
 
 .collection-single__text span {
-  width: 50%;
-  font-size: 12px;
+  width: 70%;
+  font-size: 16px;
   text-align: center;
 }
 
 @media (max-width: 1650px) {
   .collection-single__text span {
-    width: 80%;
+    width: 90%;
   }
 }
 
