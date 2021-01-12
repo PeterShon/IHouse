@@ -1,6 +1,7 @@
 .conteiner {
   max-width: 1760px;
   margin: 0 auto;
+  overflow: hidden;
   @include media-custom(1770px)  {
     padding: 0 20px;
   }
