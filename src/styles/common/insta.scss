@@ -1,6 +1,7 @@
 .insta {
   position: relative;
   background-color: $background-blue;
+  display: none;
   &__inner {
     display: flex;
     justify-content: center;

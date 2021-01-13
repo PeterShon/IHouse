@@ -6718,6 +6718,7 @@ a {
 .insta {
   background: #BFE8E5;
   position: relative;
+  display: none;
 }
 
 .insta__inner {
